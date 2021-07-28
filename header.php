@@ -26,29 +26,34 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'ncs4-pro' ); ?></a>
 	<a class="skip-link screen-reader-text" href="#colophon"><?php esc_html_e( 'Skip to footer', 'ncs4-pro'); ?></a>
 
+	<style><?php include 'header.css'; ?></style>
 	<header id="masthead" class="site-header">
 		<div class="site-header-inner">
 			<div class="site-header-col col1">
-				<?php
-				the_custom_logo(); // Replace with custom logo code later
-				?>
+				<div class="col-inner">
+					<?php
+					the_custom_logo(); // Replace with custom logo code later
+					?>
+				</div><!-- .col-inner -->
 			</div><!-- .header-col.header-col1 -->
 			<div class="site-header-col col2">
-				<!-- Search bar widget -->
-				<div id="header-search-widget" class="header-widget-area"></div>
-				<!-- Navbar -->
-				<div id="header-navbar-area" class="header-widget-area">
-					<nav id="header-navbar" class="main-navigation">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ncs4-pro' ); ?></button>
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'menu-1',
-								'menu_id'		 =>	'primary-menu',
-							)
-						);
-						?>
-					</nav>
+				<div class="col-inner">
+					<!-- Search bar widget -->
+					<div id="header-search-widget" class="header-widget-area"></div>
+					<!-- Navbar -->
+					<div id="header-navbar-area" class="header-widget-area">
+						<nav id="header-navbar" class="main-navigation">
+							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ncs4-pro' ); ?></button>
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-1',
+									'menu_id'		 =>	'primary-menu',
+								)
+							);
+							?>
+						</nav>
+					</div><!-- .col-inner -->
 				</div><!-- #header-navbar-area -->
 			</div><!-- .header-col.header-col2 -->
 		</div><!-- .site-header-inner -->
