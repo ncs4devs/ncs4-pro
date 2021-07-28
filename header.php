@@ -27,34 +27,29 @@
 	<a class="skip-link screen-reader-text" href="#colophon"><?php esc_html_e( 'Skip to footer', 'ncs4-pro'); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<div class="site-header-inner">
+			<div class="site-header-col col1">
 				<?php
-			else :
+				the_custom_logo(); // Replace with custom logo code later
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$ncs4_pro_description = get_bloginfo( 'description', 'display' );
-			if ( $ncs4_pro_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $ncs4_pro_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ncs4-pro' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+			</div><!-- .header-col.header-col1 -->
+			<div class="site-header-col col2">
+				<!-- Search bar widget -->
+				<div id="header-search-widget" class="header-widget-area"></div>
+				<!-- Navbar -->
+				<div id="header-navbar-area" class="header-widget-area">
+					<nav id="header-navbar" class="main-navigation">
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ncs4-pro' ); ?></button>
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-1',
+								'menu_id'		 =>	'primary-menu',
+							)
+						);
+						?>
+					</nav>
+				</div><!-- #header-navbar-area -->
+			</div><!-- .header-col.header-col2 -->
+		</div><!-- .site-header-inner -->
 	</header><!-- #masthead -->
