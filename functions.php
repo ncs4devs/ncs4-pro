@@ -12,6 +12,15 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+// Add SVG support
+// Warning: SVG is an insecure image format and should only be accepted from trusted sources
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+
 if ( ! function_exists( 'ncs4_pro_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -94,10 +103,10 @@ if ( ! function_exists( 'ncs4_pro_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 250,
-				'width'       => 250,
-				'flex-width'  => true,
-				'flex-height' => true,
+				'height'      		   => 250,
+				'width'       		   => 250,
+				'flex-width'  		   => true,
+				'flex-height' 		   => true,
 			)
 		);
 	}

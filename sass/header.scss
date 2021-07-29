@@ -2,6 +2,7 @@
 
 $header-col1-width: 30%;
 $header-col2-width: 100% - $header-col1-width;
+$nav-submenu-width: 150px;
 
 .site-header {
 	display: flex;
@@ -9,13 +10,34 @@ $header-col2-width: 100% - $header-col1-width;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: $color_ncs4-navy;
 	min-height: 100px;
+	background-color: $color_ncs4-navy;
+	
+	* {
+		color: $color_white;
+	}
+	
+	*:visited {
+		color: unset;
+	}
+
+	a:hover, a:focus {
+		background-color: $link_blue-bg;
+		color: unset;
+	}
 }
 
 .site-header-inner {
+	display: flex;
+	width: 80%;
+	max-width: 1320px;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.site-header-col {
 	margin-top: auto;
-	width: 100%;
 }
 
 .site-header-col.col1 {
@@ -23,15 +45,158 @@ $header-col2-width: 100% - $header-col1-width;
 	width: $header-col1-width;
 
 	.col-inner {
+		width: 100%;
 		float: left;
+	}
+
+	a, a:hover, a:focus {
+		background-color: transparent;
 	}
 }
 
 .site-header-col.col2 {
 	float: right;
 	width: $header-col2-width;
+	padding-bottom: 8px;
 
 	.col-inner {
 		float: right;
 	}
+}
+
+/* Search form */
+#header-search-widget {
+	display: flex;
+
+	.search-form {
+		margin-left: auto;
+	}
+}
+
+/* Navigation
+--------------------------------------------- */
+/* Imported (and modified) from _s's default style.scss */
+
+/* Desktop Navigation */
+.main-navigation {
+  display: block;
+  width: 100%;
+  $submenu-border-width: 1px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+    	padding: 0 8px;
+    }
+
+    /* Sub-menus */
+    ul {
+    	background-color: $color_white;
+    	width: $nav-submenu-width;
+    	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  		float: left;
+  		position: absolute;
+  		top: 100%;
+  		left: -$submenu-border-width; // lineup content of menu with content of header widget
+  		z-index: 99999;
+  		display: none;
+
+  		li {
+  			width: $nav-submenu-width;
+  		}
+
+  		a {
+  			background-color: $color_ncs4-navy;
+			padding: 5px;
+			box-sizing: border-box;
+			border-style: solid;
+			border-color: $color_white;
+			border-width: $submenu-border-width;
+			border-bottom-style: none;
+		}
+
+		li:last-of-type a{
+			border-bottom-style: solid;
+		}
+
+  		/* Sub-sub-menus */
+  		ul {
+  			position: absolute;
+			top: 0;
+			right: -$nav-submenu-width;
+  		}
+
+  		li:hover > ul, li:focus-within > ul {
+  			display: block;
+  			left: auto;
+  		}
+    }
+
+
+
+    li:hover > ul, li:focus-within > ul {
+    	display: block;
+    }
+  }
+
+  li {
+  	position: relative;
+  	margin-right: 5px;
+  }
+
+  li:last-of-type {
+  	margin-right: 0;
+  }
+
+  a {
+  	display: inherit;
+  	text-decoration: none;
+  }
+}
+
+/* Mobile Navigation */
+.menu-toggle, .main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+  	
+  	.main-navigation ul {
+    	display: flex;
+    }
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation
+{
+	margin: 0 0 1.5em;
+}
+
+.comment-navigation .nav-links,
+.posts-navigation .nav-links,
+.post-navigation .nav-links 
+{
+	display: flex;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous
+{
+	flex: 1 0 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next
+{
+	text-align: end;
+  	flex: 1 0 50%;
 }

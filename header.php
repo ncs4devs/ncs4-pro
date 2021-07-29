@@ -31,15 +31,31 @@
 		<div class="site-header-inner">
 			<div class="site-header-col col1">
 				<div class="col-inner">
-					<?php
-					the_custom_logo(); // Replace with custom logo code later
-					?>
+					<a class="title-link" href="/">
+						<?php
+						$custom_logo_id = get_theme_mod( 'custom_logo' );
+						$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+	 
+						if ( has_custom_logo() ) {
+						    echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+						} else {
+						    echo '<h1>' . get_bloginfo('name') . '</h1>';
+						}
+						?>
+					</a><!-- .title-link -->
 				</div><!-- .col-inner -->
 			</div><!-- .header-col.header-col1 -->
 			<div class="site-header-col col2">
 				<div class="col-inner">
 					<!-- Search bar widget -->
-					<div id="header-search-widget" class="header-widget-area"></div>
+					<div id="header-search-widget" class="header-widget-area">
+						<form class="search-form" method="get" action="/" role="search" itemprop="potentialAction" itemtype="https://schema.org/SearchAction">
+							<label class="search-form-lbl screen-reader-text" for="searchform">Search</label>
+							<input id="searchform" class="search-form-input" type="search" name="s" placeholder="Search" itemprop="query-input">
+							<input class="search-form-submit" type="submit" value="Search">
+							<meta content="/?s={s}" itemprop="target">
+						</form>
+					</div>
 					<!-- Navbar -->
 					<div id="header-navbar-area" class="header-widget-area">
 						<nav id="header-navbar" class="main-navigation">
