@@ -1,8 +1,12 @@
+@use 'sass:color';
 @import 'abstracts/variables/colors';
+@import 'abstracts/variables/resources';
 
 $header-col1-width: 30%;
 $header-col2-width: 100% - $header-col1-width;
 $nav-submenu-width: 150px;
+$searchform-height: 3.2rem;
+$mobile_nav-width: 18.6rem;
 
 .site-header {
 	display: flex;
@@ -66,10 +70,55 @@ $nav-submenu-width: 150px;
 
 /* Search form */
 #header-search-widget {
+	$searchform-bg: $color_ncs4-navy-dark;
+
 	display: flex;
 
-	.search-form {
+	#header-search-widget-inner {
 		margin-left: auto;
+
+		.search-form {
+			display: flex;
+			margin-left: auto;
+			border-width: 1px;
+			border-style: none;
+			border-radius: 0;
+			border-bottom-style: solid;
+			border-color: $color_ncs4-navy-light;
+
+			* {
+				border: none;
+				border-radius: 0;
+			}
+
+			#searchform { /* input field */
+				box-sizing: content-box;
+				padding: 0 0.5rem;
+				line-height: 0; /* Removes any space at top */
+				height: $searchform-height;
+				background-color: $searchform-bg;
+				color: $color_white;
+			}
+
+			#searchform:focus, #searchform:focus-visible {
+				outline: none;
+			}
+
+			.search-form-submit {
+				box-sizing: content-box;
+				height: $searchform-height;
+				width: $searchform-height;
+				background-color: $searchform-bg;
+				background-image: url($ico_search);
+				background-repeat: no-repeat;
+				background-size: 100%;
+				padding: 0;
+			}
+
+			.search-form-submit:hover {
+				cursor: pointer;
+			}
+		}
 	}
 }
 
@@ -162,14 +211,78 @@ $nav-submenu-width: 150px;
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 1201px) {
 	.menu-toggle {
 		display: none;
 	}
-  	
-  	.main-navigation ul {
-    	display: flex;
-    }
+
+  .main-navigation ul {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+	.site-header-inner {
+		display: block;
+		width: auto;
+	}
+
+	.site-header-col {
+		margin: 0;
+		display: inline-block;
+	}
+
+	.site-header-col.col1, .site-header-col.col2 {
+		width: 100%;
+		float: unset;
+	}
+
+	.site-header-col.col2 .col-inner {
+		display: block;
+		width: 100%;
+
+		#header-search-widget {
+			float: left;
+		}
+
+		#header-navbar-area {
+			float: right;
+		}
+	}
+
+	#header-navbar {
+		box-sizing: border-box;
+		height: 100%;
+		margin-left: 1.5rem;
+
+		.menu-toggle {
+			color: $color_white;
+			background-color: $color_ncs4-navy-dark;
+			padding: 0;
+			border: none;
+			border-radius: 0;
+			border-color: $color_ncs4-navy-light;
+			border-width: 1px;
+			border-bottom-style: solid;
+			height: $searchform-height;
+			width: $mobile_nav-width;
+		}
+
+		.menu-toggle:hover, .menu-toggle:focus {
+			cursor: pointer;
+			background-color: $link_blue-bg-dark;
+		}
+	}
+
+	
+
+	#primary-menu {
+		display: none;
+	}
+
+
+
+
 }
 
 .site-main .comment-navigation,
