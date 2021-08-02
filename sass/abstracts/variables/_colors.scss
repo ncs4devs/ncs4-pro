@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
@@ -20,5 +22,8 @@ $color__border-input: #ccc;
 $color__border-abbr: #666;
 
 $color_ncs4-navy: hsl(221, 30%, 20%);
+$color_ncs4-navy-dark: darken($color_ncs4-navy, 8%);
+$color_ncs4-navy-light: lighten($color_ncs4-navy, 10%);
 $color_white: hsl(0, 0%, 90%);
 $link_blue-bg: hsl(212, 100%, 30%);
+$link_blue-bg-dark: darken($link_blue-bg, 8%);
