@@ -20,6 +20,15 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+// Register styles and scripts
+function ncs4_enqueue_custom_styles() {
+	if (!is_admin()) {
+		wp_enqueue_style( 'style', get_stylesheet_uri() );
+		wp_enqueue_style( 'header', get_template_directory_uri() . '/header.css' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'ncs4_enqueue_custom_styles', 11);
+
 
 if ( ! function_exists( 'ncs4_pro_setup' ) ) :
 	/**
