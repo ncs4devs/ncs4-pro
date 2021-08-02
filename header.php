@@ -25,8 +25,6 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'ncs4-pro' ); ?></a>
 	<a class="skip-link screen-reader-text" href="#colophon"><?php esc_html_e( 'Skip to footer', 'ncs4-pro'); ?></a>
-
-	<style><?php include 'header.css'; ?></style>
 	<header id="masthead" class="site-header">
 		<div class="site-header-inner">
 			<div class="site-header-col col1">
@@ -48,13 +46,16 @@
 			<div class="site-header-col col2">
 				<div class="col-inner">
 					<!-- Search bar widget -->
-					<div id="header-search-widget" class="header-widget-area">
-						<form class="search-form" method="get" action="/" role="search" itemprop="potentialAction" itemtype="https://schema.org/SearchAction">
-							<label class="search-form-lbl screen-reader-text" for="searchform">Search</label>
-							<input id="searchform" class="search-form-input" type="search" name="s" placeholder="Search" itemprop="query-input">
-							<input class="search-form-submit" type="submit" value="Search">
-							<meta content="/?s={s}" itemprop="target">
-						</form>
+					<div id="header-search-widget" class="header-widget-area widget-area">
+						<div id="header-search-widget-inner" class="header-widget-area-inner widget-area-inner">
+							<form class="search-form" method="get" action="/" role="search" itemprop="potentialAction" itemtype="https://schema.org/SearchAction">
+								<label class="search-form-lbl screen-reader-text" for="searchform">Search</label>
+								<input id="searchform" class="search-form-input" type="search" name="s" placeholder="Search" itemprop="query-input"><button class="search-form-submit" type="submit" value="Search" title="Search">
+									<span class="screen-reader-text">Submit</span>
+								</button>
+								<meta content="/?s={s}" itemprop="target">
+							</form>
+						</div>
 					</div>
 					<!-- Navbar -->
 					<div id="header-navbar-area" class="header-widget-area">
