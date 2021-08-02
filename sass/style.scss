@@ -61,7 +61,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  */
 html {
   line-height: 1.15;
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%; /* 10px */
+}
 
 /* Sections
 	 ========================================================================== */
@@ -69,7 +71,9 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  margin: 0; }
+  margin: 0;
+  font-size: 1.4rem;
+}
 
 /**
  * Render the `main` element consistently in IE.
@@ -356,7 +360,7 @@ textarea {
   line-height: 1.5;
 
   * {
-    font-size: .875rem; /* 14px */
+    font-size: 1.4rem; /* 14px */
   }
 }
 

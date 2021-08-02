@@ -62,6 +62,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+  /* 10px */
 }
 
 /* Sections
@@ -71,6 +73,7 @@ html {
  */
 body {
   margin: 0;
+  font-size: 1.4rem;
 }
 
 /**
@@ -397,7 +400,7 @@ input *,
 select *,
 optgroup *,
 textarea * {
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   /* 14px */
 }
 
