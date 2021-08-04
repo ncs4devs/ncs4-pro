@@ -23,8 +23,8 @@ add_filter('upload_mimes', 'cc_mime_types');
 // Register styles and scripts
 function ncs4_enqueue_custom_styles() {
 	if (!is_admin()) {
-		wp_enqueue_style( 'style', get_stylesheet_uri() );
-		wp_enqueue_style( 'header', get_template_directory_uri() . '/header.css' );
+		wp_enqueue_style( 'style', get_stylesheet_uri(), array(), rand(111,9999));
+		wp_enqueue_style( 'header', get_template_directory_uri() . '/header.css', array(), rand(111,9999));
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ncs4_enqueue_custom_styles', 11);
