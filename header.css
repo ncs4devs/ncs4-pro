@@ -19,6 +19,7 @@
 }
 
 .site-header-inner {
+  position: relative;
   display: flex;
   width: 80%;
   max-width: 1320px;
@@ -28,24 +29,37 @@
 }
 
 .site-header-col {
+  display: flex;
+}
+.site-header-col .col-inner {
   margin-top: auto;
 }
-
 .site-header-col.col1 {
+  position: relative;
   float: left;
-  width: 30%;
+  width: 25%;
+}
+.site-header-col.col1 .site-header-topbar {
+  position: absolute;
+  height: 5px;
+  width: 95%;
+  background-color: #ffcc33;
 }
 .site-header-col.col1 .col-inner {
   width: 100%;
+  padding-top: 5px;
+  padding-right: 5%;
   float: left;
+}
+.site-header-col.col1 .col-inner .title-link {
+  display: block;
 }
 .site-header-col.col1 a, .site-header-col.col1 a:hover, .site-header-col.col1 a:focus {
   background-color: transparent;
 }
-
 .site-header-col.col2 {
   float: right;
-  width: 70%;
+  width: 75%;
   padding-bottom: 8px;
 }
 .site-header-col.col2 .col-inner {
@@ -106,6 +120,8 @@
 .main-navigation {
   display: block;
   width: 100%;
+  /* color_ncs4-navy */
+  /* color_white */
 }
 .main-navigation ul {
   list-style: none;
@@ -113,10 +129,22 @@
   padding: 0;
   /* Sub-menus */
 }
+.main-navigation ul li {
+  display: flex;
+  text-align: center;
+}
+.main-navigation ul li:hover > ul, .main-navigation ul li:focus-within > ul {
+  display: block;
+}
 .main-navigation ul a {
+  margin-top: auto;
+  text-transform: uppercase;
   padding: 0 8px;
 }
 .main-navigation ul ul {
+  border-color: #ffcc33;
+  border-width: 5px;
+  border-top-style: solid;
   background-color: #e6e6e6;
   width: 150px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -129,31 +157,33 @@
   /* Sub-sub-menus */
 }
 .main-navigation ul ul li {
+  display: block;
+  text-align: left;
   width: 150px;
-}
-.main-navigation ul ul a {
-  background-color: #242d42;
-  padding: 5px;
-  box-sizing: border-box;
-  border-style: solid;
-  border-color: #e6e6e6;
-  border-width: 1px;
-  border-bottom-style: none;
-}
-.main-navigation ul ul li:last-of-type a {
-  border-bottom-style: solid;
-}
-.main-navigation ul ul ul {
-  position: absolute;
-  top: 0;
-  right: -150px;
 }
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li:focus-within > ul {
   display: block;
   left: auto;
 }
-.main-navigation ul li:hover > ul, .main-navigation ul li:focus-within > ul {
-  display: block;
+.main-navigation ul ul li:last-of-type a {
+  border-bottom-style: solid;
+}
+.main-navigation ul ul a, .main-navigation ul ul a:visited {
+  margin: 0;
+  text-transform: unset;
+  color: #e6e6e6;
+  background-color: #242d42;
+  padding: 5px;
+  box-sizing: border-box;
+  border-style: none;
+  border-color: #e6e6e6;
+  border-width: 1px;
+  border-bottom-style: none;
+}
+.main-navigation ul ul ul {
+  position: absolute;
+  top: 0;
+  right: -150px;
 }
 .main-navigation li {
   position: relative;
@@ -168,10 +198,6 @@
 }
 
 /* Mobile Navigation */
-.menu-toggle, .main-navigation.toggled ul {
-  display: block;
-}
-
 @media screen and (min-width: 1201px) {
   .menu-toggle {
     display: none;
@@ -191,12 +217,10 @@
     margin: 0;
     display: inline-block;
   }
-
   .site-header-col.col1, .site-header-col.col2 {
     width: 100%;
     float: unset;
   }
-
   .site-header-col.col2 .col-inner {
     display: block;
     width: 100%;
@@ -212,8 +236,10 @@
     box-sizing: border-box;
     height: 100%;
     margin-left: 1.5rem;
+    --menu-expand-button-width: 3.2rem;
   }
   #header-navbar .menu-toggle {
+    position: relative;
     color: #e6e6e6;
     background-color: #151b28;
     padding: 0;
@@ -229,9 +255,34 @@
     cursor: pointer;
     background-color: #003470;
   }
-
+  #header-navbar ul {
+    position: absolute;
+    width: 18.6rem;
+    background-color: #242d42;
+    /* Submenu */
+  }
+  #header-navbar ul li {
+    margin: 0;
+  }
+  #header-navbar ul li a {
+    width: 100%;
+    text-align: left;
+  }
+  #header-navbar ul li.page_item_has_children a {
+    width: calc(100% - var(--menu-expand-button-width));
+  }
+  #header-navbar ul ul {
+    display: none;
+  }
+  #header-navbar ul .toggled ul {
+    display: block;
+  }
   #primary-menu {
     display: none;
+    /* Menu Opened */
+  }
+  .toggled #primary-menu {
+    display: block;
   }
 }
 .site-main .comment-navigation,
