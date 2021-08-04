@@ -5,16 +5,16 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	const siteNavigation = document.getElementById( 'site-navigation' );
+	const siteNavigation = document.getElementById( 'header-navbar' );
 
-	// Return early if the navigation don't exist.
+	// Return early if the navigation doesn't exist.
 	if ( ! siteNavigation ) {
 		return;
 	}
 
 	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
 
-	// Return early if the button don't exist.
+	// Return early if the button doesn't exist.
 	if ( 'undefined' === typeof button ) {
 		return;
 	}
