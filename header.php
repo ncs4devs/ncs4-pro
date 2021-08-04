@@ -28,6 +28,7 @@
 	<header id="masthead" class="site-header">
 		<div class="site-header-inner">
 			<div class="site-header-col col1">
+				<div class="site-header-topbar"></div>
 				<div class="col-inner">
 					<a class="title-link" href="/">
 						<?php
@@ -60,7 +61,7 @@
 					<!-- Navbar -->
 					<div id="header-navbar-area" class="header-widget-area">
 						<nav id="header-navbar" class="main-navigation">
-							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ncs4-pro' ); ?></button>
+							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'ncs4-pro' ); ?></button>
 							<?php
 							wp_nav_menu(
 								array(
