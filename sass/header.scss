@@ -14,10 +14,11 @@ $mobile_nav-width: 18.6rem;
 	position: sticky;
 	top: 0;
 	left: 0;
+	z-index: 100;
 	width: 100%;
 	min-height: 100px;
 	background-color: $color_ncs4-navy;
-	
+
 	* {
 		color: $color_white;
 
@@ -271,7 +272,7 @@ $mobile_nav-width: 18.6rem;
 		&.col2 .col-inner {
 			display: block;
 			width: 100%;
-		
+
 			#header-search-widget {
 				float: left;
 			}
@@ -335,10 +336,10 @@ $mobile_nav-width: 18.6rem;
 				display: block;
 			}
 		}
-	
+
 		@at-root #primary-menu {
 			display: none;
-		
+
 			/* Menu Opened */
 			.toggled & {
 				display: block;
@@ -360,7 +361,7 @@ $mobile_nav-width: 18.6rem;
 
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
-.post-navigation .nav-links 
+.post-navigation .nav-links
 {
 	display: flex;
 }
