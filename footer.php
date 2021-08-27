@@ -31,4 +31,5 @@
 <?php wp_footer(); ?>
 
 </body>
+<?php include('template-parts/credits.html');?>
 </html>
