@@ -72,7 +72,7 @@ html {
  */
 body {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 /**
@@ -360,7 +360,7 @@ textarea {
   line-height: 1.5;
 
   * {
-    font-size: 1.4rem; /* 14px */
+    font-size: 1.6rem; /* 16px */
   }
 }
 
@@ -373,7 +373,9 @@ h6 {
   clear: both; }
 
 p {
-  margin-bottom: 1.5em; }
+  margin: 0;
+  margin-bottom: 1em;
+}
 
 dfn,
 cite,
@@ -574,7 +576,7 @@ textarea {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 0; }
 
 .page-links {
   clear: both;

@@ -73,7 +73,7 @@ html {
  */
 body {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 /**
@@ -400,8 +400,8 @@ input *,
 select *,
 optgroup *,
 textarea * {
-  font-size: 1.4rem;
-  /* 14px */
+  font-size: 1.6rem;
+  /* 16px */
 }
 
 h1,
@@ -414,7 +414,8 @@ h6 {
 }
 
 p {
-  margin-bottom: 1.5em;
+  margin: 0;
+  margin-bottom: 1em;
 }
 
 dfn,
@@ -656,7 +657,7 @@ textarea {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0;
+  margin: 0;
 }
 
 .page-links {
