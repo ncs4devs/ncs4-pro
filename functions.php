@@ -23,8 +23,25 @@ add_filter('upload_mimes', 'cc_mime_types');
 // Register styles and scripts
 function ncs4_enqueue_custom_styles() {
 	if (!is_admin()) {
-		wp_enqueue_style( 'style', get_stylesheet_uri(), array(), rand(111,9999));
-		wp_enqueue_style( 'header', get_template_directory_uri() . '/header.css', array(), rand(111,9999));
+		wp_enqueue_style(
+			'style',
+			get_stylesheet_uri(),
+			array(),
+			filemtime( get_stylesheet_directory() . '/style.css' ),
+		);
+		wp_enqueue_style(
+			'header',
+			get_template_directory_uri() . '/header.css',
+			array(),
+			filemtime( get_stylesheet_directory() . '/header.css' ),
+		);
+		wp_enqueue_style(
+			'margin',
+			get_template_directory_uri() . '/margin.css',
+			array(),
+			filemtime( get_stylesheet_directory() . '/margin.css' ),
+		);
+
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ncs4_enqueue_custom_styles', 11);
