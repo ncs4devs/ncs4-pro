@@ -27,15 +27,15 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'ncs4-pro' ); ?></a>
 	<a class="skip-link screen-reader-text" href="#colophon"><?php esc_html_e( 'Skip to footer', 'ncs4-pro'); ?></a>
 	<header id="masthead" class="site-header">
-		<div class="site-header-inner">
-			<div class="site-header-col col1">
-				<div class="site-header-topbar"></div>
+		<div class="site-header__inner ncs4-site-margin">
+			<div class="site-header-col site-header-col__col1">
+				<div id="site-header-topbar"></div>
 				<div class="col-inner">
 					<a class="title-link" href="/">
 						<?php
 						$custom_logo_id = get_theme_mod( 'custom_logo' );
 						$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-	 
+
 						if ( has_custom_logo() ) {
 						    echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
 						} else {
@@ -45,11 +45,11 @@
 					</a><!-- .title-link -->
 				</div><!-- .col-inner -->
 			</div><!-- .header-col.header-col1 -->
-			<div class="site-header-col col2">
+			<div class="site-header-col site-header-col__col2">
 				<div class="col-inner">
 					<!-- Search bar widget -->
 					<div id="header-search-widget" class="header-widget-area widget-area">
-						<div id="header-search-widget-inner" class="header-widget-area-inner widget-area-inner">
+						<div id="header-search-widget__inner" class="header-widget-area__inner widget-area__inner">
 							<form class="search-form" method="get" action="/" role="search" itemprop="potentialAction" itemtype="https://schema.org/SearchAction">
 								<label class="search-form-lbl screen-reader-text" for="searchform">Search</label>
 								<input id="searchform" class="search-form-input" type="search" name="s" placeholder="Search" itemprop="query-input"><button class="search-form-submit" type="submit" value="Search" title="Search">
@@ -64,10 +64,12 @@
 						<nav id="header-navbar" class="main-navigation">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'ncs4-pro' ); ?></button>
 							<?php
+							include get_stylesheet_directory() . '/ncs4-nav-walker.php';
 							wp_nav_menu(
 								array(
-									'theme_location' => 'menu-1',
-									'menu_id'		 =>	'primary-menu',
+									'theme_location' 	=> 'menu-1',
+									'menu_id'		 			=> 'primary-menu',
+									'walker' 					=> new NCS4_Nav_Walker(),
 								)
 							);
 							?>
