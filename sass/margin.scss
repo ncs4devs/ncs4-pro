@@ -1,0 +1,11 @@
+$max-width: 1720px;
+
+.ncs4-site-margin {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+
+  &.no-padding {
+    padding: 0;
+  }
+}
