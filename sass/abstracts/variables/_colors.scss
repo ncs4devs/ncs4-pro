@@ -1,5 +1,7 @@
 @use 'sass:color';
 
+/* These colors are kept for compatibility reasons and should not be used */
+
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
@@ -21,11 +23,38 @@ $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
 
-$color_ncs4-navy: hsl(221, 30%, 20%);
-$color_ncs4-navy-dark: darken($color_ncs4-navy, 8%);
-$color_ncs4-navy-light: lighten($color_ncs4-navy, 10%);
-$color_usm-yellow: hsl(45, 100%, 60%);
-$color_white: hsl(0, 0%, 90%);
-$color_grey: hsl(0, 0%, 20%);
-$link_blue-bg: hsl(212, 100%, 30%);
-$link_blue-bg-dark: darken($link_blue-bg, 8%);
+/* These colors may be used */
+
+// Palette URL: http://paletton.com/#uid=c3K1e3B001kgBdIavnIdmiLltb-qv85kq7weg5JelmB6vlsFx8mek++tCN2ZB+VIV+XnQ+whQk00aJ0dmT01gQ022S7C0t */
+/* Colors are swapped around to be in order from darkest to lightest */
+
+/* Navy */
+$color_primary-0: #0B152B;
+$color_primary-1: #18243E;
+$color_primary-2: #273249;	// Main Primary color */
+$color_primary-3: #3E4A64;
+$color_primary-4: #59657E;
+
+/* Blue */
+$color_secondary-0: #002C5D;
+$color_secondary-1: #003B7C;
+$color_secondary-2: #00499A;	// Main Secondary color */
+$color_secondary-3: #0061CD;
+$color_secondary-4: #097BFB;
+
+/* Yellow */
+$color_primary-0c: #B18800;
+$color_primary-1c: #E4B005;
+$color_primary-2c: #FFCE2F;	// Main Complement color */
+$color_primary-3c: #FFD755;
+$color_primary-4c: #FFE17F;
+
+/* Grey */
+$color_secondary-0c: #040303;
+$color_secondary-1c: #171717;
+$color_secondary-2c: #555555;	// Main Secondary complement */
+$color_secondary-3c: #868686;
+$color_secondary-4c: #B6B5B5;
+
+$color_white-dark: #e6e6e6;
+$color_white: #f4f4f4;

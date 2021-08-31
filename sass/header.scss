@@ -17,10 +17,10 @@ $mobile_nav-width: 18.6rem;
 	z-index: 100;
 	width: 100%;
 	min-height: 100px;
-	background-color: $color_ncs4-navy;
+	background-color: $color_primary-2;
 
 	* {
-		color: $color_white;
+		color: $color_white-dark;
 
 		&:visited {
 			color: unset;
@@ -28,7 +28,7 @@ $mobile_nav-width: 18.6rem;
 	}
 
 	a:hover, a:focus {
-		background-color: $link_blue-bg;
+		background-color: $color_secondary-2;
 		color: unset;
 	}
 }
@@ -59,7 +59,7 @@ $mobile_nav-width: 18.6rem;
 			position: absolute;
 			height: 5px;
 			width: 100% - $header-logo-padding-right;
-			background-color: $color_usm-yellow;
+			background-color: $color-primary-2c;
 		}
 
 		.col-inner {
@@ -91,7 +91,7 @@ $mobile_nav-width: 18.6rem;
 
 /* Search form */
 #header-search-widget {
-	$searchform-bg: $color_ncs4-navy-dark;
+	$searchform-bg: $color_primary-0;
 
 	display: flex;
 
@@ -105,7 +105,7 @@ $mobile_nav-width: 18.6rem;
 			border-style: none;
 			border-radius: 0;
 			border-bottom-style: solid;
-			border-color: $color_ncs4-navy-light;
+			border-color: $color_primary-3;
 
 			* {
 				border: none;
@@ -118,7 +118,7 @@ $mobile_nav-width: 18.6rem;
 				line-height: 0; /* Removes any space at top */
 				height: $searchform-height;
 				background-color: $searchform-bg;
-				color: $color_white;
+				color: $color_white-dark;
 
 				&:focus, &:focus-visible {
 					outline: none;
@@ -151,8 +151,8 @@ $mobile_nav-width: 18.6rem;
 .main-navigation {
   display: block;
   width: 100%;
-  $submenu-item-bg-color: $color_ncs4-navy; /* color_ncs4-navy */
-  $submenu-item-color: $color_white; /* color_white */
+  $submenu-item-bg-color: $color_primary-2;
+  $submenu-item-color: $color_white-dark;
   $submenu-border-width: 1px;
 
   ul {
@@ -177,10 +177,10 @@ $mobile_nav-width: 18.6rem;
 
     /* Sub-menus */
     ul {
-    	border-color: $color_usm-yellow;
+    	border-color: $color-primary-2c;
     	border-width: 5px;
     	border-top-style: solid;
-    	background-color: $color_white;
+    	background-color: $color_white-dark;
     	width: $nav-submenu-width;
     	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   		float: left;
@@ -213,7 +213,7 @@ $mobile_nav-width: 18.6rem;
 				padding: 5px;
 				box-sizing: border-box;
 				border-style: none;
-				border-color: $color_white;
+				border-color: $color_white-dark;
 				border-width: $submenu-border-width;
 				border-bottom-style: none;
 			}
@@ -287,17 +287,17 @@ $mobile_nav-width: 18.6rem;
 		box-sizing: border-box;
 		height: 100%;
 		margin-left: 1.5rem;
-		$mobile-nav-bg: $color_ncs4-navy;
+		$mobile-nav-bg: $color_primary-2;
 		--menu-expand-button-width: 3.2rem;
 
 		.menu-toggle {
 			position: relative;
-			color: $color_white;
-			background-color: $color_ncs4-navy-dark;
+			color: $color_white-dark;
+			background-color: $color_primary-0;
 			padding: 0;
 			border: none;
 			border-radius: 0;
-			border-color: $color_ncs4-navy-light;
+			border-color: $color_primary-3;
 			border-width: 1px;
 			border-bottom-style: solid;
 			height: $searchform-height;
@@ -305,7 +305,7 @@ $mobile_nav-width: 18.6rem;
 
 			&:hover, &:focus {
 				cursor: pointer;
-				background-color: $link_blue-bg-dark;
+				background-color: $color_secondary-1;
 			}
 		}
 

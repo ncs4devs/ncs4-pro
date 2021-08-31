@@ -1,3 +1,10 @@
+/* These colors are kept for compatibility reasons and should not be used */
+/* These colors may be used */
+/* Colors are swapped around to be in order from darkest to lightest */
+/* Navy */
+/* Blue */
+/* Yellow */
+/* Grey */
 /* Minimum safe tested value: 80% */
 body {
   background-color: #f4f4f4;
@@ -7,7 +14,7 @@ body {
 .hero-container {
   position: relative;
   z-index: -1;
-  background-color: #141414;
+  background-color: #171717;
 }
 .hero-container .ncs4-site-margin {
   padding: 0 10%;
@@ -18,10 +25,10 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  background: linear-gradient(-70deg, transparent 49.95%, rgba(51, 51, 51, 0.6) 50.05%);
+  background: linear-gradient(-70deg, transparent 49.95%, rgba(23, 23, 23, 0.6) 50.05%);
 }
 .hero-text {
-  color: #e6e6e6;
+  color: #f4f4f4;
   flex: 0 0 50%;
   padding-left: 2%;
 }
@@ -56,36 +63,39 @@ body {
   margin-top: 0;
 }
 .banner h3 {
-  max-width: 50ch;
+  max-width: 40ch;
   font-size: 3.2rem;
   text-transform: uppercase;
   margin-bottom: 0;
+  padding: 0 3.2rem;
 }
 .banner p {
   font-size: 2.4rem;
+  max-width: 100ch;
+  padding: 0 3.2rem;
 }
 .banner p:last-of-type {
   margin-bottom: 0;
 }
 .banner-navy {
-  background-color: #242d42;
+  background-color: #18243E;
 }
 .banner-navy__gradient {
-  background: linear-gradient(0, #043E7E 0%, #033164 22%, #000204 100%);
+  background: linear-gradient(0, #003B7C 0%, #002C5D 22%, #040303 100%);
 }
 .banner-navy h3 {
-  color: #ffcf36;
+  color: #FFCE2F;
 }
 .banner-navy p {
-  color: #e2e2e2;
+  color: #e6e6e6;
 }
 .banner-white {
   background-color: #f4f4f4;
-  color: #6a6a6a;
+  color: #555555;
 }
 .banner-blue {
-  background-color: #087bfb;
-  color: #e2e2e2;
+  background-color: #097BFB;
+  color: #e6e6e6;
 }
 
 /* Pillar Styling */
@@ -98,8 +108,8 @@ body {
 .pillar {
   height: 100%;
   margin-top: 4.8rem;
-  background: linear-gradient(0, #043e7e 0%, #087bfb 100%);
-  color: #e2e2e2;
+  background: linear-gradient(0, #003B7C 0%, #097BFB 100%);
+  color: #f4f4f4;
 }
 .pillar figure {
   display: flex;
@@ -136,7 +146,7 @@ body {
   column-gap: 2px;
 }
 .tiles .tile {
-  background-color: #087bfb;
+  background-color: #097BFB;
   flex: 1 0 0;
   min-width: max-content;
 }

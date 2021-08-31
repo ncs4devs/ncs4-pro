@@ -1,3 +1,10 @@
+/* These colors are kept for compatibility reasons and should not be used */
+/* These colors may be used */
+/* Colors are swapped around to be in order from darkest to lightest */
+/* Navy */
+/* Blue */
+/* Yellow */
+/* Grey */
 .site-header {
   display: flex;
   position: sticky;
@@ -6,7 +13,7 @@
   z-index: 100;
   width: 100%;
   min-height: 100px;
-  background-color: #242d42;
+  background-color: #273249;
 }
 .site-header * {
   color: #e6e6e6;
@@ -15,7 +22,7 @@
   color: unset;
 }
 .site-header a:hover, .site-header a:focus {
-  background-color: #004799;
+  background-color: #00499A;
   color: unset;
 }
 
@@ -44,7 +51,7 @@
   position: absolute;
   height: 5px;
   width: 95%;
-  background-color: #ffcc33;
+  background-color: #FFCE2F;
 }
 .site-header-col.col1 .col-inner {
   width: 100%;
@@ -81,7 +88,7 @@
   border-style: none;
   border-radius: 0;
   border-bottom-style: solid;
-  border-color: #364463;
+  border-color: #3E4A64;
 }
 #header-search-widget #header-search-widget-inner .search-form * {
   border: none;
@@ -94,7 +101,7 @@
   line-height: 0;
   /* Removes any space at top */
   height: 3.2rem;
-  background-color: #151b28;
+  background-color: #0B152B;
   color: #e6e6e6;
 }
 #header-search-widget #header-search-widget-inner .search-form #searchform:focus, #header-search-widget #header-search-widget-inner .search-form #searchform:focus-visible {
@@ -104,7 +111,7 @@
   box-sizing: content-box;
   height: 3.2rem;
   width: 3.2rem;
-  background-color: #151b28;
+  background-color: #0B152B;
   background-image: url("/wp-content/uploads/2021/08/magnifying-glass-white.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -121,8 +128,6 @@
 .main-navigation {
   display: block;
   width: 100%;
-  /* color_ncs4-navy */
-  /* color_white */
 }
 .main-navigation ul {
   list-style: none;
@@ -143,7 +148,7 @@
   padding: 0 8px;
 }
 .main-navigation ul ul {
-  border-color: #ffcc33;
+  border-color: #FFCE2F;
   border-width: 5px;
   border-top-style: solid;
   background-color: #e6e6e6;
@@ -173,7 +178,7 @@
   margin: 0;
   text-transform: unset;
   color: #e6e6e6;
-  background-color: #242d42;
+  background-color: #273249;
   padding: 5px;
   box-sizing: border-box;
   border-style: none;
@@ -242,11 +247,11 @@
   #header-navbar .menu-toggle {
     position: relative;
     color: #e6e6e6;
-    background-color: #151b28;
+    background-color: #0B152B;
     padding: 0;
     border: none;
     border-radius: 0;
-    border-color: #364463;
+    border-color: #3E4A64;
     border-width: 1px;
     border-bottom-style: solid;
     height: 3.2rem;
@@ -254,12 +259,12 @@
   }
   #header-navbar .menu-toggle:hover, #header-navbar .menu-toggle:focus {
     cursor: pointer;
-    background-color: #003470;
+    background-color: #003B7C;
   }
   #header-navbar ul {
     position: absolute;
     width: 18.6rem;
-    background-color: #242d42;
+    background-color: #273249;
     /* Submenu */
   }
   #header-navbar ul li {

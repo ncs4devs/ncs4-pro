@@ -2,13 +2,11 @@
 @use 'sass:math';
 @import 'abstracts/variables/colors';
 
-$margin-color: #141414;
-
-$overlay-color: color.scale($color_grey, $alpha: -40%);
+$overlay-color: color.scale($color_secondary-1c, $alpha: -40%);
 $hero-width: 80%; /* Minimum safe tested value: 80% */
 
 body {
-  background-color: #f4f4f4;
+  background-color: $color_white;
 }
 
 /* Hero styling */
@@ -16,7 +14,7 @@ body {
 .hero-container {
   position: relative;
   z-index: -1;
-  background-color: $margin-color;
+  background-color: $color_secondary-1c;
 
   .ncs4-site-margin {
     padding: 0 math.div(100% - $hero-width, 2);
@@ -65,10 +63,6 @@ body {
 }
 
 /* Banner block styling ("Vision", "Mission", etc) */
-$color_yellow: #ffcf36;
-$color_white: #e2e2e2;
-$color_grey: #6a6a6a;
-$color_white__bright: #f4f4f4;
 
 .banner {
   padding: 2.4rem 0;
@@ -78,14 +72,17 @@ $color_white__bright: #f4f4f4;
   }
 
   h3 {
-    max-width: 50ch;
+    max-width: 40ch;
     font-size: 3.2rem;
     text-transform: uppercase;
     margin-bottom: 0;
+    padding: 0 3.2rem;
   }
 
   p {
     font-size: 2.4rem;
+    max-width: 100ch;
+    padding: 0 3.2rem;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -93,29 +90,29 @@ $color_white__bright: #f4f4f4;
   }
 
   &-navy {
-    background-color: $color_ncs4-navy;
+    background-color: $color_primary-1;
 
     &__gradient {
-      background: linear-gradient(0, #043E7E 0%, #033164 22%, #000204 100%);
+      background: linear-gradient(0, $color_secondary-1 0%, $color_secondary-0 22%, $color_secondary-0c 100%);
     }
 
     h3 {
-      color: $color_yellow;
+      color: $color_primary-2c;
     }
 
     p {
-      color: $color_white;
+      color: $color_white-dark;
     }
   }
 
   &-white {
-    background-color: $color_white__bright;
-    color: $color_grey;
+    background-color: $color_white;
+    color: $color_secondary-2c;
   }
 
   &-blue {
-    background-color: #087bfb;
-    color: #e2e2e2;
+    background-color: $color_secondary-4;
+    color: $color_white-dark;
   }
 }
 
@@ -131,8 +128,8 @@ $color_white__bright: #f4f4f4;
   @at-root .pillar {
     height: 100%;
     margin-top: 4.8rem;
-    background: linear-gradient(0, #043e7e 0%, #087bfb 100%);
-    color: #e2e2e2;
+    background: linear-gradient(0, $color_secondary-1 0%, $color_secondary-4 100%);
+    color: $color_white;
 
     figure {
       display: flex; /* Shrink image container to image */
@@ -163,7 +160,7 @@ $color_white__bright: #f4f4f4;
 
   &__inner {
     font-size: 3.2rem;
-    background-color: #f4f4f4;
+    background-color: $color_white;
 
     > div { /* Inner container of group */
       display: flex;
@@ -174,7 +171,7 @@ $color_white__bright: #f4f4f4;
   }
 
   .tile {
-    background-color: #087bfb;
+    background-color: $color_secondary-4;
     flex: 1 0 0;
     min-width: max-content;
 
