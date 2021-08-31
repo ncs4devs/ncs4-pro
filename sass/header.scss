@@ -3,11 +3,11 @@
 @import 'abstracts/variables/resources';
 
 $header-col1-width: 25%;
-$header-logo-padding-right: 5%;
 $header-col2-width: 100% - $header-col1-width;
 $nav-submenu-width: 150px;
 $searchform-height: 3.2rem;
 $mobile_nav-width: 18.6rem;
+$mobile-breakpoint: 1200px;
 
 .site-header {
 	display: flex;
@@ -18,6 +18,86 @@ $mobile_nav-width: 18.6rem;
 	width: 100%;
 	min-height: 100px;
 	background-color: $color_primary-2;
+
+	&__inner {
+		position: relative;
+		display: flex;
+		width: 100%;
+		gap: 0.8rem;
+
+		@media screen and (max-width: $mobile-breakpoint) {
+			display: block;
+			width: auto;
+		}
+
+		@at-root .site-header-col {
+			display: flex;
+
+			.col-inner {
+				margin-top: auto;
+			}
+
+			&__col1 {
+				position: relative;
+				float: left;
+				width: $header-col1-width;
+
+				@at-root #site-header-topbar {
+					position: absolute;
+					height: 5px;
+					width: 100%;
+					background-color: $color-primary-2c;
+				}
+
+				.col-inner {
+					width: 100%;
+					padding-top: 5px;
+					float: left;
+
+					.title-link {
+						display: block;
+						background-color: transparent;
+
+						&:hover, &:focus {
+							@extend .title-link;
+						}
+					}
+				}
+			}
+
+			&__col2 {
+				float: right;
+				width: $header-col2-width;
+				padding-bottom: 8px;
+
+				.col-inner {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: right;
+
+					@media screen and (max-width: $mobile-breakpoint) {
+						justify-content: center;
+						gap: 0.8rem;
+
+						> * {
+							flex: 1 0 0;
+						}
+					}
+				}
+			}
+
+			@media screen and (max-width: $mobile-breakpoint) {
+				display: inline-block;
+				margin: 0;
+
+				&__col1, &__col2 {
+					width: 100%;
+					float: unset;
+				}
+			}
+
+		}
+	}
 
 	* {
 		color: $color_white-dark;
@@ -33,69 +113,13 @@ $mobile_nav-width: 18.6rem;
 	}
 }
 
-.site-header-inner {
-	position: relative;
-	display: flex;
-	width: 80%;
-	max-width: 1320px;
-	padding: 0;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.site-header-col {
-	display: flex;
-
-	.col-inner {
-		margin-top: auto;
-	}
-
-	&.col1 {
-		position: relative;
-		float: left;
-		width: $header-col1-width;
-
-		.site-header-topbar {
-			position: absolute;
-			height: 5px;
-			width: 100% - $header-logo-padding-right;
-			background-color: $color-primary-2c;
-		}
-
-		.col-inner {
-			width: 100%;
-			padding-top: 5px;
-			padding-right: $header-logo-padding-right;
-			float: left;
-
-			.title-link {
-				display: block;
-			}
-		}
-
-		a, a:hover, a:focus {
-			background-color: transparent;
-		}
-	}
-
-	&.col2 {
-		float: right;
-		width: $header-col2-width;
-		padding-bottom: 8px;
-
-		.col-inner {
-			float: right;
-		}
-	}
-}
-
 /* Search form */
 #header-search-widget {
 	$searchform-bg: $color_primary-0;
 
 	display: flex;
 
-	#header-search-widget-inner {
+	&__inner {
 		margin-left: auto;
 
 		.search-form {
@@ -140,6 +164,16 @@ $mobile_nav-width: 18.6rem;
 				}
 			}
 		}
+
+		@media screen and (max-width: $mobile-breakpoint) {
+			& {
+				width: 100%;
+
+				#searchform {
+					flex: 1 0 0;
+				}
+			}
+		}
 	}
 }
 
@@ -147,7 +181,6 @@ $mobile_nav-width: 18.6rem;
 --------------------------------------------- */
 /* Imported (and modified) from _s's default style.scss */
 
-/* Desktop Navigation */
 .main-navigation {
   display: block;
   width: 100%;
@@ -155,7 +188,16 @@ $mobile_nav-width: 18.6rem;
   $submenu-item-color: $color_white-dark;
   $submenu-border-width: 1px;
 
+	.menu-toggle {
+		display: none;
+
+		@media screen and (max-width: $mobile-breakpoint) {
+			display: block;
+		}
+	}
+
   ul {
+		display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -164,15 +206,19 @@ $mobile_nav-width: 18.6rem;
     	display: flex;
     	text-align: center;
 
+			.submenu-toggle {
+				display: none;
+			}
+
+	    a {
+	    	margin-top: auto;
+	    	text-transform: uppercase;
+	    	padding: 0 8px;
+	    }
+
     	&:hover > ul, &:focus-within > ul {
     		display: block;
     	}
-    }
-
-    a {
-    	margin-top: auto;
-    	text-transform: uppercase;
-    	padding: 0 8px;
     }
 
     /* Sub-menus */
@@ -200,22 +246,20 @@ $mobile_nav-width: 18.6rem;
   				left: auto;
   			}
 
-  			&:last-of-type a {
-  				border-bottom-style: solid;
-  			}
   		}
 
-  		a, a:visited {
-  			margin: 0;
-  			text-transform: unset;
-  			color: $submenu-item-color;
-  			background-color: $submenu-item-bg-color;
+			a:visited {
+				margin: 0;
+				text-transform: unset;
+				color: $submenu-item-color;
 				padding: 5px;
 				box-sizing: border-box;
-				border-style: none;
-				border-color: $color_white-dark;
-				border-width: $submenu-border-width;
-				border-bottom-style: none;
+				border: $submenu-border-width none $color_white-dark;
+			}
+
+  		a {
+  			@extend :visited;
+  			background-color: $submenu-item-bg-color;
 			}
 
   		/* Sub-sub-menus */
@@ -240,68 +284,26 @@ $mobile_nav-width: 18.6rem;
   	display: inherit;
   	text-decoration: none;
   }
-}
 
-/* Mobile Navigation */
-
-@media screen and (min-width: 1201px) {
-	.menu-toggle {
-		display: none;
-	}
-
-  .main-navigation ul {
-    display: flex;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-	.site-header-inner {
-		display: block;
-		width: auto;
-	}
-
-	.site-header-col {
+	/* Mobile Nav Menu */
+	@media screen and (max-width: $mobile-breakpoint) {
+		/* #header-navbar.main-navigation */
+		display: flex;
 		margin: 0;
-		display: inline-block;
-
-		&.col1, &.col2 {
-			width: 100%;
-			float: unset;
-		}
-
-		&.col2 .col-inner {
-			display: block;
-			width: 100%;
-
-			#header-search-widget {
-				float: left;
-			}
-
-			#header-navbar-area {
-				float: right;
-			}
-		}
-	}
-
-	#header-navbar {
-		box-sizing: border-box;
-		height: 100%;
-		margin-left: 1.5rem;
-		$mobile-nav-bg: $color_primary-2;
+		$mobile-nav-bg: $color-primary-2;
 		--menu-expand-button-width: 3.2rem;
 
 		.menu-toggle {
 			position: relative;
+			height: $searchform-height;
+			width: $mobile_nav-width;
+			flex: 1 0 0;
 			color: $color_white-dark;
 			background-color: $color_primary-0;
 			padding: 0;
-			border: none;
 			border-radius: 0;
-			border-color: $color_primary-3;
-			border-width: 1px;
+			border: 1px none $color_primary-3;
 			border-bottom-style: solid;
-			height: $searchform-height;
-			width: $mobile_nav-width;
 
 			&:hover, &:focus {
 				cursor: pointer;
@@ -320,6 +322,10 @@ $mobile_nav-width: 18.6rem;
 				a {
 					width: 100%;
 					text-align: left;
+				}
+
+				.submenu-toggle {
+					display: block;
 				}
 
 				&.page_item_has_children a {
@@ -347,10 +353,10 @@ $mobile_nav-width: 18.6rem;
 			}
 		}
 	}
-
-
-
 }
+
+
+/* Default _s code, remove at ye own peril */
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,
