@@ -1,0 +1,10 @@
+.ncs4-site-margin {
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.ncs4-site-margin.no-padding {
+  padding: 0;
+}
+
+/*# sourceMappingURL=margin.css.map */
