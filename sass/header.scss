@@ -4,7 +4,7 @@
 
 $header-col1-width: 25%;
 $header-col2-width: 100% - $header-col1-width;
-$nav-submenu-width: 150px;
+$nav-submenu-width: 20.0rem;
 $searchform-height: 3.2rem;
 $mobile_nav-width: 18.6rem;
 $mobile-breakpoint: 1200px;
@@ -16,7 +16,7 @@ $mobile-breakpoint: 1200px;
 	left: 0;
 	z-index: 100;
 	width: 100%;
-	min-height: 100px;
+	min-height: 10.0rem;
 	background-color: $color_primary-2;
 
 	&__inner {
@@ -24,11 +24,6 @@ $mobile-breakpoint: 1200px;
 		display: flex;
 		width: 100%;
 		gap: 0.8rem;
-
-		@media screen and (max-width: $mobile-breakpoint) {
-			display: block;
-			width: auto;
-		}
 
 		@at-root .site-header-col {
 			display: flex;
@@ -68,19 +63,28 @@ $mobile-breakpoint: 1200px;
 			&__col2 {
 				float: right;
 				width: $header-col2-width;
-				padding-bottom: 8px;
+				padding-bottom: 1rem;
 
 				.col-inner {
 					display: flex;
+					flex: 0 0 100%;
 					flex-wrap: wrap;
+					flex-direction: row-reverse;
 					justify-content: right;
+					gap: 0.8rem;
+					column-gap: 1.6rem;
+				}
 
-					@media screen and (max-width: $mobile-breakpoint) {
+				@media screen and (max-width: $mobile-breakpoint) {
+					padding-bottom: 2.4rem;
+
+					.col-inner {
+						flex-direction: row;
 						justify-content: center;
 						gap: 0.8rem;
 
 						> * {
-							flex: 1 0 0;
+							flex: 0;
 						}
 					}
 				}
@@ -91,6 +95,7 @@ $mobile-breakpoint: 1200px;
 				margin: 0;
 
 				&__col1, &__col2 {
+					display: flex;
 					width: 100%;
 					float: unset;
 				}
@@ -110,6 +115,79 @@ $mobile-breakpoint: 1200px;
 	a:hover, a:focus {
 		background-color: $color_secondary-2;
 		color: unset;
+	}
+}
+
+/* Membership button */
+#header-membership {
+	text-align: center;
+
+	a {
+		display: block;
+		width: 15.0rem;
+		height: 100%;
+		padding-top: 2px;
+		background-color: $color_primary-2c;
+		color: $color_secondary-0c;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:hover, &:focus {
+			background-color: $color_primary-3c;
+		}
+
+		&:focus-visible {
+			background-color: $color_primary-3c;
+			outline: 2px solid $color_white-dark;
+			outline-offset: 4px;
+		}
+	}
+
+	@media screen and (max-width: $mobile-breakpoint) {
+		flex: 1 0 0;
+		justify-content: right;
+		display: flex;
+	}
+}
+
+@mixin searchIcon() {
+	background-image: url($ico_search);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: $searchform-height;
+	width: $searchform-height;
+}
+
+/* Mobile widgets */
+.header-widget-area__small {
+
+	@media screen and (min-width: $mobile-breakpoint + 0.1px) {
+		.mobile-widget {
+			display: none;
+		}
+	}
+
+	.search-bar-toggle {
+		@include searchIcon();
+		background-color: transparent;
+		border: none;
+	}
+
+	.menu-toggle {
+		position: relative;
+		height: $searchform-height;
+		flex: 0 0 $searchform-height;
+		color: $color_white-dark;
+		background-color: $color_primary-0;
+		padding: 0;
+		border-radius: 0;
+		border: 1px none $color_primary-3;
+		border-bottom-style: solid;
+
+		&:hover, &:focus {
+			cursor: pointer;
+			background-color: $color_secondary-1;
+		}
 	}
 }
 
@@ -150,18 +228,23 @@ $mobile-breakpoint: 1200px;
 			}
 
 			.search-form-submit {
+				@include searchIcon();
 				box-sizing: content-box;
-				height: $searchform-height;
-				width: $searchform-height;
 				background-color: $searchform-bg;
-				background-image: url($ico_search);
-				background-repeat: no-repeat;
-				background-size: 100%;
 				padding: 0;
 
 				&:hover {
 					cursor: pointer;
 				}
+
+				&:focus-visible {
+					outline: 2px solid $color_white-dark;
+					outline-offset: 4px;
+				}
+			}
+
+			@media screen and (max-width: $mobile-breakpoint) {
+				display: none;
 			}
 		}
 
@@ -181,20 +264,18 @@ $mobile-breakpoint: 1200px;
 --------------------------------------------- */
 /* Imported (and modified) from _s's default style.scss */
 
+@mixin expandSubmenu() {
+	display: flex;
+	flex-direction: column;
+	gap: 1px; // item sep width
+}
+
 .main-navigation {
   display: block;
   width: 100%;
   $submenu-item-bg-color: $color_primary-2;
   $submenu-item-color: $color_white-dark;
-  $submenu-border-width: 1px;
-
-	.menu-toggle {
-		display: none;
-
-		@media screen and (max-width: $mobile-breakpoint) {
-			display: block;
-		}
-	}
+	$submenu-topbar-width: 5px;
 
   ul {
 		display: flex;
@@ -217,14 +298,14 @@ $mobile-breakpoint: 1200px;
 	    }
 
     	&:hover > ul, &:focus-within > ul {
-    		display: block;
+    		@include expandSubmenu();
     	}
     }
 
     /* Sub-menus */
     ul {
     	border-color: $color-primary-2c;
-    	border-width: 5px;
+    	border-width: $submenu-topbar-width;
     	border-top-style: solid;
     	background-color: $color_white-dark;
     	width: $nav-submenu-width;
@@ -232,7 +313,6 @@ $mobile-breakpoint: 1200px;
   		float: left;
   		position: absolute;
   		top: 100%;
-  		left: -$submenu-border-width; // lineup content of menu with content of header widget
   		z-index: 99999;
   		display: none;
 
@@ -242,7 +322,7 @@ $mobile-breakpoint: 1200px;
   			width: $nav-submenu-width;
 
   			&:hover > ul, &:focus-within > ul {
-  				display: block;
+  				@include expandSubmenu();
   				left: auto;
   			}
 
@@ -254,7 +334,6 @@ $mobile-breakpoint: 1200px;
 				color: $submenu-item-color;
 				padding: 5px;
 				box-sizing: border-box;
-				border: $submenu-border-width none $color_white-dark;
 			}
 
   		a {
@@ -265,7 +344,7 @@ $mobile-breakpoint: 1200px;
   		/* Sub-sub-menus */
   		ul {
   			position: absolute;
-				top: 0;
+				top: -$submenu-topbar-width;
 				right: -$nav-submenu-width;
   		}
     }
@@ -292,24 +371,6 @@ $mobile-breakpoint: 1200px;
 		margin: 0;
 		$mobile-nav-bg: $color-primary-2;
 		--menu-expand-button-width: 3.2rem;
-
-		.menu-toggle {
-			position: relative;
-			height: $searchform-height;
-			width: $mobile_nav-width;
-			flex: 1 0 0;
-			color: $color_white-dark;
-			background-color: $color_primary-0;
-			padding: 0;
-			border-radius: 0;
-			border: 1px none $color_primary-3;
-			border-bottom-style: solid;
-
-			&:hover, &:focus {
-				cursor: pointer;
-				background-color: $color_secondary-1;
-			}
-		}
 
 		ul {
 			position: absolute;
