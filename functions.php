@@ -23,6 +23,9 @@ add_filter('upload_mimes', 'cc_mime_types');
 // Register styles and scripts
 function ncs4_enqueue_custom_styles() {
 	if (!is_admin()) {
+		wp_enqueue_style( // Default WP style which enables dashicons
+			'dashicons',
+		);
 		wp_enqueue_style(
 			'style',
 			get_stylesheet_uri(),
@@ -179,6 +182,7 @@ function ncs4_pro_scripts() {
 	wp_style_add_data( 'ncs4-pro-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'ncs4-pro-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'ncs4-pro-search', get_template_directory_uri() . '/js/searchbar.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
