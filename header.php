@@ -54,16 +54,18 @@
 							<!-- Connect Link -->
 							<a href="https://connect.ncs4.usm.edu/">Membership</a>
 						</div><!-- #header-membership-->
-						<div id="mobile_search-bar-toggle" class="mobile-widget">
-							<button class="search-bar-toggle" aria-controls="header-search-bar" aria-expanded="false">
-								<span class="screen-reader-text">Open search bar</span>
-							</button><!-- .search-bar-toggle -->
-						</div><!-- #mobile_search-bar-toggle -->
-						<div id="mobile_navbar-toggle" class="mobile-widget">
-							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-								<span class="dashicons dashicons-menu"/>
-							</button>
-						</div><!-- #mobile_navbar-toggle-->
+						<div id="mobile_header-widgets">
+							<div id="mobile_search-bar-toggle" class="mobile-widget">
+								<button class="search-bar-toggle" aria-controls="header-search-bar" aria-expanded="false">
+									<span class="screen-reader-text">Open search bar</span>
+								</button><!-- .search-bar-toggle -->
+							</div><!-- #mobile_search-bar-toggle -->
+							<div id="mobile_navbar-toggle" class="mobile-widget">
+								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+									<span class="dashicons dashicons-menu"/>
+								</button>
+							</div><!-- #mobile_navbar-toggle -->
+						</div><!-- #mobile_header-widgets -->
 					</div><!-- .header-widget-area__small -->
 					<!-- Search bar widget -->
 					<div id="header-search-widget" class="header-widget-area widget-area">
