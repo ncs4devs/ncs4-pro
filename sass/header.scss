@@ -147,7 +147,6 @@ $margin-width: 3.2rem;
 
 	/* Membership button */
 	@at-root #header-membership {
-		width: 11rem;
 		height: 100%;
 		border-bottom: 1px solid transparent; /* Same height as inner search bar */
 
@@ -157,6 +156,7 @@ $margin-width: 3.2rem;
 			justify-content: center;
 			width: 100%;
 			height: 100%;
+			padding: 0 0.4rem;
 			background-color: $color_primary-2c;
 			color: $color_secondary-0c;
 			text-decoration: none;
@@ -336,6 +336,7 @@ $margin-width: 3.2rem;
 
 #header-navbar-area {
 	margin-top: auto;
+	width: 100%;
 }
 
 @media screen and (max-width: $mobile-breakpoint) {
@@ -351,7 +352,8 @@ $margin-width: 3.2rem;
 }
 
 .main-navigation {
-  display: block;
+  display: flex;
+	justify-content: right;
   width: 100%;
   $submenu-item-bg-color: $color_primary-2;
   $submenu-item-color: $color_white-dark;
@@ -480,6 +482,7 @@ $margin-width: 3.2rem;
 
 	@media screen and (max-width: $mobile-breakpoint) {
 		/* #header-navbar.main-navigation */
+		display: block;
 		margin: 0;
 		$mobile-nav-bg: $color-primary-2;
 		--menu-expand-button-width: 3.2rem;
