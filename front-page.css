@@ -17,37 +17,50 @@ body {
   background-color: #171717;
 }
 .hero-container .ncs4-site-margin {
-  padding: 0 10%;
   position: relative;
+  max-width: calc(85vh / 9 * 16);
 }
 .hero-overlay {
   display: flex;
   position: absolute;
   top: 0;
+  right: 0;
   bottom: 0;
-  background: linear-gradient(-70deg, transparent 49.95%, rgba(23, 23, 23, 0.6) 50.05%);
+  left: 0;
+  padding: inherit;
+}
+.hero-overlay > div {
+  position: relative;
+  width: 50%;
+  background-color: rgba(23, 23, 23, 0.6);
+}
+.hero-overlay > div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  width: calc(100% / 2.7474774195);
+  shape-outside: polygon(0 0, 100% 0, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  background: inherit;
 }
 .hero-text {
   color: #f4f4f4;
   flex: 0 0 50%;
   padding-left: 2%;
 }
-.hero-text__header {
-  width: 60%;
-}
 .hero-text__header h2 {
   margin-top: 0.8em;
   margin-bottom: 0.4em;
   font-style: italic;
   text-transform: uppercase;
-  font-size: clamp(10px, 2.9vw, 4.8rem);
-}
-.hero-text__paragraph {
-  width: 40%;
+  font-size: clamp(10px, min(5vh, 3vw), 4.8rem);
 }
 .hero-text__paragraph p {
   margin: 0;
-  font-size: clamp(8px, 2.4vw, 2.4rem);
+  font-size: clamp(8px, min(4vh, 2.5vw), 2.4rem);
 }
 
 .hero-video {
