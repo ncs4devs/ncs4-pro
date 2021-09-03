@@ -1,0 +1,53 @@
+@import 'abstracts/variables/colors';
+
+#colophon.site-footer {
+
+  @at-root #footer-widget-area {
+    padding: 6rem 3rem 3rem;
+    color: $color_white-dark;
+    background-color: $color_primary-2;
+
+    img {
+      margin-bottom: 3rem;
+    }
+
+    h4 {
+      margin: 0;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+
+      &.no-caps {
+        text-transform: unset;
+      }
+    }
+
+    p {
+      margin-bottom: 2.4rem;
+    }
+
+    &__inner {
+      display: flex;
+      column-gap: 6.4rem;
+
+      .widget-area {
+        color: inherit;
+        flex: 1 0 0;
+
+        &__1 {
+
+        }
+      }
+    }
+  }/* #footer-widget-area */
+
+  @at-root #footer-copyright-area {
+    padding: 1.6rem 0;
+    color: $color_white-dark;
+    background-color: $color_primary-0;
+    border-top: 1px solid $color_secondary-2c;
+
+    p {
+      margin: 0;
+    }
+  }
+}/* #colophon.site-footer */

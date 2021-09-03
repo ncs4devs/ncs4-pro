@@ -1,0 +1,50 @@
+/* These colors are kept for compatibility reasons and should not be used */
+/* These colors may be used */
+/* Colors are swapped around to be in order from darkest to lightest */
+/* Navy */
+/* Blue */
+/* Yellow */
+/* Grey */
+#colophon.site-footer {
+  /* #footer-widget-area */
+}
+#footer-widget-area {
+  padding: 6rem 3rem 3rem;
+  color: #e6e6e6;
+  background-color: #273249;
+}
+#footer-widget-area img {
+  margin-bottom: 3rem;
+}
+#footer-widget-area h4 {
+  margin: 0;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+#footer-widget-area h4.no-caps {
+  text-transform: unset;
+}
+#footer-widget-area p {
+  margin-bottom: 2.4rem;
+}
+#footer-widget-area__inner {
+  display: flex;
+  column-gap: 6.4rem;
+}
+#footer-widget-area__inner .widget-area {
+  color: inherit;
+  flex: 1 0 0;
+}
+#footer-copyright-area {
+  padding: 1.6rem 0;
+  color: #e6e6e6;
+  background-color: #0B152B;
+  border-top: 1px solid #555555;
+}
+#footer-copyright-area p {
+  margin: 0;
+}
+
+/* #colophon.site-footer */
+
+/*# sourceMappingURL=footer.css.map */

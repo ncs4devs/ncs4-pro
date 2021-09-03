@@ -39,6 +39,12 @@ function ncs4_enqueue_custom_styles() {
 			filemtime( get_stylesheet_directory() . '/header.css' ),
 		);
 		wp_enqueue_style(
+			'footer',
+			get_template_directory_uri() . '/footer.css',
+			array(),
+			filemtime( get_stylesheet_directory() . '/footer.css' ),
+		);
+		wp_enqueue_style(
 			'margin',
 			get_template_directory_uri() . '/margin.css',
 			array(),
