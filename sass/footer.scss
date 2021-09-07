@@ -1,11 +1,45 @@
 @import 'abstracts/variables/colors';
 
 #colophon.site-footer {
+  $side-padding: 3.2rem;
+  $top-padding: 6.4rem;
+
+  a {
+    color: $color_link-2;
+    text-decoration: none;
+
+    &:focus {
+      color: $color_link-3;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      @extend :focus;
+      cursor: pointer;
+    }
+
+    &:focus-visible {
+      color: $color_link-3;
+      outline: 1px solid $color_white-dark;
+    }
+  }
+
+  .quick-links--social-media a:focus-visible {
+    outline-width: 3px;
+    outline-offset: 5px;
+  }
+
+  .widget-text-area {
+
+    h1, h2, h3, h4, h5, h6, p, li {
+      max-width: 40ch;
+    }
+  }
 
   @at-root #footer-widget-area {
-    padding: 6rem 3rem 3rem;
+    padding: $top-padding $side-padding $side-padding;
     color: $color_white-dark;
-    background-color: $color_primary-2;
+    background-color: $color_primary-1;
 
     img {
       margin-bottom: 3rem;
@@ -41,13 +75,73 @@
   }/* #footer-widget-area */
 
   @at-root #footer-copyright-area {
-    padding: 1.6rem 0;
+    padding: 0.8rem $side-padding 0.8rem;
     color: $color_white-dark;
     background-color: $color_primary-0;
     border-top: 1px solid $color_secondary-2c;
 
     p {
       margin: 0;
+    }
+  }
+
+  .post-area {
+    margin: 0 0 3.2rem 0;
+
+    ul {
+      $marker-size: 1.6rem;
+      padding: 0 0 0 $marker-size;
+      margin: 0 0 1.6rem 0;
+
+      li {
+        padding: 0 0 0 0.8rem;
+
+        &::marker {
+          content: "\f345"; /* right arrow alt2 */
+          font-family: dashicons;
+          font-size: $marker-size;
+        }
+      }
+    }
+  }
+
+  .quick-links {
+
+    .links {
+      line-height: 1.9;
+    }
+
+    &--social-media {
+      $icon-width: 6.4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, $icon-width);
+      gap: 1.6rem;
+
+      > * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $color_secondary-3c;
+        height: $icon-width;
+        transition: background-color 0.1s ease-in-out;
+
+        &:focus {
+          background-color: $color_secondary-2c;
+        }
+
+        &:hover {
+          @extend :focus;
+          cursor: pointer;
+        }
+      }
+
+      svg {
+        width: $icon-width / 2;
+        height: $icon-width / 2;
+        stroke: $color_white-dark;
+        fill: $color_white-dark;
+      }
     }
   }
 }/* #colophon.site-footer */

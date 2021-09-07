@@ -4,6 +4,8 @@
  *
  * Contains the closing of the #content div and all content after.
  *
+ * Requires the WordPress plugin "Simple Social Icons"
+ *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package NCS4_Pro
@@ -41,6 +43,21 @@
 	 	<a class="ncs4-archive-link" href="'. get_category_link(get_cat_ID($category)) .'">
 			View All
 		</a>';
+ }
+
+ function createSocialIcon($name, $url) {
+   $n = strtolower($name);
+   echo '
+    <a href="'. $url .'" target="_blank" rel="noopener noreferrer" class="ssi-'.
+      $n .'" title="'. $name .'">
+      <svg class="social-'. $n .'" role="img" aria-labelledby="social-'.
+        $n .'-2" viewbox="0 0 32 32">
+        <title id="social-'. $n .'-2">'. $name .'</title>
+        <use xlink:href="/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-'.
+        $n .'"></use>
+      </svg>
+    </a>
+   ';
  }
 
 ?>
@@ -101,7 +118,37 @@
 					</section><!-- .widget-text-area.recent-posts -->
 				</div><!-- .widget-area__2 -->
 				<div class="widget-area widget-area__3">
-
+          <div class="widget-text-area quick-links">
+            <section class="quick-links--directory">
+              <h4>Quick Links</h4>
+              <p class="links">
+                <a href="/about/">About NCS⁴</a><br>
+                <a href="/industry-engagement/sponsorship-opportunities/">
+                  Advertise and Sponsor</a><br>
+                <a href="/membership/">Become a Member</a><br>
+                <a href="/resources/best-practices/">
+                  Best Practices Guides</a><br>
+                <a href="/training/cssp/">CSSP Certification</a><br>
+                <a href="/training/dhs-fema-courses">DHS/FEMA Training</a><br>
+                <a href="/resources/newsletter/">
+                  Subscribe to the Newsletter</a><br>
+                <a href="/about/contact-us/">Contact Us</a>
+                <br>
+                <br>
+                Site Directory (Coming soon!)
+                <br>
+                Privacy Policy (Coming soon!)
+              </p><!-- .links -->
+            </section><!-- .quick-links--directory -->
+            <section class="quick-links--social-media">
+              <?php
+                createSocialIcon("Facebook", "https://www.facebook.com/usmncs4");
+                createSocialIcon("LinkedIn", "https://www.linkedin.com/in/ncs4usm");
+                createSocialIcon("Twitter", "https://twitter.com/ncs4usm");
+                createSocialIcon("YouTube", "https://www.youtube.com/channel/UCUvonlCDvCxaoWw7IpO1Hiw");
+              ?>
+            </section><!-- .quick-links--social-media -->
+          </div><!-- .quick-links -->
 				</div><!-- .widget-area__3 -->
 			</div><!-- #footer-widget-area__inner -->
 		</div><!-- #footer-widget-area -->

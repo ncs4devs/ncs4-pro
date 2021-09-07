@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* These colors are kept for compatibility reasons and should not be used */
 /* These colors may be used */
 /* Colors are swapped around to be in order from darkest to lightest */
@@ -5,13 +6,36 @@
 /* Blue */
 /* Yellow */
 /* Grey */
+/* Links */
 #colophon.site-footer {
   /* #footer-widget-area */
 }
+#colophon.site-footer a {
+  color: #1b8bff;
+  text-decoration: none;
+}
+#colophon.site-footer a:focus, #colophon.site-footer .quick-links--social-media > a:hover, #colophon.site-footer a:hover {
+  color: #53a6fd;
+  text-decoration: underline;
+}
+#colophon.site-footer a:hover {
+  cursor: pointer;
+}
+#colophon.site-footer a:focus-visible {
+  color: #53a6fd;
+  outline: 1px solid #e6e6e6;
+}
+#colophon.site-footer .quick-links--social-media a:focus-visible {
+  outline-width: 3px;
+  outline-offset: 5px;
+}
+#colophon.site-footer .widget-text-area h1, #colophon.site-footer .widget-text-area h2, #colophon.site-footer .widget-text-area h3, #colophon.site-footer .widget-text-area h4, #colophon.site-footer .widget-text-area h5, #colophon.site-footer .widget-text-area h6, #colophon.site-footer .widget-text-area p, #colophon.site-footer .widget-text-area li {
+  max-width: 40ch;
+}
 #footer-widget-area {
-  padding: 6rem 3rem 3rem;
+  padding: 6.4rem 3.2rem 3.2rem;
   color: #e6e6e6;
-  background-color: #273249;
+  background-color: #18243E;
 }
 #footer-widget-area img {
   margin-bottom: 3rem;
@@ -36,13 +60,59 @@
   flex: 1 0 0;
 }
 #footer-copyright-area {
-  padding: 1.6rem 0;
+  padding: 0.8rem 3.2rem 0.8rem;
   color: #e6e6e6;
   background-color: #0B152B;
   border-top: 1px solid #555555;
 }
 #footer-copyright-area p {
   margin: 0;
+}
+
+#colophon.site-footer .post-area {
+  margin: 0 0 3.2rem 0;
+}
+#colophon.site-footer .post-area ul {
+  padding: 0 0 0 1.6rem;
+  margin: 0 0 1.6rem 0;
+}
+#colophon.site-footer .post-area ul li {
+  padding: 0 0 0 0.8rem;
+}
+#colophon.site-footer .post-area ul li::marker {
+  content: "";
+  /* right arrow alt2 */
+  font-family: dashicons;
+  font-size: 1.6rem;
+}
+#colophon.site-footer .quick-links .links {
+  line-height: 1.9;
+}
+#colophon.site-footer .quick-links--social-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 6.4rem);
+  gap: 1.6rem;
+}
+#colophon.site-footer .quick-links--social-media > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #868686;
+  height: 6.4rem;
+  transition: background-color 0.1s ease-in-out;
+}
+#colophon.site-footer .quick-links--social-media > *:focus, #colophon.site-footer .quick-links--social-media > :hover {
+  background-color: #555555;
+}
+#colophon.site-footer .quick-links--social-media > *:hover {
+  cursor: pointer;
+}
+#colophon.site-footer .quick-links--social-media svg {
+  width: 3.2rem;
+  height: 3.2rem;
+  stroke: #e6e6e6;
+  fill: #e6e6e6;
 }
 
 /* #colophon.site-footer */

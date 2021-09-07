@@ -4,7 +4,6 @@
 @import 'abstracts/variables/structure';
 
 $overlay-color: color.scale($color_secondary-1c, $alpha: -40%);
-$hero-width: 80%; /* Minimum safe tested value: 80% */
 
 body {
   background-color: $color_white;

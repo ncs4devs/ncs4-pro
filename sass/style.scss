@@ -569,9 +569,9 @@ textarea {
 .sticky {
   display: block; }
 
-.post,
-.page {
-  margin: 0 0 1.5em; }
+.post, .page {
+  margin: 0; 
+}
 
 .updated:not(.published) {
   display: none; }
