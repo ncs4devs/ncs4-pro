@@ -1,0 +1,87 @@
+@use 'sass:list';
+@import 'abstracts/variables/colors';
+
+$navies: $color_primary-0, $color_primary-1, $color_primary-2, $color_primary-3, $color_primary-4;
+$dark-blues: $color_secondary-0, $color_secondary-1, $color_secondary-2, $color_secondary-3, $color_secondary-4;
+$yellows: $color_primary-0c, $color_primary-1c, $color_primary-2c, $color_primary-3c, $color_primary-4c;
+$greys: $color_secondary-0c, $color_secondary-1c, $color_secondary-2c, $color_secondary-3c, $color_secondary-4c;
+$links: $color_link-0, $color_link-1, $color_link-2, $color_link-3, $color_link-4;
+
+@mixin colorProp($slug, $color) {
+  .has-#{$slug} {
+    &-color {
+      color: $color;
+    }
+    &-background-color {
+      background-color: $color;
+    }
+  }
+}
+
+@mixin colorProps($id, $list, $c) {
+  @each $color in $list {
+    @include colorProp(#{$id}-#{list.index($list, $color) - 1}#{$c}, $color);
+  }
+}
+
+/*
+  The second-most generic stylesheet (besides style.css, which isn't modified
+  if it can be avoided)
+*/
+
+h1 {
+  font-size: 6.4rem;
+}
+
+h2 {
+  font-size: 5.6rem;
+}
+
+h3 {
+  font-size: 4.8rem;
+}
+
+h4 {
+  font-size: 4.0rem;
+}
+
+h5 {
+  font-size: 3.2rem;
+}
+
+h6 {
+  font-size: 2.4rem;
+}
+
+p {
+  font-size: 2.0rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+
+  &.no-text-transform {
+    text-transform: none;
+  }
+
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0.25em 0;
+}
+
+body {
+  color: $color_secondary-2c;
+}
+
+header.entry-header {
+  display: none;
+}
+
+/* Color Palette Styles */
+@include colorProps("primary", $navies, "");
+@include colorProps("secondary", $dark-blues, "");
+@include colorProps("primary", $yellows, "-c");
+@include colorProps("secondary", $greys, "-c");
+@include colorProp("white", $color_white);
+@include colorProp("white-dark", $color_white-dark);

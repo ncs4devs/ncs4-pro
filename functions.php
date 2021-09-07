@@ -33,6 +33,12 @@ function ncs4_enqueue_custom_styles() {
 			filemtime( get_stylesheet_directory() . '/style.css' ),
 		);
 		wp_enqueue_style(
+			'index',
+			get_template_directory_uri() . '/index.css',
+			array(),
+			filemtime( get_stylesheet_directory() . '/index.css' ),
+		);
+		wp_enqueue_style(
 			'header',
 			get_template_directory_uri() . '/header.css',
 			array(),
@@ -72,6 +78,156 @@ if ( ! function_exists( 'ncs4_pro_setup' ) ) :
 		 * to change 'ncs4-pro' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'ncs4-pro', get_template_directory() . '/languages' );
+
+		// Add custom color palette
+		add_theme_support( 'editor-color-palette', array(
+			// Navy
+			array(
+				'name'	=>  'Navy 0',
+				'slug'	=>  'primary-0',
+				'color'	=>  '#0b152b',
+			),
+			array(
+				'name'	=>	'Navy 1',
+				'slug'	=>	'primary-1',
+				'color'	=>	'#18243e',
+			),
+			array(
+				'name'	=>	'Navy 2 (Base Tone)',
+				'slug'	=>	'primary-2',
+				'color'	=>	'#273249',
+			),
+			array(
+				'name'	=>	'Navy 3',
+				'slug'	=>	'primary-3',
+				'color'	=>	'#3e4a64',
+			),
+			array(
+				'name'	=>	'Navy 4',
+				'slug'	=>	'primary-4',
+				'color'	=>	'#59657e',
+			),
+			// Dark Blue
+			array(
+				'name'	=>	'Dark Blue 0',
+				'slug'	=>	'secondary-0',
+				'color'	=>	'#002c5d',
+			),
+			array(
+				'name'	=>	'Dark Blue 1',
+				'slug'	=>	'secondary-1',
+				'color'	=>	'#003b7c',
+			),
+			array(
+				'name'	=>	'Dark Blue 2 (Base Tone)',
+				'slug'	=>	'secondary-2',
+				'color'	=>	'#00499A',
+			),
+			array(
+				'name'	=>	'Dark Blue 3',
+				'slug'	=>	'secondary-3',
+				'color'	=>	'#0061cd',
+			),
+			array(
+				'name'	=>	'Dark Blue 4',
+				'slug'	=>	'secondary-4',
+				'color'	=>	'#097bfb',
+			),
+			// Yellow
+			array(
+				'name'	=>	'Yellow 0',
+				'slug'	=>	'primary-0c',
+				'color'	=>	'#b18800',
+			),
+			array(
+				'name'	=>	'Yellow 1',
+				'slug'	=>	'primary-1c',
+				'color'	=>	'#e4b005',
+			),
+			array(
+				'name'	=>	'Yellow 2 (Base Tone)',
+				'slug'	=>	'primary-2c',
+				'color'	=>	'#ffce2f',
+			),
+			array(
+				'name'	=>	'Yellow 3',
+				'slug'	=>	'primary-3c',
+				'color'	=>	'#ffd755',
+			),
+			array(
+				'name'	=>	'Yellow 4',
+				'slug'	=>	'primary-4c',
+				'color'	=>	'#ffe17f',
+			),
+			// Grey
+			array(
+				'name'	=>	'Grey 0',
+				'slug'	=>	'secondary-0c',
+				'color'	=>	'#040303',
+			),
+			array(
+				'name'	=>	'Grey 1',
+				'slug'	=>	'secondary-1c',
+				'color'	=>	'#171717',
+			),
+			array(
+				'name'	=>	'Grey 2 (Base Tone)',
+				'slug'	=>	'secondary-2c',
+				'color'	=>	'#555',
+			),
+			array(
+				'name'	=>	'Grey 3',
+				'slug'	=>	'secondary-3c',
+				'color'	=>	'#868686',
+			),
+			array(
+				'name'	=>	'Grey 4',
+				'slug'	=>	'secondary-4c',
+				'color'	=>	'#b6b5b5',
+			),
+			// Links
+			array(
+				'name'	=>	'Light Blue 0',
+				'slug'	=>	'link-0',
+				'color'	=>	'#0051a5',
+			),
+			array(
+				'name'	=>	'Light Blue 1',
+				'slug'	=>	'link-1',
+				'color'	=>	'#037fff',
+			),
+			array(
+				'name'	=>	'Light Blue 2 (Base Tone)',
+				'slug'	=>	'link-2',
+				'color'	=>	'#1b8bff',
+			),
+			array(
+				'name'	=>	'Light Blue 3',
+				'slug'	=>	'link-3',
+				'color'	=>	'#53a6fd',
+			),
+			array(
+				'name'	=>	'Light Blue 4',
+				'slug'	=>	'link-4',
+				'color'	=>	'#95c5f6',
+			),
+			// Whites
+			array(
+				'name'	=>	'Dark White (Text)',
+				'slug'	=>	'white-dark',
+				'color'	=>	'#e6e6e6',
+			),
+			array(
+				'name'	=>	'White (Backgrounds)',
+				'slug'	=>	'white',
+				'color'	=>	'#f4f4f4',
+			),
+		));
+
+		// No custom colors. Bad editor >:(
+		// ( More seriously, custom colors are disabled so that we don't end up
+		// with 100 versions of "blue" )
+		add_theme_support( 'disable-custom-colors' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
