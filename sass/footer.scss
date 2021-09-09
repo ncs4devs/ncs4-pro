@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import 'abstracts/variables/colors';
 
 #colophon.site-footer {
@@ -137,8 +138,8 @@
       }
 
       svg {
-        width: $icon-width / 2;
-        height: $icon-width / 2;
+        width: math.div($icon-width, 2);
+        height: math.div($icon-width, 2);
         stroke: $color_white-dark;
         fill: $color_white-dark;
       }
