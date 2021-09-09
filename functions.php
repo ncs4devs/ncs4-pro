@@ -246,6 +246,25 @@ if ( ! function_exists( 'ncs4_pro_setup' ) ) :
 		// with 100 versions of "blue" )
 		add_theme_support( 'disable-custom-colors' );
 
+		add_theme_support( 'editor-gradient-presets', array(
+			array(
+				'name'			=>	'Dark Blue to Black',
+				'slug'			=>	'secondary-1_secondary-0_secondary-0c',
+				'gradient'	=>	'linear-gradient(0deg, #003b7c 0%, #002c5d 22%, #040303 100%)',
+			),
+			array(
+				'name'			=>	'Dark Blue to Mid Blue',
+				'slug'			=>	'secondary-1_secondary-4',
+				'gradient'	=>	'linear-gradient(0deg, #003b7c 0%, #097bfb 100%)',
+			),
+		));
+
+		// Same reason for disabling custom colors.
+		// However, it might be worth it to re-enable this and just tell people
+		// not to change the stops, so that they can freely modify the angle
+		// Alternatively, a free preset angles and some InspectorControls could do it
+		add_theme_support( 'disable-custom-gradients' );
+
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
