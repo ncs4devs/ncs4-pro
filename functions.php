@@ -20,7 +20,7 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
-// Register styles and scripts
+// Register styles
 function ncs4_enqueue_custom_styles() {
 	if (!is_admin()) {
 		wp_enqueue_style( // Default WP style which enables dashicons
@@ -31,6 +31,12 @@ function ncs4_enqueue_custom_styles() {
 			get_stylesheet_uri(),
 			array(),
 			filemtime( get_stylesheet_directory() . '/style.css' ),
+		);
+		wp_enqueue_style(
+			'color-palette',
+			get_template_directory_uri() . '/generic/color-palette.css',
+			array(),
+			filemtime( get_stylesheet_directory() . '/generic/color-palette.css' ),
 		);
 		wp_enqueue_style(
 			'index',
@@ -60,6 +66,17 @@ function ncs4_enqueue_custom_styles() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ncs4_enqueue_custom_styles', 11);
+
+// Register editor styles
+function ncs4_enqueue_custom_editor_styles() {
+	wp_enqueue_style(
+		'color-palette',
+		get_template_directory_uri() . '/generic/color-palette.css',
+		array(),
+		filemtime( get_stylesheet_directory() . '/generic/color-palette.css' ),
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'ncs4_enqueue_custom_editor_styles');
 
 
 if ( ! function_exists( 'ncs4_pro_setup' ) ) :
