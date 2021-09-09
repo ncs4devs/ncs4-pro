@@ -113,7 +113,7 @@ body {
     background-color: $color_primary-1;
 
     &__gradient {
-      background: linear-gradient(0, $color_secondary-1 0%, $color_secondary-0 22%, $color_secondary-0c 100%);
+      background: linear-gradient(0deg, $color_secondary-1 0%, $color_secondary-0 22%, $color_secondary-0c 100%);
     }
 
     h3 {

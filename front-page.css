@@ -94,7 +94,7 @@ body {
   background-color: #18243E;
 }
 .banner-navy__gradient {
-  background: linear-gradient(0, #003B7C 0%, #002C5D 22%, #040303 100%);
+  background: linear-gradient(0deg, #003B7C 0%, #002C5D 22%, #040303 100%);
 }
 .banner-navy h3 {
   color: #FFCE2F;
