@@ -32,9 +32,13 @@ h4, h5, h6 {
 
 p {
   font-size: 2.1rem;
-  margin: 0 0 2.4rem 0;
+  margin: 0;
   line-height: 1.6em;
   max-width: 80ch;
+
+  + p {
+    margin-top: 2.4rem;
+  }
 }
 
 em, strong {
@@ -47,4 +51,49 @@ body {
 
 header.entry-header {
   display: none;
+}
+
+/* Wordpress Block Stylings */
+
+.wp-block-embed.is-type-video {
+  margin: 1.6rem 0 !important; /* WP uses margin: auto !important */
+
+  .wp-block-embed__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Utility classes */
+
+.no-margin {
+  margin: 0;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.no-margin-right {
+  margin-right: 0;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.no-margin-left {
+  margin-left: 0;
+}
+
+
+.equal-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+
+  > * {
+    flex: 0 0 auto;
+  }
 }
