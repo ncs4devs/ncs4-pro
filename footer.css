@@ -32,6 +32,10 @@
 #colophon.site-footer .widget-text-area h1, #colophon.site-footer .widget-text-area h2, #colophon.site-footer .widget-text-area h3, #colophon.site-footer .widget-text-area h4, #colophon.site-footer .widget-text-area h5, #colophon.site-footer .widget-text-area h6, #colophon.site-footer .widget-text-area p, #colophon.site-footer .widget-text-area li {
   max-width: 40ch;
 }
+#colophon.site-footer .widget-text-area h1, #colophon.site-footer .widget-text-area h1 a, #colophon.site-footer .widget-text-area h2, #colophon.site-footer .widget-text-area h2 a, #colophon.site-footer .widget-text-area h3, #colophon.site-footer .widget-text-area h3 a, #colophon.site-footer .widget-text-area h4, #colophon.site-footer .widget-text-area h4 a, #colophon.site-footer .widget-text-area h5, #colophon.site-footer .widget-text-area h5 a, #colophon.site-footer .widget-text-area h6, #colophon.site-footer .widget-text-area h6 a, #colophon.site-footer .widget-text-area p, #colophon.site-footer .widget-text-area p a, #colophon.site-footer .widget-text-area li, #colophon.site-footer .widget-text-area li a {
+  font-size: inherit;
+  font-style: normal;
+}
 #footer-widget-area {
   padding: 6.4rem 3.2rem 3.2rem;
   color: #e6e6e6;
