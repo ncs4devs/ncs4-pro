@@ -8,4 +8,8 @@ $max-width: 1720px;
   &.no-padding {
     padding: 0;
   }
+
+  &__size-small {
+    max-width: 1000px;
+  }
 }

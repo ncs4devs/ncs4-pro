@@ -6,5 +6,8 @@
 .ncs4-site-margin.no-padding {
   padding: 0;
 }
+.ncs4-site-margin__size-small {
+  max-width: 1000px;
+}
 
 /*# sourceMappingURL=margin.css.map */
