@@ -41,7 +41,23 @@ p + p {
   margin-top: 2.4rem;
 }
 
-em, strong {
+a, a:visited {
+  color: #0061CD;
+  text-decoration: none;
+}
+a:focus, a:hover, a:visited:hover, a:visited:focus {
+  color: #00499A;
+  text-decoration: underline;
+}
+a:hover, a:visited:hover {
+  cursor: pointer;
+}
+a:focus-visible, a:visited:focus-visible {
+  outline: 2px solid #00499A;
+  outline-offset: 0.2em;
+}
+
+a, em, strong, span {
   font-size: inherit;
 }
 
