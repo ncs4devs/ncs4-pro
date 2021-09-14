@@ -9,8 +9,8 @@
 
 get_header();
 ?>
-
-	<main id="primary" class="site-main">
+	<style><?php include get_stylesheet_directory() . '/search.css'; ?></style>
+	<main id="primary" class="site-main ncs4-site-margin ncs4-site-margin__size-small">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -18,7 +18,7 @@ get_header();
 				<h1 class="page-title">
 					<?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'ncs4-pro' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Search Results for: &ldquo;%s&rdquo;', 'ncs4-pro' ), '<span>' . get_search_query() . '</span>' );
 					?>
 				</h1>
 			</header><!-- .page-header -->
@@ -49,5 +49,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
