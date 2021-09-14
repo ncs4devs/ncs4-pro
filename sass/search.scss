@@ -1,0 +1,32 @@
+@import 'abstracts/variables/colors';
+
+header.entry-header {
+  display: block;
+}
+
+.entry-title {
+
+  a {
+    text-decoration: underline;
+    color: $color_secondary-2c;
+
+    &:focus {
+      color: $color_secondary-1c;
+    }
+
+    &:hover {
+      @extend :focus;
+      cursor: pointer;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color_link-2;
+      outline-offset: 0.2em;
+    }
+
+  }
+}
+
+strong.search-highlight {
+  background-color: $color_primary-2c;
+}

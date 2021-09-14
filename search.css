@@ -1,0 +1,32 @@
+/* These colors are kept for compatibility reasons and should not be used */
+/* These colors may be used */
+/* Colors are swapped around to be in order from darkest to lightest */
+/* Navy */
+/* Dark Blue */
+/* Yellow */
+/* Grey */
+/* Links */
+header.entry-header {
+  display: block;
+}
+
+.entry-title a {
+  text-decoration: underline;
+  color: #555555;
+}
+.entry-title a:focus, .entry-title a:hover {
+  color: #171717;
+}
+.entry-title a:hover {
+  cursor: pointer;
+}
+.entry-title a:focus-visible {
+  outline: 2px solid #1b8bff;
+  outline-offset: 0.2em;
+}
+
+strong.search-highlight {
+  background-color: #FFCE2F;
+}
+
+/*# sourceMappingURL=search.css.map */
