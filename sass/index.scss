@@ -41,7 +41,30 @@ p {
   }
 }
 
-em, strong {
+a, a:visited {
+  $link-main: $color_secondary-3;
+  $link-accent: $color_secondary-2;
+
+  color: $link-main;
+  text-decoration: none;
+
+  &:focus {
+    color: $link-accent;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    @extend :focus;
+    cursor: pointer;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $link-accent;
+    outline-offset: 0.2em;
+  }
+}
+
+a, em, strong, span {
   font-size: inherit;
 }
 
