@@ -58,6 +58,8 @@
 #footer-widget-area__inner {
   display: flex;
   column-gap: 6.4rem;
+  row-gap: 3.2rem;
+  flex-wrap: wrap;
 }
 #footer-widget-area__inner .widget-area {
   color: inherit;

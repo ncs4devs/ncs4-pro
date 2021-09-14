@@ -68,6 +68,8 @@
     &__inner {
       display: flex;
       column-gap: 6.4rem;
+      row-gap: 3.2rem;
+      flex-wrap: wrap;
 
       .widget-area {
         color: inherit;
