@@ -499,6 +499,7 @@ input[type="submit"] {
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
+    cursor: pointer;
     border-color: #ccc #bbb #aaa; }
   button:active, button:focus,
   input[type="button"]:active,
@@ -570,7 +571,7 @@ textarea {
   display: block; }
 
 .post, .page {
-  margin: 0; 
+  margin: 0;
 }
 
 .updated:not(.published) {
