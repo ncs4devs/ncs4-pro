@@ -79,6 +79,33 @@ header.entry-header {
   justify-content: center;
 }
 
+.wp-block-embed-issuu {
+  --height: 90vh;
+  width: 100%;
+  max-width: calc($aspect-ratio * var(--height));
+}
+.wp-block-embed-issuu .issuuembed {
+  position: relative;
+  max-width: calc($aspect-ratio * var(--height));
+  max-height: var(--height);
+  /* Inline style overrides */
+  width: auto !important;
+  height: auto !important;
+  /* Aspect ratio hack */
+}
+.wp-block-embed-issuu .issuuembed::after {
+  content: "";
+  display: block;
+  padding-top: 64.7058823529%;
+}
+.wp-block-embed-issuu iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Utility classes */
 .no-margin {
   margin: 0;
