@@ -1,0 +1,61 @@
+/* Turns the top admin bar into a sidebar */
+html {
+  margin-top: 0 !important;
+}
+
+#wpadminbar {
+  position: fixed;
+  top: 30%;
+  left: 97%;
+  min-width: unset;
+  width: 32px;
+  height: auto;
+  /* Center icons */
+}
+#wpadminbar * {
+  width: 100%;
+}
+#wpadminbar ul {
+  display: flex;
+  flex-direction: column;
+}
+#wpadminbar li {
+  min-height: 32px;
+  overflow: hidden;
+}
+#wpadminbar li.menupop a, #wpadminbar li.menupop.hover > .ab-sub-wrapper, #wpadminbar li.menupop .ab-sub-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  word-wrap: break-word;
+  white-space: normal !important;
+}
+#wpadminbar li.menupop .ab-sub-wrapper {
+  display: block;
+  width: 0;
+  height: 0;
+}
+#wpadminbar li.menupop.hover {
+  overflow: visible;
+  height: auto;
+}
+#wpadminbar li.menupop.hover > a, #wpadminbar li.menupop.hover > .ab-sub-wrapper {
+  overflow: visible;
+  width: 240px;
+  min-height: 32px;
+  height: auto;
+  transform: translate(-100%, 0);
+  padding-left: 8px !important;
+}
+#wpadminbar li.menupop.hover > .ab-sub-wrapper {
+  top: 100%;
+}
+#wpadminbar .ab-item {
+  padding: 0 !important;
+}
+#wpadminbar .ab-item::before, #wpadminbar .ab-icon {
+  padding-left: 7px !important;
+}
+
+/*# sourceMappingURL=admin-bar.css.map */

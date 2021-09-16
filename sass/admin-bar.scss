@@ -1,0 +1,80 @@
+/* Turns the top admin bar into a sidebar */
+
+html {
+  margin-top: 0 !important;
+}
+
+#wpadminbar {
+  $submenu-width: 240px;
+
+  position: fixed;
+  top: 30%;
+  left: 97%;
+  min-width: unset;
+  width: 32px;
+  height: auto;
+  //transform: translate(-32px, 0);
+
+  & * {
+    width: 100%;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  li {
+    min-height: 32px;
+    overflow: hidden;
+
+    &.menupop {
+
+      & a, .ab-sub-wrapper{
+        $transition-speed: 0.3s;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        transition:
+          transform $transition-speed ease-in-out,
+          width $transition-speed ease-in-out;
+        word-wrap: break-word;
+        white-space: normal !important;
+      }
+
+      .ab-sub-wrapper {
+        display: block;
+        width: 0;
+        height: 0;
+      }
+
+      &.hover {
+        overflow: visible;
+        height: auto;
+
+        > a {
+          overflow: visible;
+          width: $submenu-width;
+          min-height: 32px;
+          height: auto;
+          transform: translate(-100%, 0);
+          padding-left: 8px !important;
+        }
+
+        > .ab-sub-wrapper {
+          @extend a;
+          top: 100%;
+        }
+
+      }
+    }
+  }
+
+  /* Center icons */
+  .ab-item {
+    padding: 0 !important;
+  }
+  .ab-item::before, .ab-icon {
+    padding-left: 7px !important;
+  }
+}
