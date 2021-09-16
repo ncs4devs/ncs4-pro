@@ -1,12 +1,26 @@
-$max-width: 1720px;
+/* Note: For backwards compatibility, ncs4-site-margin is styled
+  the same as ncs4-site-margin__size-large (i.e. max-width: 1720px is the
+  default). This is because other elements besides margin blocks use
+  a .ncs4-site-margin class to style them (back when the only size was "large").
+  If you want to update this, just know you'll have to go and update multiple
+  other elements (mostly in the front page, header, and footer templates).
+*/
 
 .ncs4-site-margin {
-  max-width: $max-width;
+  max-width: 1720px;
   margin: 0 auto;
   padding: 0 3.2rem;
 
   &.no-padding {
     padding: 0;
+  }
+
+  &__size-max {
+    max-width: unset;
+  }
+
+  &__size-large {
+    max-width: 1720px;
   }
 
   &__size-small {
