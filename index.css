@@ -10,37 +10,49 @@
   The second-most generic stylesheet (besides style.css, which isn't modified
   if it can be avoided)
 */
+a, em, strong, span, ul, li {
+  overflow-wrap: break-word;
+  font-size: inherit;
+}
+
 /* Headings */
-h1, h2, h3 {
+h1, h2 {
   font-size: 4rem;
   text-transform: uppercase;
   margin: 1em 0 0.5em 0;
   overflow-wrap: break-word;
 }
-h1.no-text-transform, h2.no-text-transform, h3.no-text-transform {
+h1.no-text-transform, h2.no-text-transform {
   text-transform: none;
 }
-h1 + h4, h1 + h5, h1 + h6, h2 + h4, h2 + h5, h2 + h6, h3 + h4, h3 + h5, h3 + h6 {
+h1 + h3, h1 + h4, h1 + h5, h1 + h6, h2 + h3, h2 + h4, h2 + h5, h2 + h6 {
   margin-top: -1em;
 }
 
 /* Subheadings */
-h4, h5, h6 {
+h3, h4, h5, h6 {
   font-size: 2.5rem;
-  font-style: italic;
   letter-spacing: 0.5px;
   margin: 1em 0 0.5em 0;
   overflow-wrap: break-word;
 }
 
-p {
+h3, h4 {
+  font-style: italic;
+}
+
+h5, h6 {
+  font-weight: normal;
+}
+
+p, li, ul {
   font-size: 2.1rem;
   margin: 0;
   line-height: 1.6em;
   max-width: 80ch;
   overflow-wrap: break-word;
 }
-p + p {
+p + p, p + li, li + p, li + li, ul + p, ul + li {
   margin-top: 2.4rem;
 }
 
@@ -60,13 +72,8 @@ a:focus-visible, a:visited:focus-visible {
   outline-offset: 0.2em;
 }
 
-a, em, strong, span {
-  overflow-wrap: break-word;
-  font-size: inherit;
-}
-
 body {
-  color: #555555;
+  color: #171717;
 }
 
 header.entry-header {
