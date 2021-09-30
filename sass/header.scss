@@ -6,6 +6,7 @@ $header-col1-width: 25%;
 $header-col2-width: 100% - $header-col1-width;
 $header-padding: 1rem;
 $nav-submenu-width: 20.0rem;
+$nav-sticky-breakpoint: 500px;
 $mobile_widget-area-height: 3.2rem;
 $mobile_nav-width: 18.6rem;
 $mobile_navbar-height: 24rem;
@@ -23,6 +24,10 @@ $margin-width: 3.2rem;
 	width: 100%;
 	min-height: 10.0rem;
 	background-color: $color_primary-2;
+
+  @media screen and (max-height: $nav-sticky-breakpoint) {
+    position: relative;
+  }
 
 	&__inner {
 		position: relative;

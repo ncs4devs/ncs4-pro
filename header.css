@@ -18,6 +18,11 @@
   background-color: #273249;
   /* .site-header__inner */
 }
+@media screen and (max-height: 500px) {
+  .site-header {
+    position: relative;
+  }
+}
 .site-header__inner {
   position: relative;
   display: flex;
