@@ -7,14 +7,25 @@
   if it can be avoided)
 */
 
-a, em, strong, span, ul, li {
+$text-shrink-breakpoint: 700; /* Start shrinking text when vw = 700px */
+
+@function clampFont($min, $max) {
+  $max-unitless: math.div($max, $max * 0 + 1) * 10;
+  @return clamp(
+    #{$min},
+    #{math.div(100vw * $max-unitless, $text-shrink-breakpoint)},
+    #{$max}
+  )
+}
+
+a, em, strong, span, ul, li, sup, sub {
   overflow-wrap: break-word;
   font-size: inherit;
 }
 
 /* Headings */
 h1, h2 {
-  font-size: 4.0rem;
+  font-size: clampFont(2.1rem, 4.0rem);
   text-transform: uppercase;
   margin: 1em 0 0.5em 0;
   overflow-wrap: break-word;
@@ -30,7 +41,7 @@ h1, h2 {
 
 /* Subheadings */
 h3, h4, h5, h6 {
-  font-size: 2.5rem;
+  font-size: clampFont(1.6rem, 2.5rem);
   letter-spacing: 0.5px;
   margin: 1em 0 0.5em 0;
   overflow-wrap: break-word;
@@ -45,7 +56,7 @@ h5, h6 {
 }
 
 p, li, ul{
-  font-size: 2.1rem;
+  font-size: clampFont(1.0rem, 2.1rem);
   margin: 0;
   line-height: 1.6em;
   max-width: 80ch;
