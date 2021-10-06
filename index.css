@@ -16,6 +16,10 @@ a, em, strong, span, ul, li, sup, sub {
   font-size: inherit;
 }
 
+sup, sub {
+  font-size: 0.7em;
+}
+
 /* Headings */
 h1, h2 {
   font-size: clamp( 2.1rem, 5.7142857143vw, 4rem );
@@ -79,6 +83,17 @@ body {
 
 header.entry-header {
   display: none;
+}
+
+.post-thumbnail {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 60vh;
+  justify-content: center;
+}
+.post-thumbnail img {
+  width: 100%;
 }
 
 /* Wordpress Block Stylings */
