@@ -10,8 +10,22 @@ html {
   min-width: unset;
   width: 32px;
   height: auto;
+  transform: translate(var(--dx, 0), var(--dy, 0));
   /* Center icons */
 }
+#wp-admin-bar-drag div.ab-item {
+  padding-top: 0.4rem !important;
+}
+#wp-admin-bar-drag svg {
+  fill: white;
+}
+#wp-admin-bar-drag svg:hover {
+  cursor: grab;
+}
+#wp-admin-bar-drag svg:active {
+  cursor: grabbing;
+}
+
 #wpadminbar * {
   width: 100%;
 }

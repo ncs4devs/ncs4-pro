@@ -20,6 +20,23 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+function ncs4_custom_admin_bar_items($admin_bar) {
+  if (!is_admin()) {
+    $admin_bar->add_menu( array(
+      'id'    =>  'drag',
+      'title' =>  '<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" role="img" aria-hidden="true" focusable="false"><path d="M5 4h2V2H5v2zm6-2v2h2V2h-2zm-6 8h2V8H5v2zm6 0h2V8h-2v2zm-6 6h2v-2H5v2zm6 0h2v-2h-2v2z"></path></svg>',
+    ));
+
+    wp_enqueue_script(
+      'ncs4-pro-adminbar-drag',
+      get_template_directory_uri() . '/js/adminbar_drag.js',
+      array(),
+      filemtime( get_stylesheet_directory() . '/js/adminbar_drag.js'),
+    );
+  }
+}
+add_action('admin_bar_menu', 'ncs4_custom_admin_bar_items');
+
 // Register styles
 function ncs4_enqueue_custom_styles() {
 	if (!is_admin()) {

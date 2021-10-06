@@ -13,7 +13,26 @@ html {
   min-width: unset;
   width: 32px;
   height: auto;
-  //transform: translate(-32px, 0);
+  transform: translate(var(--dx, 0), var(--dy, 0));
+
+  @at-root #wp-admin-bar-drag {
+
+    div.ab-item {
+      padding-top: 0.4rem !important;
+    }
+
+    svg {
+      fill: white;
+
+      &:hover {
+        cursor: grab;
+      }
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+  }
 
   & * {
     width: 100%;
