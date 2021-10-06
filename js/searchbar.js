@@ -13,4 +13,11 @@
         : 'true'
     );
   });
+
+  document.addEventListener( 'click', (event) => {
+    if (!btn.contains(event.target) && !search.contains(event.target)) {
+      search.classList.remove( 'toggled' );
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
 }
