@@ -92,11 +92,11 @@ if ( ! function_exists( 'ncs4_pro_entry_footer' ) ) :
 			);
 			echo '</span>';
 		}
-
+    /* No edit link.
 		edit_post_link(
 			sprintf(
 				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
+					// translators: %s: Name of current post. Only visible to screen readers
 					__( 'Edit <span class="screen-reader-text">%s</span>', 'ncs4-pro' ),
 					array(
 						'span' => array(
@@ -109,6 +109,7 @@ if ( ! function_exists( 'ncs4_pro_entry_footer' ) ) :
 			'<span class="edit-link">',
 			'</span>'
 		);
+    */
 	}
 endif;
 
