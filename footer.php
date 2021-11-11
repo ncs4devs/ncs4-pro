@@ -89,7 +89,7 @@
 							<section class="post-area post-area__news">
 								<h4>In The News</h4>
 								<ul id="news-list" class="ncs4-posts-list">
-									<?php createPostsList('News') ?>
+									<?php createPostsList('News', 5) ?>
 								</ul><!-- #news-list -->
 								<?php createArchiveLink('News') ?>
 							</section><!-- .post-area__news -->
@@ -109,7 +109,7 @@
 							<section class="post-area post-area__uncategorized">
 								<h4>Recent Posts</h4>
 								<ul id="uncategorized-list" class="ncs4-posts-list">
-									<?php createPostsList('Uncategorized') ?>
+									<?php createPostsList('Uncategorized', 5) ?>
 								</ul><!-- #uncategorized-list -->
 								<?php createArchiveLink('Uncategorized') ?>
 							</section><!-- .post-area__uncategorized -->
