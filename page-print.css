@@ -1,0 +1,70 @@
+/* Styles elements for BP Print page */
+html {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #2a2a2a;
+  border: 32px solid white;
+  margin-top: 32px;
+}
+
+body {
+  padding: 8px 0;
+}
+
+.ncs4-bp-subtopic {
+  display: block !important;
+}
+
+.share-section {
+  display: none;
+}
+
+.ncs4-section.ncs4-bp-content,
+.wp-block-ncs4-custom-blocks-mixed-section {
+  background-color: transparent;
+  border: 2px solid black;
+}
+
+.ncs4-custom-blocks-section-title-area,
+.ncs4-custom-blocks-mixed-section-beam {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+.ncs4-custom-blocks-generic-section-title-area {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.print-page-header {
+  display: grid;
+  grid-template-columns: 40% auto;
+}
+.print-page-header p {
+  text-align: right;
+  margin-top: auto;
+}
+.print-page-header hr {
+  grid-column: 2 span;
+  width: 100%;
+  background-color: black;
+  margin-bottom: 0;
+  margin-top: 3.2rem;
+}
+
+h1, h2 {
+  font-size: 18pt;
+  max-width: unset;
+}
+
+h3, h4, h5, h6 {
+  font-size: 15pt;
+  max-width: unset;
+}
+
+p, li, ul {
+  font-size: 12pt;
+  max-width: unset;
+}
+
+/*# sourceMappingURL=page-print.css.map */
