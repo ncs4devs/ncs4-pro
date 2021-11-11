@@ -16,9 +16,9 @@ $text-shrink-breakpoint: 700; /* Start shrinking text when vw = 700px */
     #{math.div(100vw * $max-unitless, $text-shrink-breakpoint)},
     #{$max}
   )
-}
+};
 
-a, em, strong, span, ul, li, sup, sub {
+a, em, strong, span, ul, li, sup, sub, label {
   overflow-wrap: break-word;
   font-size: inherit;
 }
@@ -96,6 +96,7 @@ a, a:visited {
 
 body {
   color: $color_secondary-1c;
+  line-height: 1.35;
 }
 
 header.entry-header {

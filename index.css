@@ -11,7 +11,7 @@
   if it can be avoided)
 */
 /* Start shrinking text when vw = 700px */
-a, em, strong, span, ul, li, sup, sub {
+a, em, strong, span, ul, li, sup, sub, label {
   overflow-wrap: break-word;
   font-size: inherit;
 }
@@ -79,6 +79,7 @@ a:focus-visible, a:visited:focus-visible {
 
 body {
   color: #171717;
+  line-height: 1.35;
 }
 
 header.entry-header {
