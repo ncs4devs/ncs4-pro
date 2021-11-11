@@ -22,12 +22,14 @@ $gradients: (
 );
 
 @mixin colorProp($slug, $color) {
-  .has-#{$slug} {
+  :root .has-#{$slug} {
     &-color {
       color: $color;
+      --palette-color: #{$color};
     }
     &-background-color {
       background-color: $color;
+      --palette-bg-color: #{$color};
     }
   }
 }
@@ -40,7 +42,7 @@ $gradients: (
 
 @mixin makeGradients() {
   @each $slug, $grad in $gradients {
-    .has-#{$slug}-gradient-background {
+    :root .has-#{$slug}-gradient-background {
       background: $grad;
     }
   }
@@ -49,9 +51,15 @@ $gradients: (
 /* Color Palette Styles */
 @include colorProps("primary", $navies, "");
 @include colorProps("secondary", $dark-blues, "");
+@include colorProps("primary", $yellows, "c");
+@include colorProps("secondary", $greys, "c");
+
+/* Temporary measure while custom blocks are rewritten */
 @include colorProps("primary", $yellows, "-c");
 @include colorProps("secondary", $greys, "-c");
+
 @include colorProps("link", $links, "");
+@include colorProp("white-bright", #fff);
 @include colorProp("white", $color_white);
 @include colorProp("white-dark", $color_white-dark);
 

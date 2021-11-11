@@ -266,6 +266,11 @@ if ( ! function_exists( 'ncs4_pro_setup' ) ) :
 				'slug'	=>	'white',
 				'color'	=>	'#f4f4f4',
 			),
+      array(
+        'name'  =>  'Pure White',
+        'slug'  =>  'white-bright',
+        'color' =>  '#fff',
+      ),
 		));
 
 		// No custom colors. Bad editor >:(

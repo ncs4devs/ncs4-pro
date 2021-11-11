@@ -7,200 +7,354 @@
 /* Grey */
 /* Links */
 /* Color Palette Styles */
-.has-primary-0-color {
+:root .has-primary-0-color {
   color: #0B152B;
+  --palette-color: #0B152B;
 }
-.has-primary-0-background-color {
+:root .has-primary-0-background-color {
   background-color: #0B152B;
+  --palette-bg-color: #0B152B;
 }
 
-.has-primary-1-color {
+:root .has-primary-1-color {
   color: #18243E;
+  --palette-color: #18243E;
 }
-.has-primary-1-background-color {
+:root .has-primary-1-background-color {
   background-color: #18243E;
+  --palette-bg-color: #18243E;
 }
 
-.has-primary-2-color {
+:root .has-primary-2-color {
   color: #273249;
+  --palette-color: #273249;
 }
-.has-primary-2-background-color {
+:root .has-primary-2-background-color {
   background-color: #273249;
+  --palette-bg-color: #273249;
 }
 
-.has-primary-3-color {
+:root .has-primary-3-color {
   color: #3E4A64;
+  --palette-color: #3E4A64;
 }
-.has-primary-3-background-color {
+:root .has-primary-3-background-color {
   background-color: #3E4A64;
+  --palette-bg-color: #3E4A64;
 }
 
-.has-primary-4-color {
+:root .has-primary-4-color {
   color: #59657E;
+  --palette-color: #59657E;
 }
-.has-primary-4-background-color {
+:root .has-primary-4-background-color {
   background-color: #59657E;
+  --palette-bg-color: #59657E;
 }
 
-.has-secondary-0-color {
+:root .has-secondary-0-color {
   color: #002C5D;
+  --palette-color: #002C5D;
 }
-.has-secondary-0-background-color {
+:root .has-secondary-0-background-color {
   background-color: #002C5D;
+  --palette-bg-color: #002C5D;
 }
 
-.has-secondary-1-color {
+:root .has-secondary-1-color {
   color: #003B7C;
+  --palette-color: #003B7C;
 }
-.has-secondary-1-background-color {
+:root .has-secondary-1-background-color {
   background-color: #003B7C;
+  --palette-bg-color: #003B7C;
 }
 
-.has-secondary-2-color {
+:root .has-secondary-2-color {
   color: #00499A;
+  --palette-color: #00499A;
 }
-.has-secondary-2-background-color {
+:root .has-secondary-2-background-color {
   background-color: #00499A;
+  --palette-bg-color: #00499A;
 }
 
-.has-secondary-3-color {
+:root .has-secondary-3-color {
   color: #0061CD;
+  --palette-color: #0061CD;
 }
-.has-secondary-3-background-color {
+:root .has-secondary-3-background-color {
   background-color: #0061CD;
+  --palette-bg-color: #0061CD;
 }
 
-.has-secondary-4-color {
+:root .has-secondary-4-color {
   color: #097BFB;
+  --palette-color: #097BFB;
 }
-.has-secondary-4-background-color {
+:root .has-secondary-4-background-color {
   background-color: #097BFB;
+  --palette-bg-color: #097BFB;
 }
 
-.has-primary-0-c-color {
+:root .has-primary-0c-color {
   color: #B18800;
+  --palette-color: #B18800;
 }
-.has-primary-0-c-background-color {
+:root .has-primary-0c-background-color {
   background-color: #B18800;
+  --palette-bg-color: #B18800;
 }
 
-.has-primary-1-c-color {
+:root .has-primary-1c-color {
   color: #E4B005;
+  --palette-color: #E4B005;
 }
-.has-primary-1-c-background-color {
+:root .has-primary-1c-background-color {
   background-color: #E4B005;
+  --palette-bg-color: #E4B005;
 }
 
-.has-primary-2-c-color {
+:root .has-primary-2c-color {
   color: #FFCE2F;
+  --palette-color: #FFCE2F;
 }
-.has-primary-2-c-background-color {
+:root .has-primary-2c-background-color {
   background-color: #FFCE2F;
+  --palette-bg-color: #FFCE2F;
 }
 
-.has-primary-3-c-color {
+:root .has-primary-3c-color {
   color: #FFD755;
+  --palette-color: #FFD755;
 }
-.has-primary-3-c-background-color {
+:root .has-primary-3c-background-color {
   background-color: #FFD755;
+  --palette-bg-color: #FFD755;
 }
 
-.has-primary-4-c-color {
+:root .has-primary-4c-color {
   color: #FFE17F;
+  --palette-color: #FFE17F;
 }
-.has-primary-4-c-background-color {
+:root .has-primary-4c-background-color {
   background-color: #FFE17F;
+  --palette-bg-color: #FFE17F;
 }
 
-.has-secondary-0-c-color {
+:root .has-secondary-0c-color {
   color: #040303;
+  --palette-color: #040303;
 }
-.has-secondary-0-c-background-color {
+:root .has-secondary-0c-background-color {
   background-color: #040303;
+  --palette-bg-color: #040303;
 }
 
-.has-secondary-1-c-color {
+:root .has-secondary-1c-color {
   color: #171717;
+  --palette-color: #171717;
 }
-.has-secondary-1-c-background-color {
+:root .has-secondary-1c-background-color {
   background-color: #171717;
+  --palette-bg-color: #171717;
 }
 
-.has-secondary-2-c-color {
+:root .has-secondary-2c-color {
   color: #555555;
+  --palette-color: #555555;
 }
-.has-secondary-2-c-background-color {
+:root .has-secondary-2c-background-color {
   background-color: #555555;
+  --palette-bg-color: #555555;
 }
 
-.has-secondary-3-c-color {
+:root .has-secondary-3c-color {
   color: #868686;
+  --palette-color: #868686;
 }
-.has-secondary-3-c-background-color {
+:root .has-secondary-3c-background-color {
   background-color: #868686;
+  --palette-bg-color: #868686;
 }
 
-.has-secondary-4-c-color {
+:root .has-secondary-4c-color {
   color: #B6B5B5;
+  --palette-color: #B6B5B5;
 }
-.has-secondary-4-c-background-color {
+:root .has-secondary-4c-background-color {
   background-color: #B6B5B5;
+  --palette-bg-color: #B6B5B5;
 }
 
-.has-link-0-color {
+/* Temporary measure while custom blocks are rewritten */
+:root .has-primary-0-c-color {
+  color: #B18800;
+  --palette-color: #B18800;
+}
+:root .has-primary-0-c-background-color {
+  background-color: #B18800;
+  --palette-bg-color: #B18800;
+}
+
+:root .has-primary-1-c-color {
+  color: #E4B005;
+  --palette-color: #E4B005;
+}
+:root .has-primary-1-c-background-color {
+  background-color: #E4B005;
+  --palette-bg-color: #E4B005;
+}
+
+:root .has-primary-2-c-color {
+  color: #FFCE2F;
+  --palette-color: #FFCE2F;
+}
+:root .has-primary-2-c-background-color {
+  background-color: #FFCE2F;
+  --palette-bg-color: #FFCE2F;
+}
+
+:root .has-primary-3-c-color {
+  color: #FFD755;
+  --palette-color: #FFD755;
+}
+:root .has-primary-3-c-background-color {
+  background-color: #FFD755;
+  --palette-bg-color: #FFD755;
+}
+
+:root .has-primary-4-c-color {
+  color: #FFE17F;
+  --palette-color: #FFE17F;
+}
+:root .has-primary-4-c-background-color {
+  background-color: #FFE17F;
+  --palette-bg-color: #FFE17F;
+}
+
+:root .has-secondary-0-c-color {
+  color: #040303;
+  --palette-color: #040303;
+}
+:root .has-secondary-0-c-background-color {
+  background-color: #040303;
+  --palette-bg-color: #040303;
+}
+
+:root .has-secondary-1-c-color {
+  color: #171717;
+  --palette-color: #171717;
+}
+:root .has-secondary-1-c-background-color {
+  background-color: #171717;
+  --palette-bg-color: #171717;
+}
+
+:root .has-secondary-2-c-color {
+  color: #555555;
+  --palette-color: #555555;
+}
+:root .has-secondary-2-c-background-color {
+  background-color: #555555;
+  --palette-bg-color: #555555;
+}
+
+:root .has-secondary-3-c-color {
+  color: #868686;
+  --palette-color: #868686;
+}
+:root .has-secondary-3-c-background-color {
+  background-color: #868686;
+  --palette-bg-color: #868686;
+}
+
+:root .has-secondary-4-c-color {
+  color: #B6B5B5;
+  --palette-color: #B6B5B5;
+}
+:root .has-secondary-4-c-background-color {
+  background-color: #B6B5B5;
+  --palette-bg-color: #B6B5B5;
+}
+
+:root .has-link-0-color {
   color: #0051a5;
+  --palette-color: #0051a5;
 }
-.has-link-0-background-color {
+:root .has-link-0-background-color {
   background-color: #0051a5;
+  --palette-bg-color: #0051a5;
 }
 
-.has-link-1-color {
+:root .has-link-1-color {
   color: #037fff;
+  --palette-color: #037fff;
 }
-.has-link-1-background-color {
+:root .has-link-1-background-color {
   background-color: #037fff;
+  --palette-bg-color: #037fff;
 }
 
-.has-link-2-color {
+:root .has-link-2-color {
   color: #1b8bff;
+  --palette-color: #1b8bff;
 }
-.has-link-2-background-color {
+:root .has-link-2-background-color {
   background-color: #1b8bff;
+  --palette-bg-color: #1b8bff;
 }
 
-.has-link-3-color {
+:root .has-link-3-color {
   color: #53a6fd;
+  --palette-color: #53a6fd;
 }
-.has-link-3-background-color {
+:root .has-link-3-background-color {
   background-color: #53a6fd;
+  --palette-bg-color: #53a6fd;
 }
 
-.has-link-4-color {
+:root .has-link-4-color {
   color: #95c5f6;
+  --palette-color: #95c5f6;
 }
-.has-link-4-background-color {
+:root .has-link-4-background-color {
   background-color: #95c5f6;
+  --palette-bg-color: #95c5f6;
 }
 
-.has-white-color {
+:root .has-white-bright-color {
+  color: #fff;
+  --palette-color: #fff;
+}
+:root .has-white-bright-background-color {
+  background-color: #fff;
+  --palette-bg-color: #fff;
+}
+
+:root .has-white-color {
   color: #f4f4f4;
+  --palette-color: #f4f4f4;
 }
-.has-white-background-color {
+:root .has-white-background-color {
   background-color: #f4f4f4;
+  --palette-bg-color: #f4f4f4;
 }
 
-.has-white-dark-color {
+:root .has-white-dark-color {
   color: #e6e6e6;
+  --palette-color: #e6e6e6;
 }
-.has-white-dark-background-color {
+:root .has-white-dark-background-color {
   background-color: #e6e6e6;
+  --palette-bg-color: #e6e6e6;
 }
 
-.has-secondary-1_secondary-0_secondary-0c-gradient-background {
+:root .has-secondary-1_secondary-0_secondary-0c-gradient-background {
   background: linear-gradient(0deg, #003B7C 0%, #002C5D 22%, #040303 100%);
 }
 
-.has-secondary-1_secondary-4-gradient-background {
+:root .has-secondary-1_secondary-4-gradient-background {
   background: linear-gradient(0deg, #003B7C 0%, #097BFB 100%);
 }
 
