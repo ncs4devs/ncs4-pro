@@ -5,6 +5,10 @@
   $side-padding: 3.2rem;
   $top-padding: 6.4rem;
 
+  * {
+    font-size: inherit;
+  }
+
   a {
     color: $color_link-2;
     text-decoration: none;
@@ -74,10 +78,6 @@
       .widget-area {
         color: inherit;
         flex: 1 0 0;
-
-        &__1 {
-
-        }
       }
     }
   }/* #footer-widget-area */
