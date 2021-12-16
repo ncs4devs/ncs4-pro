@@ -321,7 +321,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  column-gap: 0.8rem;
+  column-gap: 1.6rem;
   /* Sub-menus */
 }
 .main-navigation ul li {
