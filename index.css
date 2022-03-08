@@ -100,7 +100,7 @@ header.entry-header {
 /* Components */
 .ncs4-button, .ncs4-button:visited {
   --btn-primary: #f4f4f4;
-  --btn-secondary: #00499A;
+  --btn-secondary: #0061CD;
   display: inline-block;
   background-color: var(--btn-secondary);
   color: var(--btn-primary);
@@ -126,7 +126,7 @@ header.entry-header {
 }
 .ncs4-button.ncs4-button__blue, .ncs4-button:visited.ncs4-button__blue {
   --btn-primary: #f4f4f4;
-  --btn-secondary: #00499A;
+  --btn-secondary: #0061CD;
 }
 .ncs4-button.ncs4-button__yellow, .ncs4-button:visited.ncs4-button__yellow {
   --btn-primary: #040303;

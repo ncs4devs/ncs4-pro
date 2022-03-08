@@ -121,7 +121,7 @@ header.entry-header {
 
 .ncs4-button, .ncs4-button:visited {
   --btn-primary: #{$color_white};
-  --btn-secondary: #{$color_secondary-2};
+  --btn-secondary: #{$color_secondary-3};
 
   display: inline-block;
   background-color: var(--btn-secondary);
@@ -149,7 +149,7 @@ header.entry-header {
   /* Button types */
   &.ncs4-button__blue {
     --btn-primary: #{$color_white};
-    --btn-secondary: #{$color_secondary-2};
+    --btn-secondary: #{$color_secondary-3};
   }
 
   &.ncs4-button__yellow {
