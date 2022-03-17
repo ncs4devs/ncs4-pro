@@ -102,6 +102,7 @@ header.entry-header {
   --btn-primary: #f4f4f4;
   --btn-secondary: #0061CD;
   display: inline-block;
+  height: fit-content;
   background-color: var(--btn-secondary);
   color: var(--btn-primary);
   padding: 1em 1.5em;
@@ -112,6 +113,7 @@ header.entry-header {
 }
 .ncs4-button:hover, .ncs4-button:focus-visible, .ncs4-button:focus, .ncs4-button:visited:hover, .ncs4-button:visited:focus-visible, .ncs4-button:visited:focus {
   text-decoration: none;
+  outline-color: var(--btn-secondary);
   color: var(--btn-primary);
 }
 @media (prefers-reduced-motion: no-preference) {

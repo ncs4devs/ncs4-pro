@@ -124,6 +124,7 @@ header.entry-header {
   --btn-secondary: #{$color_secondary-3};
 
   display: inline-block;
+  height: fit-content;
   background-color: var(--btn-secondary);
   color: var(--btn-primary);
   padding: 1.0em 1.5em;
@@ -133,6 +134,7 @@ header.entry-header {
 
   &:hover, &:focus-visible, &:focus {
     text-decoration: none;
+    outline-color: var(--btn-secondary);
     color: var(--btn-primary);
 
     @media (prefers-reduced-motion: no-preference) {
