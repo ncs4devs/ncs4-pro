@@ -18,7 +18,7 @@ $text-shrink-breakpoint: 700; /* Start shrinking text when vw = 700px */
   )
 };
 
-a, em, strong, span, ul, li, sup, sub, label {
+a, em, strong, span, ul, ol, li, sup, sub, label {
   overflow-wrap: break-word;
   font-size: inherit;
 }
@@ -59,7 +59,7 @@ h5, h6 {
   font-weight: normal;
 }
 
-p, li, ul{
+p, li, ul, ol{
   font-size: clampFont(1.0rem, 2.1rem);
   margin: 0;
   line-height: 1.6em;

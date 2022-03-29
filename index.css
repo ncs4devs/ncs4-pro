@@ -11,7 +11,7 @@
   if it can be avoided)
 */
 /* Start shrinking text when vw = 700px */
-a, em, strong, span, ul, li, sup, sub, label {
+a, em, strong, span, ul, ol, li, sup, sub, label {
   overflow-wrap: break-word;
   font-size: inherit;
 }
@@ -50,14 +50,14 @@ h5, h6 {
   font-weight: normal;
 }
 
-p, li, ul {
+p, li, ul, ol {
   font-size: clamp( 1rem, 3vw, 2.1rem );
   margin: 0;
   line-height: 1.6em;
   max-width: 80ch;
   overflow-wrap: break-word;
 }
-p + p, p + li, li + p, li + li, ul + p, ul + li {
+p + p, p + li, li + p, li + li, ul + p, ul + li, ol + p, ol + li {
   margin-top: 2.4rem;
 }
 
