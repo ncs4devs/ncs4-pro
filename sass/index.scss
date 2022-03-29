@@ -178,6 +178,26 @@ header.entry-header {
   }
 }
 
+.wp-block-embed.wp-embed-aspect-16-9 .wp-block-embed__wrapper { /* Youtube videos, mostly */
+  position: relative;
+  padding-top: 56.25%; /* 9/16 */
+
+  > span { /* Later WP versions add a span between the block and the iframe */
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .wp-block-embed-issuu {
   $aspect-ratio: math.div(17, 11);
   --height: 90vh;
@@ -242,26 +262,5 @@ header.entry-header {
 
   > * {
     flex: 0 0 auto;
-  }
-}
-
-/* Various embed stylings */
-.wp-block-embed.wp-embed-aspect-16-9 .wp-block-embed__wrapper { /* Youtube videos, mostly */
-  position: relative;
-  padding-top: 56.25%; /* 9/16 */
-
-  > span { /* Later WP versions add a span between the block and the iframe */
-    display: flex;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  iframe {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
   }
 }
