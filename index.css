@@ -197,6 +197,11 @@ header.entry-header {
   height: 100%;
 }
 
+.wp-block-seperator {
+  border: none;
+  background-color: #888;
+}
+
 /* Utility classes */
 .no-margin {
   margin: 0;
