@@ -250,6 +250,14 @@ header.entry-header {
   position: relative;
   padding-top: 56.25%; /* 9/16 */
 
+  > span { /* Later WP versions add a span between the block and the iframe */
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   iframe {
     position: absolute;
     top: 0;
