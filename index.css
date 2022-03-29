@@ -97,6 +97,23 @@ header.entry-header {
   width: 100%;
 }
 
+/* Table styles */
+.wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) {
+  background-color: #f4f4f4;
+}
+
+.wp-block-table {
+  margin-bottom: 3rem !important;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.24), 0 4px 8px 0 rgba(0, 0, 0, 0.22), 0 6px 4px -2px rgba(0, 0, 0, 0.3);
+}
+.wp-block-table table {
+  margin: 0;
+}
+
+td, th {
+  padding: 0.5em;
+}
+
 /* Components */
 .ncs4-button, .ncs4-button:visited {
   --btn-primary: #f4f4f4;
