@@ -116,6 +116,13 @@
   background-color: #00499A;
   color: unset;
 }
+.site-header a[href="#"]:hover {
+  cursor: default;
+}
+.site-header a[href="#"]:hover, .site-header a[href="#"]:focus, .site-header a[href="#"]:focus-visible {
+  background-color: #273249;
+  /* Don't color links without a page */
+}
 
 /* Mobile widgets */
 .header-widget-area__small {

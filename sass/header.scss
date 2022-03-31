@@ -136,6 +136,17 @@ $margin-width: 3.2rem;
 		background-color: $color_secondary-2;
 		color: unset;
 	}
+
+  a[href="#"] {
+
+    &:hover {
+      cursor: default;
+    }
+
+    &:hover, &:focus, &:focus-visible {
+      background-color: $color_primary-2; /* Don't color links without a page */
+    }
+  }
 }
 
 @mixin searchIcon() {
