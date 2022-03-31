@@ -58,7 +58,7 @@ p, li, ul, ol {
   max-width: 80ch;
   overflow-wrap: break-word;
 }
-p + p, p + li, li + p, li + li, ul + p, ul + li, ol + p, ol + li {
+p + p, li + p, ul + p, ol + p {
   margin-top: 2.4rem;
 }
 
