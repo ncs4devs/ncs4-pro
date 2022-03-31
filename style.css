@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: NCS4 Pro
 Theme URI: http://underscores.me/
@@ -59,6 +60,296 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@font-face {
+  font-family: "Lato";
+  src: url("/font/lato-regular-webfont.woff2") format("woff2"), url("/font/lato-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "fontello";
+  src: url("/font/fontello.woff2") format("woff2"), url("/font/fontello.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.icon:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon--amazon:before {
+  content: "";
+}
+
+/* '' */
+.icon--angle-double-down:before {
+  content: "";
+}
+
+/* '' */
+.icon--angle-double-left:before {
+  content: "";
+}
+
+/* '' */
+.icon--angle-double-right:before {
+  content: "";
+}
+
+/* '' */
+.icon--angle-double-up:before {
+  content: "";
+}
+
+/* '' */
+.icon--angle-down:before {
+  content: "";
+}
+
+/* '' */
+.icon--angle-left:before {
+  content: "";
+}
+
+/* '' */
+.icon--angle-right:before {
+  content: "";
+}
+
+/* '' */
+.icon--angle-up:before {
+  content: "";
+}
+
+/* '' */
+.icon--apple:before {
+  content: "";
+}
+
+/* '' */
+.icon--archive:before {
+  content: "";
+}
+
+/* '' */
+.icon--audio:before {
+  content: "";
+}
+
+/* '' */
+.icon--calendar:before {
+  content: "";
+}
+
+/* '' */
+.icon--chrome:before {
+  content: "";
+}
+
+/* '' */
+.icon--code:before {
+  content: "";
+}
+
+/* '' */
+.icon--connect:before {
+  content: "";
+}
+
+/* '' */
+.icon--down-big:before {
+  content: "";
+}
+
+/* '' */
+.icon--down:before {
+  content: "";
+}
+
+/* '' */
+.icon--edge:before {
+  content: "";
+}
+
+/* '' */
+.icon--etsy:before {
+  content: "";
+}
+
+/* '' */
+.icon--excel:before {
+  content: "";
+}
+
+/* '' */
+.icon--external:before {
+  content: "";
+}
+
+/* '' */
+.icon--facebook:before {
+  content: "";
+}
+
+/* '' */
+.icon--firefox:before {
+  content: "";
+}
+
+/* '' */
+.icon--image:before {
+  content: "";
+}
+
+/* '' */
+.icon--internet-explorer:before {
+  content: "";
+}
+
+/* '' */
+.icon--left-big:before {
+  content: "";
+}
+
+/* '' */
+.icon--left:before {
+  content: "";
+}
+
+/* '' */
+.icon--linkedin:before {
+  content: "";
+}
+
+/* '' */
+.icon--mail:before {
+  content: "";
+}
+
+/* '' */
+.icon--menu:before {
+  content: "";
+}
+
+/* '' */
+.icon--opera:before {
+  content: "";
+}
+
+/* '' */
+.icon--pdf:before {
+  content: "";
+}
+
+/* '' */
+.icon--pinterest:before {
+  content: "";
+}
+
+/* '' */
+.icon--powerpoint:before {
+  content: "";
+}
+
+/* '' */
+.icon--quote-left:before {
+  content: "";
+}
+
+/* '' */
+.icon--quote-right:before {
+  content: "";
+}
+
+/* '' */
+.icon--reddit:before {
+  content: "";
+}
+
+/* '' */
+.icon--right-big:before {
+  content: "";
+}
+
+/* '' */
+.icon--right:before {
+  content: "";
+}
+
+/* '' */
+.icon--rss:before {
+  content: "";
+}
+
+/* '' */
+.icon--search:before {
+  content: "";
+}
+
+.icon--sliders:before {
+  content: "";
+}
+
+/* '' */
+.icon--snapchat:before {
+  content: "";
+}
+
+/* '' */
+.icon--twitter:before {
+  content: "";
+}
+
+/* '' */
+.icon--up-big:before {
+  content: "";
+}
+
+/* '' */
+.icon--up:before {
+  content: "";
+}
+
+/* '' */
+.icon--video:before {
+  content: "";
+}
+
+/* '' */
+.icon--wikipedia:before {
+  content: "";
+}
+
+/* '' */
+.icon--word:before {
+  content: "";
+}
+
+/* '' */
+.icon--youtube:before {
+  content: "";
+}
+
+/* '' */
+@font-face {
+  font-family: "Liberation Serif";
+  src: url("/font/liberationserif-regular-webfont.woff2") format("woff2"), url("/font/liberationserif-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -390,7 +681,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   line-height: 1.5;
 }
