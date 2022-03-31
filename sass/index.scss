@@ -67,10 +67,14 @@ p, li, ul, ol{
   line-height: 1.6em;
   max-width: 80ch;
   overflow-wrap: break-word;
+}
 
-  + p {
-    margin-top: 2.4rem;
-  }
+p + p {
+  margin-top: 2.4rem;
+}
+
+ul, ol {
+  margin-bottom: 1.5em;
 }
 
 a, a:visited {

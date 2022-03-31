@@ -58,8 +58,13 @@ p, li, ul, ol {
   max-width: 80ch;
   overflow-wrap: break-word;
 }
-p + p, li + p, ul + p, ol + p {
+
+p + p {
   margin-top: 2.4rem;
+}
+
+ul, ol {
+  margin-bottom: 1.5em;
 }
 
 a, a:visited {
