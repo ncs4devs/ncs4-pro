@@ -83,6 +83,13 @@ a:focus-visible, a:visited:focus-visible {
   outline-offset: 0.2em;
 }
 
+code, kbd, tt, var {
+  font-size: inherit;
+}
+code.error, kbd.error, tt.error, var.error {
+  color: red;
+}
+
 body {
   color: #171717;
   line-height: 1.35;

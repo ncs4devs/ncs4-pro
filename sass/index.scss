@@ -100,6 +100,14 @@ a, a:visited {
   }
 }
 
+code, kbd, tt, var {
+  font-size: inherit;
+
+  &.error {
+    color: red;
+  }
+}
+
 body {
   color: $color_secondary-1c;
   line-height: 1.35;
