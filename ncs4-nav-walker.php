@@ -9,13 +9,6 @@ class NCS4_Nav_Walker extends Walker_Nav_Menu {
 		many accessibility programs. Just leave it as it is.)
 		*/
 
-    /*
-		$output .= '<li class="' . implode(" ", (array) $item -> classes) . '">';
-		$output .= '<a href="' . $item -> url . '">';
-		$output .= $item -> title;
-		$output .= '</a>';
-    */
-
     $atts           = array();
 		$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
 		$atts['target'] = ! empty( $item->target ) ? $item->target : '';
