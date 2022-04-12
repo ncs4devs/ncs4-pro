@@ -24,7 +24,7 @@
           <?php
             if ($isValid) {
               echo "<p>Please wait while you are redirected. If the new page does not load, click <a href='"
-                . $url . "' target='_blank'>here</a></p>";
+                . $url . "' target='_blank'>here</a>.</p>";
             } else {
               echo "<p>Something went wrong. Please try again later. (<code class='error'>Err: Invalid url</code>)</p>";
             }
