@@ -135,6 +135,7 @@ td, th {
   height: fit-content;
   background-color: var(--btn-secondary);
   color: var(--btn-primary);
+  margin: 1em 0;
   padding: 1em 1.5em;
   font-weight: bold;
   border-radius: 5px;

@@ -9,3 +9,52 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+@mixin component-buttons() {
+  .ncs4-button, .ncs4-button:visited {
+    --btn-primary: #{$color_white};
+    --btn-secondary: #{$color_secondary-3};
+
+    display: inline-block;
+    height: fit-content;
+    background-color: var(--btn-secondary);
+    color: var(--btn-primary);
+    margin: 1em 0;
+    padding: 1.0em 1.5em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.1s ease-in-out;
+
+    &:hover, &:focus-visible, &:focus {
+      text-decoration: none;
+      outline-color: var(--btn-secondary);
+      color: var(--btn-primary);
+
+      @media (prefers-reduced-motion: no-preference) {
+        transform: scale(1.1);
+      }
+    }
+
+    &:active {
+      @media (prefers-reduced-motion: no-preference) {
+        transform: scale(0.9);
+      }
+    }
+
+    /* Button types */
+    &.ncs4-button__blue {
+      --btn-primary: #{$color_white};
+      --btn-secondary: #{$color_secondary-3};
+    }
+
+    &.ncs4-button__yellow {
+      --btn-primary: #{$color_secondary-0c};
+      --btn-secondary: #{$color_primary-2c};
+    }
+
+    &.ncs4-button__gold {
+      --btn-primary: #{$color_secondary-0c};
+      --btn-secondary: #{$color_primary-1c};
+    }
+  }
+}

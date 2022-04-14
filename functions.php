@@ -92,6 +92,12 @@ function ncs4_enqueue_custom_editor_styles() {
 		array(),
 		filemtime( get_stylesheet_directory() . '/generic/color-palette.css' ),
 	);
+  wp_enqueue_style(
+    'ncs4-pro-editor-style',
+    get_stylesheet_directory_uri() . '/editor-style.css',
+    array(),
+    filemtime( get_stylesheet_directory() . '/editor-style.css'),
+  );
 }
 add_action( 'enqueue_block_editor_assets', 'ncs4_enqueue_custom_editor_styles');
 

@@ -1,0 +1,10 @@
+@use 'sass:list';
+@use 'sass:math';
+@import 'abstracts/variables/colors';
+@import 'abstracts/mixins/mixins';
+
+/*
+  Generic stylesheet which is loaded in the editor
+ */
+
+@include component-buttons();
