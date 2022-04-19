@@ -20,12 +20,22 @@ sup, sub {
   font-size: 0.7em;
 }
 
+/*      Base Typography      */
+p, li, ul, ol, h1, h2, h3, h4, h5, h6 {
+  line-height: 1.6em;
+  letter-spacing: 0.01em;
+  overflow-wrap: break-word;
+}
+p, p div, li, li div, ul, ul div, ol, ol div, h1, h1 div, h2, h2 div, h3, h3 div, h4, h4 div, h5, h5 div, h6, h6 div {
+  font-size: clamp( 1.6rem, 3vw, 2.1rem );
+}
+
 /* Headings */
 h1, h2 {
   font-size: clamp( 2.1rem, 5.7142857143vw, 4rem );
+  line-height: 1.2em;
   text-transform: uppercase;
   margin: 1em 0 0.5em 0;
-  overflow-wrap: break-word;
 }
 h1.no-text-transform, h2.no-text-transform {
   text-transform: none;
@@ -37,9 +47,8 @@ h1 + h3, h1 + h4, h1 + h5, h1 + h6, h2 + h3, h2 + h4, h2 + h5, h2 + h6 {
 /* Subheadings */
 h3, h4, h5, h6 {
   font-size: clamp( 1.6rem, 3.5714285714vw, 2.5rem );
-  letter-spacing: 0.5px;
+  line-height: 1.4em;
   margin: 1em 0 0.5em 0;
-  overflow-wrap: break-word;
 }
 
 /*
@@ -51,16 +60,9 @@ h5, h6 {
   font-weight: normal;
 }
 
-div, p, li, ul, ol {
-  font-size: clamp( 1rem, 3vw, 2.1rem );
+p, li, ul, ol {
   margin: 0;
-  line-height: 1.6em;
   max-width: 80ch;
-  overflow-wrap: break-word;
-}
-
-div {
-  max-width: unset;
 }
 
 p + p {

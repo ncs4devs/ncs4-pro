@@ -28,12 +28,23 @@ sup, sub {
   font-size: 0.7em;
 }
 
+/*      Base Typography      */
+p, li, ul, ol, h1, h2, h3, h4, h5, h6 {
+  line-height: 1.6em;
+  letter-spacing: 0.01em;
+  overflow-wrap: break-word;
+
+  &, div {
+    font-size: clampFont(1.6rem, 2.1rem);
+  }
+}
+
 /* Headings */
 h1, h2 {
   font-size: clampFont(2.1rem, 4.0rem);
+  line-height: 1.2em;
   text-transform: uppercase;
   margin: 1em 0 0.5em 0;
-  overflow-wrap: break-word;
 
   &.no-text-transform {
     text-transform: none;
@@ -47,9 +58,8 @@ h1, h2 {
 /* Subheadings */
 h3, h4, h5, h6 {
   font-size: clampFont(1.6rem, 2.5rem);
-  letter-spacing: 0.5px;
+  line-height: 1.4em;
   margin: 1em 0 0.5em 0;
-  overflow-wrap: break-word;
 }
 
 /*
@@ -62,16 +72,9 @@ h5, h6 {
   font-weight: normal;
 }
 
-div, p, li, ul, ol{
-  font-size: clampFont(1.0rem, 2.1rem);
+p, li, ul, ol{
   margin: 0;
-  line-height: 1.6em;
   max-width: 80ch;
-  overflow-wrap: break-word;
-}
-
-div {
-  max-width: unset;
 }
 
 p + p {
