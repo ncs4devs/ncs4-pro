@@ -51,12 +51,16 @@ h5, h6 {
   font-weight: normal;
 }
 
-p, li, ul, ol {
+div, p, li, ul, ol {
   font-size: clamp( 1rem, 3vw, 2.1rem );
   margin: 0;
   line-height: 1.6em;
   max-width: 80ch;
   overflow-wrap: break-word;
+}
+
+div {
+  max-width: unset;
 }
 
 p + p {

@@ -42,19 +42,21 @@
     }
 
     /* Button types */
-    &.ncs4-button__blue {
-      --btn-primary: #{$color_white};
-      --btn-secondary: #{$color_secondary-3};
-    }
+    &.ncs4-button {
+      &__blue {
+        --btn-primary: #{$color_white};
+        --btn-secondary: #{$color_secondary-3};
+      }
 
-    &.ncs4-button__yellow {
-      --btn-primary: #{$color_secondary-0c};
-      --btn-secondary: #{$color_primary-2c};
-    }
+      &__yellow {
+        --btn-primary: #{$color_secondary-0c};
+        --btn-secondary: #{$color_primary-2c};
+      }
 
-    &.ncs4-button__gold {
-      --btn-primary: #{$color_secondary-0c};
-      --btn-secondary: #{$color_primary-1c};
+      &__gold {
+        --btn-primary: #{$color_secondary-0c};
+        --btn-secondary: #{$color_primary-1c};
+      }
     }
   }
 }
