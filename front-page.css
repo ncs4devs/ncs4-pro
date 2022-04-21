@@ -16,9 +16,19 @@ body {
   z-index: -1;
   background-color: #171717;
 }
-.hero-container .ncs4-site-margin {
-  position: relative;
-  max-width: calc(85vh / 9 * 16);
+.hero-container .hero-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 40rem;
+  height: 75vh;
+  overflow: hidden;
+}
+.hero-container .hero-background .hero-video {
+  display: block;
+  min-width: 100%;
 }
 .hero-overlay {
   display: flex;
@@ -28,44 +38,36 @@ body {
   bottom: 0;
   left: 0;
   padding: inherit;
+  box-shadow: inset 0 0 50rem #000;
 }
 .hero-overlay > div {
   position: relative;
-  width: 50%;
-  background-color: rgba(23, 23, 23, 0.6);
-}
-.hero-overlay > div::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  height: 100%;
-  width: calc(100% / 2.7474774195);
-  shape-outside: polygon(0 0, 100% 0, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 0 100%);
-  background: inherit;
+  width: 100%;
+  margin: auto 0;
+  padding: 3.2rem 0;
+  background-color: rgba(23, 23, 23, 0.75);
 }
 .hero-text {
   color: #f4f4f4;
   flex: 0 0 50%;
-  padding-left: 2%;
+  text-shadow: 0 4px 5px rgba(0, 0, 0, 0.14), 0 1px 10px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.hero-text__header, .hero-text__subheader {
+  font-family: "Liberation Serif", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .hero-text__header h2 {
-  margin-top: 0.8em;
-  margin-bottom: 0.4em;
-  font-style: italic;
-  text-transform: uppercase;
-  font-size: clamp(10px, min(5vh, 3vw), 4.8rem);
+  margin: 0;
+  font-size: clamp(10px, 4vw, 6.4rem);
+  text-transform: unset;
+}
+.hero-text__subheader {
+  margin-top: 0;
+  margin-bottom: 1.6em;
+  color: #edbf72;
 }
 .hero-text__paragraph p {
   margin: 0;
-  font-size: clamp(8px, min(4vh, 2.5vw), 2.4rem);
-}
-
-.hero-video {
-  display: block;
-  width: 100%;
+  font-size: clamp(8px, 3.5vw, 2.4rem);
 }
 
 /* Banner block styling ("Vision", "Mission", etc) */
