@@ -45,7 +45,7 @@
     &.ncs4-button {
       &__blue {
         --btn-primary: #{$color_white};
-        --btn-secondary: #{$color_secondary-3};
+        --btn-secondary: #{$color_link-0};
       }
 
       &__yellow {
