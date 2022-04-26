@@ -90,7 +90,7 @@ body {
 .banner {
   padding: 3rem 0;
 }
-.banner * > h1:first-child, .banner * > h2:first-child, .banner * > h3:first-child, .banner * > h4:first-child, .banner * > h5:first-child, .banner * > h6:first-child {
+.banner h1:first-child, .banner h2:first-child, .banner h3:first-child, .banner h4:first-child, .banner h5:first-child, .banner h6:first-child {
   margin-top: 0;
 }
 .banner h3 {
