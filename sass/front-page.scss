@@ -85,10 +85,14 @@ body {
 /* Banner block styling ("Vision", "Mission", etc) */
 
 .banner {
-  padding: 2.4rem 0;
+  padding: 3rem 0;
 
-  * {
-    margin-top: 0;
+  * > {
+    h1, h2, h3, h4, h5, h6 {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
   }
 
   h3 {
@@ -110,18 +114,23 @@ body {
   }
 
   &-navy {
+    color: color.scale($color_primary-4, $lightness: 65.5%);
     background-color: $color_primary-1;
+    text-shadow: 0 3px 5px black;
 
     &__gradient {
-      background: linear-gradient(0deg, $color_secondary-1 0%, $color_secondary-0 22%, $color_secondary-0c 100%);
-    }
-
-    h3 {
-      color: $color_primary-2c;
-    }
-
-    p {
-      color: $color_white-dark;
+      background:
+      linear-gradient(180deg,
+        rgba(0, 0, 0, 40%) 0%,
+        transparent 2%,
+        transparent 98%,
+        rgba(0, 0, 0, 40%) 100%
+      ),
+      linear-gradient(270deg,
+        $color_primary-2 0%,
+        $color_primary-1 25%,
+        $color_primary-0 100%
+      );
     }
   }
 

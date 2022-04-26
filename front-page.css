@@ -72,9 +72,9 @@ body {
 
 /* Banner block styling ("Vision", "Mission", etc) */
 .banner {
-  padding: 2.4rem 0;
+  padding: 3rem 0;
 }
-.banner * {
+.banner * > h1:first-child, .banner * > h2:first-child, .banner * > h3:first-child, .banner * > h4:first-child, .banner * > h5:first-child, .banner * > h6:first-child {
   margin-top: 0;
 }
 .banner h3 {
@@ -93,16 +93,12 @@ body {
   margin-bottom: 0;
 }
 .banner-navy {
+  color: #c3c9d5;
   background-color: #18243E;
+  text-shadow: 0 3px 5px black;
 }
 .banner-navy__gradient {
-  background: linear-gradient(0deg, #003B7C 0%, #002C5D 22%, #040303 100%);
-}
-.banner-navy h3 {
-  color: #FFCE2F;
-}
-.banner-navy p {
-  color: #e6e6e6;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, transparent 2%, transparent 98%, rgba(0, 0, 0, 0.4) 100%), linear-gradient(270deg, #273249 0%, #18243E 25%, #0B152B 100%);
 }
 .banner-white {
   background-color: #f4f4f4;
