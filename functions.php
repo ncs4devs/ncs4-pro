@@ -20,6 +20,12 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+
+function remove_admin_bar_default_style() {
+  remove_action('wp_head', '_admin_bar_bump_cb');
+}
+add_action('admin_bar_init', 'remove_admin_bar_default_style');
+
 function ncs4_custom_admin_bar_items($admin_bar) {
   if (!is_admin()) {
     $admin_bar->add_menu( array(
