@@ -65,17 +65,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   src: url("/font/lato-regular-webfont.woff2") format("woff2"), url("/font/lato-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "fontello";
   src: url("/font/fontello.woff2") format("woff2"), url("/font/fontello.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 .icon:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   speak: none;
   display: inline-block;
   text-decoration: inherit;
@@ -349,6 +352,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   src: url("/font/liberationserif-regular-webfont.woff2") format("woff2"), url("/font/liberationserif-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 html {
   line-height: 1.15;
