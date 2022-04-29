@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* These colors are kept for compatibility reasons and should not be used */
 /* These colors may be used */
 /* Colors are swapped around to be in order from darkest to lightest */
@@ -21,12 +22,12 @@ sup, sub {
 }
 
 /*      Base Typography      */
-p, li, ul, ol, h1, h2, h3, h4, h5, h6 {
+.entry-content, p, li, ul, ol, h1, h2, h3, h4, h5, h6 {
   line-height: 1.6em;
   letter-spacing: 0.01em;
   overflow-wrap: break-word;
 }
-p, p div, li, li div, ul, ul div, ol, ol div, h1, h1 div, h2, h2 div, h3, h3 div, h4, h4 div, h5, h5 div, h6, h6 div {
+.entry-content, .entry-content div, p, p div, li, li div, ul, ul div, ol, ol div, h1, h1 div, h2, h2 div, h3, h3 div, h4, h4 div, h5, h5 div, h6, h6 div {
   font-size: clamp( 1.6rem, 3vw, 2.1rem );
 }
 
@@ -65,7 +66,7 @@ p, li, ul, ol {
   max-width: 80ch;
 }
 
-p + p {
+.wp-block-file + p, p + p {
   margin-top: 2.4rem;
 }
 
@@ -237,6 +238,19 @@ td, th {
 .wp-block-separator {
   border: none;
   background-color: #888;
+}
+
+.wp-block-file {
+  margin: 0;
+}
+.wp-block-file a::before {
+  content: "";
+  font-family: "dashicons";
+  font-size: 0.9em;
+  position: relative;
+  top: 0.1em;
+  display: inline-block;
+  text-decoration: none;
 }
 
 /* Utility classes */

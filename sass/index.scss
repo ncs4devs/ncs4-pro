@@ -29,7 +29,7 @@ sup, sub {
 }
 
 /*      Base Typography      */
-p, li, ul, ol, h1, h2, h3, h4, h5, h6 {
+.entry-content, p, li, ul, ol, h1, h2, h3, h4, h5, h6 {
   line-height: 1.6em;
   letter-spacing: 0.01em;
   overflow-wrap: break-word;
@@ -77,8 +77,10 @@ p, li, ul, ol{
   max-width: 80ch;
 }
 
-p + p {
-  margin-top: 2.4rem;
+.wp-block-file, p {
+  + p{
+    margin-top: 2.4rem;
+  }
 }
 
 ul, ol {
@@ -231,6 +233,20 @@ td, th {
 .wp-block-separator {
   border: none;
   background-color: #888;
+}
+
+.wp-block-file {
+  margin: 0;
+
+  & a::before {
+    content: "";
+    font-family: "dashicons";
+    font-size: 0.9em;
+    position: relative;
+    top: 0.1em;
+    display: inline-block;
+    text-decoration: none;
+  }
 }
 
 /* Utility classes */
