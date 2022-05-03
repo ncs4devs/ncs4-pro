@@ -19,6 +19,8 @@ article {
   }
 
   .post-thumbnail {
+    border: 2px solid $color_white-dark;
+    border-bottom-style: none;
     max-height: 40vh;
   }
 

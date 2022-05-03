@@ -62,6 +62,8 @@ article * {
   flex: 0 0 auto;
 }
 article .post-thumbnail {
+  border: 2px solid #e6e6e6;
+  border-bottom-style: none;
   max-height: 40vh;
 }
 article .entry-header {
