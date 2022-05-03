@@ -34,7 +34,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-    <style><?php include get_stylesheet_directory() . '/post.css'; ?></style>
+    <style><?php include get_stylesheet_directory() . '/single.css'; ?></style>
 	</main><!-- #main -->
 
 <?php

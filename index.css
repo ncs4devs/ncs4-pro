@@ -22,12 +22,12 @@ sup, sub {
 }
 
 /*      Base Typography      */
-.entry-content, p, li, ul, ol, h1, h2, h3, h4, h5, h6 {
+.site-main, .entry-content, p, li, ul, ol, h1, h2, h3, h4, h5, h6 {
   line-height: 1.6em;
   letter-spacing: 0.01em;
   overflow-wrap: break-word;
 }
-.entry-content, .entry-content div, p, p div, li, li div, ul, ul div, ol, ol div, h1, h1 div, h2, h2 div, h3, h3 div, h4, h4 div, h5, h5 div, h6, h6 div {
+.site-main, .site-main div, .entry-content, .entry-content div, p, p div, li, li div, ul, ul div, ol, ol div, h1, h1 div, h2, h2 div, h3, h3 div, h4, h4 div, h5, h5 div, h6, h6 div {
   font-size: clamp( 1.6rem, 3vw, 2.1rem );
 }
 

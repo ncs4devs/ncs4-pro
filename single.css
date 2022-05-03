@@ -1,0 +1,13 @@
+div.entry-meta.entry-meta {
+  font-size: 16px;
+}
+
+.cat-links, .tags-links {
+  display: block;
+}
+
+.tags-links {
+  margin-bottom: 1.5em;
+}
+
+/*# sourceMappingURL=single.css.map */

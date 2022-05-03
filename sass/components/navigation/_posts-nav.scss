@@ -1,0 +1,34 @@
+.site-main nav.posts-navigation {
+  max-width: 29vw;
+  margin: 1.5em auto;
+
+  .nav-links {
+    flex-direction: row-reverse;
+  }
+
+  .nav-previous {
+    text-align: end;
+
+    a::after {
+      content: "\f345";
+    }
+  }
+
+  .nav-next {
+    text-align: start;
+
+    a::before {
+      content: "\f341";
+    }
+  }
+
+  .nav-previous, .nav-next {
+    a::before, a::after {
+      display: inline-block;
+      font-family: "dashicons";
+      position: relative;
+      top: calc(0.5ex + 3px);
+      font-size: 2em;
+    }
+  }
+}

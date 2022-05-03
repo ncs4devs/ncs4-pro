@@ -17,7 +17,7 @@
 		<div class="entry-meta">
 			<?php
 			ncs4_pro_posted_on();
-			ncs4_pro_posted_by();
+			//ncs4_pro_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>

@@ -1,0 +1,49 @@
+@import 'abstracts/variables/colors';
+@import 'components/content/post-tags';
+@import 'components/navigation/posts-nav';
+
+.archive-content__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+  gap: 3rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  background-color: $color_white-dark;
+  padding-bottom: 1px;
+
+  * {
+    flex: 0 0 auto;
+  }
+
+  .post-thumbnail {
+    max-height: 40vh;
+  }
+
+  .entry-header {
+    display: block;
+  }
+
+  .entry-content {
+    flex: 1 0 auto;
+
+    .ncs4-site-margin:first-child  {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+
+      > {
+        h1, h2, h3, h4, h5, h6 {
+          &:first-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .entry-footer {
+    width: 100%;
+  }
+}
