@@ -34,7 +34,7 @@ body {
   max-width: unset;
   min-height: 100%;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-device-width: 1000px) {
   .hero-container .hero-background .hero-video {
     display: block;
     min-width: 100%;

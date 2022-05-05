@@ -38,7 +38,7 @@ body {
       min-height: 100%;
     }
 
-    @media only screen and (min-width: $mobile-video-breakpoint) {
+    @media only screen and (min-device-width: $mobile-video-breakpoint) {
       .hero-video {
         display: block;
         min-width: 100%;
