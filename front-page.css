@@ -31,6 +31,8 @@ body {
   display: none;
 }
 .hero-container .hero-background .hero-image {
+  min-width: 100%;
+  min-height: 100%;
   justify-content: center;
 }
 .hero-container .hero-background .hero-image img {
