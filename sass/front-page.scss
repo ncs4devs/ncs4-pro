@@ -4,7 +4,8 @@
 @import 'abstracts/variables/structure';
 
 $overlay-color: color.scale($color_secondary-1c, $alpha: -40%);
-$mobile-video-breakpoint: 550px;
+$mobile-image-breakpoint: 550px;
+$mobile-video-breakpoint: 1000px;
 
 body {
   background-color: $color_white;
@@ -27,12 +28,33 @@ body {
     height: 75vh;
     overflow: hidden;
 
-    .hero-video {
-      display: block;
+    .hero-video, .hero-image {
       min-width: 100%;
+      display: none;
     }
 
-    @media only screen and (max-width: $mobile-video-breakpoint) {
+    .hero-image {
+      max-width: unset;
+      min-height: 100%;
+    }
+
+    @media only screen and (min-width: $mobile-video-breakpoint) {
+      .hero-video {
+        display: block;
+        min-width: 100%;
+      }
+    }
+
+    @media only screen
+      and (min-width: $mobile-image-breakpoint)
+      and (max-device-width: $mobile-video-breakpoint - 1)
+      {
+        .hero-image {
+          display: block;
+        }
+      }
+
+    @media only screen and (max-width: $mobile-image-breakpoint - 1) {
       display: none;
     }
   }
@@ -47,7 +69,7 @@ body {
     padding: inherit;
     box-shadow: inset 0 0 50rem #000;
 
-    @media only screen and (max-width: $mobile-video-breakpoint) {
+    @media only screen and (max-width: $mobile-image-breakpoint - 1) {
       position: relative;
     }
 
@@ -58,7 +80,7 @@ body {
       padding: 3.2rem 0;
       background-color: color.scale($color_secondary-1c, $alpha: -25%);
 
-      @media only screen and (max-width: $mobile-video-breakpoint) {
+      @media only screen and (max-width: $mobile-image-breakpoint - 1) {
         box-shadow: inset 0 0 50rem #000;
         background-color: $color_primary-1;
       }
