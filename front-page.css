@@ -31,8 +31,13 @@ body {
   display: none;
 }
 .hero-container .hero-background .hero-image {
+  justify-content: center;
+}
+.hero-container .hero-background .hero-image img {
+  width: auto;
   max-width: unset;
   min-height: 100%;
+  flex: 1 0 100%;
 }
 @media only screen and (min-device-width: 1000px) {
   .hero-container .hero-background .hero-video {
@@ -42,7 +47,7 @@ body {
 }
 @media only screen and (min-width: 550px) and (max-device-width: 999px) {
   .hero-container .hero-background .hero-image {
-    display: block;
+    display: flex;
   }
 }
 @media only screen and (max-width: 549px) {

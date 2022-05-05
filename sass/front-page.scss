@@ -34,8 +34,14 @@ body {
     }
 
     .hero-image {
-      max-width: unset;
-      min-height: 100%;
+      justify-content: center;
+
+      img {
+        width: auto;
+        max-width: unset;
+        min-height: 100%;
+        flex: 1 0 100%;
+      }
     }
 
     @media only screen and (min-device-width: $mobile-video-breakpoint) {
@@ -50,7 +56,7 @@ body {
       and (max-device-width: $mobile-video-breakpoint - 1)
       {
         .hero-image {
-          display: block;
+          display: flex;
         }
       }
 
