@@ -21,6 +21,7 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
     ?>
+    <hr class="post-title-seperator">
     <div class="entry-meta">
       <?php
       ncs4_pro_posted_on();
@@ -79,10 +80,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer ncs4-site-margin ncs4-site-margin__size-small">
-    <?php
-    ncs4_pro_posted_on();
-    //ncs4_pro_posted_by();
-    ?>
 		<?php ncs4_pro_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

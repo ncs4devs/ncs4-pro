@@ -1,1 +1,18 @@
 @import 'components/content/post-tags';
+
+.post .entry-header {
+  display: block;
+}
+
+.entry-title {
+  margin: 0.5em 0;
+}
+
+.post-title-seperator {
+  margin: 0;
+  background-color: black;
+}
+
+.entry-meta {
+  text-align: right;
+}

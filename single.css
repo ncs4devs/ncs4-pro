@@ -10,4 +10,21 @@ div.entry-meta.entry-meta {
   margin-bottom: 1.5em;
 }
 
+.post .entry-header {
+  display: block;
+}
+
+.entry-title {
+  margin: 0.5em 0;
+}
+
+.post-title-seperator {
+  margin: 0;
+  background-color: black;
+}
+
+.entry-meta {
+  text-align: right;
+}
+
 /*# sourceMappingURL=single.css.map */

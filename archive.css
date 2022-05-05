@@ -48,38 +48,49 @@ div.entry-meta.entry-meta {
 
 .archive-content__inner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(max(25vw, 25ch), 1fr));
   gap: 3rem;
 }
 
-article {
+article.post {
   display: flex;
   flex-direction: column;
   background-color: #e6e6e6;
   padding-bottom: 1px;
+  margin: 0 auto;
 }
-article * {
+article.post * {
   flex: 0 0 auto;
 }
-article .post-thumbnail {
+article.post .post-thumbnail {
   border: 2px solid #e6e6e6;
   border-bottom-style: none;
   max-height: 40vh;
 }
-article .entry-header {
+article.post .entry-header {
   display: block;
+  width: 100%;
 }
-article .entry-content {
+article.post .post-title-seperator {
+  display: none;
+}
+article.post .entry-content {
   flex: 1 0 auto;
 }
-article .entry-content .ncs4-site-margin:first-child {
+article.post .entry-content .ncs4-site-margin:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
-article .entry-content .ncs4-site-margin:first-child > h1:first-child, article .entry-content .ncs4-site-margin:first-child > h2:first-child, article .entry-content .ncs4-site-margin:first-child > h3:first-child, article .entry-content .ncs4-site-margin:first-child > h4:first-child, article .entry-content .ncs4-site-margin:first-child > h5:first-child, article .entry-content .ncs4-site-margin:first-child > h6:first-child {
+article.post .entry-content .ncs4-site-margin:first-child > h1:first-child, article.post .entry-content .ncs4-site-margin:first-child > h2:first-child, article.post .entry-content .ncs4-site-margin:first-child > h3:first-child, article.post .entry-content .ncs4-site-margin:first-child > h4:first-child, article.post .entry-content .ncs4-site-margin:first-child > h5:first-child, article.post .entry-content .ncs4-site-margin:first-child > h6:first-child {
   display: none;
 }
-article .entry-footer {
+article.post .entry-meta {
+  margin-bottom: 1.5em;
+}
+article.post .entry-title {
+  margin-bottom: 0;
+}
+article.post .entry-footer {
   width: 100%;
 }
 
