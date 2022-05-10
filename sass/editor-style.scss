@@ -7,4 +7,10 @@
   Generic stylesheet which is loaded in the editor
  */
 
+.block-editor-panel-color-gradient-settings__dropdown-content {
+  .components-popover__content > div {
+    width: 205px;
+  }
+}
+
 @include component-buttons();

@@ -9,6 +9,10 @@
 /*
   Generic stylesheet which is loaded in the editor
  */
+.block-editor-panel-color-gradient-settings__dropdown-content .components-popover__content > div {
+  width: 205px;
+}
+
 .ncs4-button, .ncs4-button:visited {
   --btn-primary: #f4f4f4;
   --btn-secondary: #0061CD;
