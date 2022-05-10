@@ -242,6 +242,7 @@ if ( ! function_exists( 'ncs4_pro_setup' ) ) :
 				'color'	=>	'#b6b5b5',
 			),
 			// Links
+      /*
 			array(
 				'name'	=>	'Light Blue 0',
 				'slug'	=>	'link-0',
@@ -267,6 +268,7 @@ if ( ! function_exists( 'ncs4_pro_setup' ) ) :
 				'slug'	=>	'link-4',
 				'color'	=>	'#95c5f6',
 			),
+      */
 			// Whites
 			array(
 				'name'	=>	'Dark White (Text)',
