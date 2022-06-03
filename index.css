@@ -138,6 +138,20 @@ td, th {
   padding: 0.5em;
 }
 
+/* Page-wide styles */
+#page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#masthead, #colophon {
+  flex: 0 0 auto;
+}
+
+#primary {
+  flex: 1 0 auto;
+}
+
 /* Components */
 .ncs4-button, .ncs4-button:visited {
   --btn-primary: #f4f4f4;

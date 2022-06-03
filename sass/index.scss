@@ -164,6 +164,21 @@ td, th {
   padding: 0.5em;
 }
 
+/* Page-wide styles */
+#page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  @at-root #masthead, #colophon {
+    flex: 0 0 auto;
+  }
+
+  @at-root #primary {
+    flex: 1 0 auto;
+  }
+}
+
 
 /* Components */
 
