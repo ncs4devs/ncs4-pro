@@ -165,6 +165,7 @@ td, th {
 }
 
 /* Page-wide styles */
+
 #page {
   min-height: 100vh;
   display: flex;
@@ -179,6 +180,16 @@ td, th {
   }
 }
 
+/* Connect */
+
+.ncs4-connect-banner {
+  border: 6px none $color_primary-1c;
+  border-style: solid none;
+}
+
+.ncs4-connect-navbar ul.wp-block-navigation__container {
+  column-gap: 1.6rem;
+}
 
 /* Components */
 

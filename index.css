@@ -152,6 +152,16 @@ td, th {
   flex: 1 0 auto;
 }
 
+/* Connect */
+.ncs4-connect-banner {
+  border: 6px none #E4B005;
+  border-style: solid none;
+}
+
+.ncs4-connect-navbar ul.wp-block-navigation__container {
+  column-gap: 1.6rem;
+}
+
 /* Components */
 .ncs4-button, .ncs4-button:visited {
   --btn-primary: #f4f4f4;
