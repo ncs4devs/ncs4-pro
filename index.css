@@ -163,8 +163,13 @@ td, th {
 }
 
 /* Forums */
-.forums {
+.forums, .bbp-forums {
   max-width: unset;
+}
+
+#bbpress-forums .bbp-forum-info .bbp-forum-content,
+#bbpress-forums p.bbp-topic-meta {
+  font-size: 16px;
 }
 
 /* Components */
