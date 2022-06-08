@@ -162,6 +162,11 @@ td, th {
   column-gap: 1.6rem;
 }
 
+/* Forums */
+.forums {
+  max-width: unset;
+}
+
 /* Components */
 .ncs4-button, .ncs4-button:visited {
   --btn-primary: #f4f4f4;

@@ -43,6 +43,13 @@ function ncs4_custom_admin_bar_items($admin_bar) {
 }
 add_action('admin_bar_menu', 'ncs4_custom_admin_bar_items');
 
+// Forum settings
+function bbp_enable_tinymce( $args = array() ) {
+  $args['tinymce'] = true;
+  return $args;
+}
+add_filter( 'bbp_after_get_the_content_parse_args', 'bbp_enable_tinymce');
+
 // Register styles
 function ncs4_enqueue_custom_styles() {
 	if (!is_admin()) {

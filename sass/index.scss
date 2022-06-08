@@ -191,6 +191,12 @@ td, th {
   column-gap: 1.6rem;
 }
 
+/* Forums */
+.forums {
+  max-width: unset;
+}
+
+
 /* Components */
 
 @include component-buttons();

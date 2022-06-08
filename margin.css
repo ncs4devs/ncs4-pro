@@ -23,4 +23,10 @@
   max-width: 1000px;
 }
 
+.bbpress-wrapper, #bbpress-forums {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 3.2rem;
+}
+
 /*# sourceMappingURL=margin.css.map */
