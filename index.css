@@ -163,7 +163,7 @@ td, th {
 }
 
 /* Forums */
-.forums, .bbp-forums {
+.forums, .bbp-forums, .bbp-topics {
   max-width: unset;
 }
 
