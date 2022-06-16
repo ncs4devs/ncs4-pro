@@ -128,60 +128,71 @@
 .header-widget-area__small {
   display: flex;
   gap: 0.8rem;
-  /* Membership button */
+  /* Logged in membership area */
+  /* Logged out membership area */
 }
-#header-membership {
-  height: 100%;
-  border-bottom: 1px solid transparent;
-  /* Same height as inner search bar */
-}
-#header-membership a {
+#membership-profile-links {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 0 0.4rem;
-  background-color: #FFCE2F;
-  color: #040303;
-  text-decoration: none;
-  text-transform: uppercase;
+  position: relative;
+  gap: 1.6rem;
 }
-#header-membership a:hover, #header-membership a:focus {
-  background-color: #FFD755;
+a#membership-connect-logo:hover, a#membership-connect-logo:focus {
+  background: transparent;
 }
-#header-membership a:focus-visible {
-  background-color: #FFD755;
-  outline: 2px solid #e6e6e6;
-  outline-offset: 4px;
-}
-@media screen and (max-width: 1000px) {
-  #header-membership {
-    flex: 1 0 0;
-    justify-content: right;
-    display: flex;
-  }
+a#membership-connect-logo img {
+  display: block;
 }
 
-#mobile_header-widgets {
+#membership-profile {
+  background: transparent;
+  padding: 0;
+  margin-top: auto;
+  border: none;
+  border-radius: 50%;
+}
+#membership-profile .membership-profile-image {
+  display: block;
+  border-radius: 50%;
+}
+
+#membership-profile-dropdown {
+  display: none;
+  flex-direction: column;
+  gap: 1px;
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  z-index: 99999;
+  margin: 0;
+  padding: 0;
+  background-color: #e6e6e6;
+  border-color: #FFCE2F;
+  border-width: 5px;
+  border-top-style: solid;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  list-style-type: none;
+}
+#membership-profile-dropdown.expanded {
   display: flex;
-  gap: 0.8rem;
 }
-#mobile_header-widgets .search-bar-toggle {
-  background-image: url("/wp-content/uploads/2021/09/magnifying-glass-white.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 3.2rem;
-  width: 3.2rem;
+#membership-profile-dropdown li {
+  background-color: #273249;
+  font-size: 16px;
 }
-#mobile_navbar-toggle .menu-toggle {
-  position: relative;
-  flex: 0 0 3.2rem;
+#membership-profile-dropdown li a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
 }
-#mobile_navbar-toggle .menu-toggle span {
-  font-size: 3.2rem;
-  width: 100%;
+
+#membership-login-links {
+  display: flex;
   height: 100%;
+  gap: 0.8em;
+}
+#membership-login-links a {
+  margin-top: auto;
+  text-decoration: none;
 }
 
 .header-widget-area__small .mobile-widget {
@@ -225,6 +236,7 @@
 /* Search form */
 #header-search-widget {
   display: flex;
+  margin-top: auto;
   /* #header-search-widget__inner */
 }
 #header-search-widget__inner {

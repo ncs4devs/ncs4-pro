@@ -16,6 +16,8 @@ $mobile-breakpoint__small: 600px;
 $mobile-breakpoint__extra-small: 360px;
 $margin-width: 3.2rem;
 
+$submenu-topbar-width: 5px;
+
 .site-header {
 	display: flex;
 	position: sticky;
@@ -162,63 +164,81 @@ $margin-width: 3.2rem;
 	display: flex;
 	gap: 0.8rem;
 
-	/* Membership button */
-	@at-root #header-membership {
-		height: 100%;
-		border-bottom: 1px solid transparent; /* Same height as inner search bar */
+  /* Logged in membership area */
+  @at-root #membership-profile-links {
+    display: flex;
+    position: relative;
+    gap: 1.6rem;
 
-		a {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 100%;
-			height: 100%;
-			padding: 0 0.4rem;
-			background-color: $color_primary-2c;
-			color: $color_secondary-0c;
-			text-decoration: none;
-			text-transform: uppercase;
+    @at-root a#membership-connect-logo {
 
-			&:hover, &:focus {
-				background-color: $color_primary-3c;
-			}
+      &:hover, &:focus {
+        background: transparent;
+      }
 
-			&:focus-visible {
-				background-color: $color_primary-3c;
-				outline: 2px solid $color_white-dark;
-				outline-offset: 4px;
-			}
-		}
+      img {
+        display: block;
+      }
+    }
 
-		@media screen and (max-width: $mobile-breakpoint) {
-			flex: 1 0 0;
-			justify-content: right;
-			display: flex;
-		}
-	}
+    @at-root #membership-profile {
+      background: transparent;
+      padding: 0;
+      margin-top: auto;
+      border: none;
+      border-radius: 50%;
 
-	@at-root #mobile_header-widgets {
-		display: flex;
-		gap: 0.8rem;
+      .membership-profile-image {
+        display: block;
+        border-radius: 50%;
+      }
+    }
 
-		.search-bar-toggle {
-			@include searchIcon();
-		}
+    @at-root #membership-profile-dropdown {
+      display: none;
+      flex-direction: column;
+      gap: 1px;
+      position: absolute;
+      top: calc(100% + 4px);
+      right: 0;
+      z-index: 99999;
+      margin: 0;
+      padding: 0;
+      background-color: $color_white-dark;
+      border-color: $color-primary-2c;
+    	border-width: $submenu-topbar-width;
+    	border-top-style: solid;
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      list-style-type: none;
 
-		@at-root #mobile_navbar-toggle {
+      &.expanded {
+        display: flex;
+      }
 
-			.menu-toggle {
-				position: relative;
-				flex: 0 0 $mobile_widget-area-height;
+      li {
+        background-color: $color_primary-2;
+        font-size: 16px;
 
-				span {
-					font-size: $mobile_widget-area-height;
-					width: 100%;
-					height: 100%;
-				}
-			}
-		}
-	}
+        a {
+          display: block;
+          padding: 5px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  /* Logged out membership area */
+  @at-root #membership-login-links {
+    display: flex;
+    height: 100%;
+    gap: 0.8em;
+
+    a {
+      margin-top: auto;
+      text-decoration: none;
+    }
+  }
 
 	.mobile-widget {
 		display: flex;
@@ -267,6 +287,7 @@ $margin-width: 3.2rem;
 	$searchform-bg: $color_primary-0;
 
 	display: flex;
+  margin-top: auto;
 
 	&__inner {
 		margin-left: auto;
@@ -374,7 +395,6 @@ $margin-width: 3.2rem;
   width: 100%;
   $submenu-item-bg-color: $color_primary-2;
   $submenu-item-color: $color_white-dark;
-	$submenu-topbar-width: 5px;
 
   ul {
 		display: flex;

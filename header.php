@@ -47,13 +47,71 @@
 			</div><!-- .header-col.header-col1 -->
 			<div class="site-header-col site-header-col__col2">
 				<div class="col-inner">
-					<!-- Container for membership link & small mobile buttons -->
+					<!-- Container for profile links & small mobile buttons -->
 					<div class="header-widget-area__small">
-						<!-- Membership Button -->
-						<div id="header-membership">
-							<!-- Connect Link -->
-							<a href="https://connect.ncs4.usm.edu/">Membership</a>
-						</div><!-- #header-membership-->
+						<!-- Profile links -->
+						<div id="membership-area">
+              <?php
+                if ( is_user_logged_in() ) {
+                  ?>
+                  <div id="membership-profile-links">
+                    <a id="membership-connect-logo" href="/connect">
+                      <img src="<?php echo get_template_directory_uri() . '/img/connect-logo.png' ?>" width="48" height="52">
+                    </a>
+                    <button id="membership-profile"
+                      aria-expanded="false"
+                      aria-controls="membership-profile-dropdown"
+                      aria-label="Show profile menu"
+                    >
+                      <?php echo get_avatar(
+                        wp_get_current_user(),
+                        $size = 48,
+                        $default = 'mysteryman',
+                        $alt = '',
+                        $args = array(
+                          'class' => 'membership-profile-image',
+                        ),
+                      );?>
+                    </button>
+                    <ul id="membership-profile-dropdown" aria-hidden="true">
+                      <li>
+                        <a href="/connect">Connect home</a>
+                      </li>
+                      <li>
+                        <a href="/profile">Settings</a>
+                      </li>
+                      <li>
+                        <a href="<?php echo wp_logout_url("/"); ?>">Logout</a>
+                      </li>
+                    </ul>
+                    <script type="text/javascript">
+                      var btn = document.getElementById("membership-profile");
+                      var dropdown = document.getElementById("membership-profile-dropdown");
+                      btn.addEventListener("click", (_) => {
+                        btn.setAttribute('aria-expanded', 'true');
+                        dropdown.classList.add("expanded");
+                        dropdown.setAttribute('aria-hidden', 'false');
+                      });
+                      document.addEventListener('click', (e) => {
+                        if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+                          btn.setAttribute('aria-expanded', 'false');
+                          dropdown.classList.remove("expanded");
+                          dropdown.setAttribute("aria-hidden", "true");
+                        }
+                      });
+                    </script>
+                  </div>
+                  <?php
+                } else {
+                  ?>
+                  <div id="membership-login-links">
+                    <a href="/join">Join</a>
+                    <a href="<?php echo wp_login_url($_SERVER['REQUEST_URI']);?>">Login</a>
+                  </div>
+                  <?php
+                }
+              ?>
+						</div><!-- #membership-area-->
 						<div id="mobile_header-widgets">
 							<div id="mobile_search-bar-toggle" class="mobile-widget">
 								<button class="search-bar-toggle" aria-controls="header-search-bar" aria-expanded="false">
