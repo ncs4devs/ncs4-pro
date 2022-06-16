@@ -108,8 +108,9 @@ a, a:visited {
     cursor: pointer;
   }
 
-  &:focus-visible {
+  @at-root a:focus-visible, a:visited:focus-visible, button:focus-visible {
     outline: 2px solid $link-accent;
+    outline-color: currentcolor;
     outline-offset: 0.2em;
   }
 }
@@ -207,6 +208,10 @@ td, th {
 
 /* Wordpress Block Stylings */
 
+
+figure > a {
+  display: block;
+}
 
 .wp-block-embed.is-type-video {
   margin: 1.6rem 0 !important; /* WP uses margin: auto !important */
