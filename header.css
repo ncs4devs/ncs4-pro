@@ -141,6 +141,7 @@ a#membership-connect-logo:hover, a#membership-connect-logo:focus {
 }
 a#membership-connect-logo img {
   display: block;
+  min-width: 24px;
 }
 
 #membership-profile {
@@ -152,6 +153,7 @@ a#membership-connect-logo img {
 }
 #membership-profile .membership-profile-image {
   display: block;
+  min-width: 24px;
   border-radius: 50%;
 }
 
@@ -193,6 +195,47 @@ a#membership-connect-logo img {
 #membership-login-links a {
   margin-top: auto;
   text-decoration: none;
+}
+
+.header-widget-area__small .mobile-widget {
+  display: flex;
+}
+.header-widget-area__small .mobile-widget button {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: #e6e6e6;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+}
+.header-widget-area__small .mobile-widget button:hover, .header-widget-area__small .mobile-widget button:focus {
+  cursor: pointer;
+  background-color: #003B7C;
+}
+.header-widget-area__small .mobile-widget button:focus-visible {
+  outline: 2px solid #e6e6e6;
+  outline-offset: 4px;
+}
+#mobile_header-widgets {
+  display: flex;
+  gap: 0.8rem;
+}
+#mobile_header-widgets .search-bar-toggle {
+  background-image: url("/wp-content/uploads/2021/09/magnifying-glass-white.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 3.2rem;
+  width: 3.2rem;
+}
+#mobile_navbar-toggle .menu-toggle {
+  position: relative;
+  flex: 0 0 3.2rem;
+}
+#mobile_navbar-toggle .menu-toggle span {
+  font-size: 3.2rem;
+  width: 100%;
+  height: 100%;
 }
 
 .header-widget-area__small .mobile-widget {
