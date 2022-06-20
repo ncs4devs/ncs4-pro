@@ -58,6 +58,7 @@ article.post {
   background-color: #e6e6e6;
   padding-bottom: 1px;
   margin: 0 auto;
+  max-width: 100%;
 }
 article.post * {
   flex: 0 0 auto;
