@@ -18,8 +18,7 @@ function cc_mime_types($mimes) {
 	$mimes['svg'] = 'image/svg+xml';
 	return $mimes;
 }
-add_filter('upload_mimes', 'cc_mime_types');
-
+add_filter('mime_types', 'cc_mime_types');
 
 function remove_admin_bar_default_style() {
   remove_action('wp_head', '_admin_bar_bump_cb');
