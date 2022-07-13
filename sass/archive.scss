@@ -2,6 +2,10 @@
 @import 'components/content/post-tags';
 @import 'components/navigation/posts-nav';
 
+.archive-description {
+  padding-bottom: 2.4rem;
+}
+
 .archive-content__inner {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(max(25vw, 25ch), 1fr));
@@ -13,7 +17,7 @@ article.post {
   flex-direction: column;
   background-color: $color_white-dark;
   padding-bottom: 1px;
-  margin: 0 auto;
+  margin: 0 auto 3rem auto;
   max-width: 100%;
 
   * {

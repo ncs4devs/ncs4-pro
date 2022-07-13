@@ -21,7 +21,7 @@ div.entry-meta.entry-meta {
 
 .site-main nav.posts-navigation {
   max-width: 29vw;
-  margin: 1.5em auto;
+  margin: 0 auto 1.5em auto;
 }
 .site-main nav.posts-navigation .nav-links {
   flex-direction: row-reverse;

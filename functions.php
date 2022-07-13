@@ -12,6 +12,17 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+// Remove "Tag: " from Newsletter archive
+add_filter('get_the_archive_title', function($title) {
+  if (is_tag()) {
+    $tag_id = get_queried_object()->term_id;
+    if ($tag_id == 20) { // Newsletter tag
+      $title = single_tag_title('', false);
+    }
+  }
+  return $title;
+});
+
 // Add SVG support
 // Warning: SVG is an insecure image format and should only be accepted from trusted sources
 function cc_mime_types($mimes) {

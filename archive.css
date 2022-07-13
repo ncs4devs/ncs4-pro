@@ -21,7 +21,7 @@ div.entry-meta.entry-meta {
 
 .site-main nav.posts-navigation {
   max-width: 29vw;
-  margin: 1.5em auto;
+  margin: 0 auto 1.5em auto;
 }
 .site-main nav.posts-navigation .nav-links {
   flex-direction: row-reverse;
@@ -46,6 +46,10 @@ div.entry-meta.entry-meta {
   font-size: 2em;
 }
 
+.archive-description {
+  padding-bottom: 2.4rem;
+}
+
 .archive-content__inner {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(max(25vw, 25ch), 1fr));
@@ -57,7 +61,7 @@ article.post {
   flex-direction: column;
   background-color: #e6e6e6;
   padding-bottom: 1px;
-  margin: 0 auto;
+  margin: 0 auto 3rem auto;
   max-width: 100%;
 }
 article.post * {
