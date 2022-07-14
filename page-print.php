@@ -147,6 +147,7 @@ function create_header() {
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Best Practices - Print</title>
 	<link rel="profile" href="https://gmpg.org/xfn/11">
   <?php load_styles() ?>
   <style><?php include get_stylesheet_directory() . '/page-print.css'; ?></style>
