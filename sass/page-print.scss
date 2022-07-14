@@ -59,17 +59,22 @@ body {
   }
 }
 
-h1, h2 {
-  font-size: 18pt;
+h1, h2, h3, h4, h5, h6, p, li, ul, ol {
   max-width: unset;
 }
 
-h3, h4, h5, h6 {
-  font-size: 15pt;
-  max-width: unset;
+h1, h2 {
+  font-size: 18pt !important;
+}
+
+h3, h4 {
+  font-size: 16pt !important;
+}
+
+h5, h6 {
+  font-size: 14pt !important;
 }
 
 p, li, ul {
-  font-size: 12pt;
-  max-width: unset;
+  font-size: 12pt !important;
 }
