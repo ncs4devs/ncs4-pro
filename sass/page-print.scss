@@ -38,16 +38,14 @@ body {
 }
 
 .print-page-header {
-  display: grid;
-  grid-template-columns: 40% auto;
-
   svg {
-
+    width: 40%;
   }
 
   p {
+    max-width: 60%;
+    float: right;
     text-align: right;
-    margin-top: auto;
   }
 
   hr {
@@ -56,6 +54,18 @@ body {
     background-color: black;
     margin-bottom: 0;
     margin-top: 3.2rem;
+  }
+}
+
+@media print {
+  p, li, .ncs4-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  ul, ol, div {
+    display: block !important;
+    overflow: visible;
   }
 }
 
