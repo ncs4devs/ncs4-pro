@@ -456,6 +456,10 @@ a#membership-connect-logo img {
   top: -5px;
   right: -20rem;
 }
+.main-navigation #primary-menu > .menu-item-has-children:nth-last-child(-n+2) > .sub-menu {
+  right: 0;
+  /* Align last two main items right to prevent overflow) */
+}
 .main-navigation li {
   position: relative;
   margin-right: 5px;

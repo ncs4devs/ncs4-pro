@@ -135,8 +135,6 @@
                 <a href="/about/contact-us/">Contact Us</a>
                 <br>
                 <br>
-                Site Directory (Coming soon!)
-                <br>
                 Privacy Policy (Coming soon!)
               </p><!-- .links -->
             </section><!-- .quick-links--directory -->

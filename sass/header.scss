@@ -535,6 +535,10 @@ $submenu-topbar-width: 5px;
     }
   } /* .main-navigation ul */
 
+  #primary-menu > .menu-item-has-children:nth-last-child(-n + 2) > .sub-menu {
+    right: 0; /* Align last two main items right to prevent overflow) */
+  }
+
   li {
   	position: relative;
   	margin-right: 5px;

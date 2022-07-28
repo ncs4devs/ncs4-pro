@@ -11,7 +11,7 @@
     class="site-main site-main__redirect"
   >
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-      <div class="entry-content entry-content__front-page">
+      <div class="entry-content">
         <div
           class="ncs4-site-margin ncs4-site-margin__size-small wp-block-ncs4-custom-blocks-margin"
           style="
