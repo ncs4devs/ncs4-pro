@@ -123,15 +123,17 @@
               <h4>Quick Links</h4>
               <p class="links">
                 <a href="/about/">About NCS⁴</a><br>
+                <a href="/training/dhs-fema-courses">DHS/FEMA Training</a><br>
+                <a href="https://ncs4demo.usm.edu/redirect?url=https://ncs4.learnworlds.com/home">
+                  E-Learning</a><br>
+                <a href="/training/cssp/">CSSP Certification</a><br>
+                <a href="/resources/best-practices/">
+                  Best Practices</a><br>
+                <a href="/membership/">Become a Member</a><br>
+                <a href="/resources/newsletter/">
+                  Subscribe to Newsletter</a><br>
                 <a href="/industry-engagement/sponsorship-opportunities/">
                   Advertise and Sponsor</a><br>
-                <a href="/membership/">Become a Member</a><br>
-                <a href="/resources/best-practices/">
-                  Best Practices Guides</a><br>
-                <a href="/training/cssp/">CSSP Certification</a><br>
-                <a href="/training/dhs-fema-courses">DHS/FEMA Training</a><br>
-                <a href="/resources/newsletter/">
-                  Subscribe to the Newsletter</a><br>
                 <a href="/about/contact-us/">Contact Us</a>
                 <br>
                 <br>
