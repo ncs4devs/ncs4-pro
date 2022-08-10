@@ -26,12 +26,19 @@ body div {
 }
 
 /*      Base Typography      */
-.site-main, .entry-content, .archive-content, p, li, ul, ol, h1, h2, h3, h4, h5, h6 {
+.caption, .tiny-text, .text-tiny {
+  font-size: clamp( 1rem, 2.2857142857vw, 1.6rem );
+}
+
+.site-main, .entry-content, .archive-content, p, li, ul, ol, h1, h2, h3, h4,
+h5, h6, legend {
   line-height: 1.6em;
   letter-spacing: 0.01em;
   overflow-wrap: break-word;
 }
-.site-main, .site-main .archive-content div, .entry-content, .entry-content .archive-content div, .archive-content, .archive-content .archive-content div, p, p .archive-content div, li, li .archive-content div, ul, ul .archive-content div, ol, ol .archive-content div, h1, h1 .archive-content div, h2, h2 .archive-content div, h3, h3 .archive-content div, h4, h4 .archive-content div, h5, h5 .archive-content div, h6, h6 .archive-content div {
+.site-main, .site-main .archive-content div, .entry-content, .entry-content .archive-content div, .archive-content, .archive-content .archive-content div, p, p .archive-content div, li, li .archive-content div, ul, ul .archive-content div, ol, ol .archive-content div, h1, h1 .archive-content div, h2, h2 .archive-content div, h3, h3 .archive-content div, h4, h4 .archive-content div,
+h5,
+h5 .archive-content div, h6, h6 .archive-content div, legend, legend .archive-content div {
   font-size: clamp( 1.6rem, 3vw, 2.1rem );
 }
 
@@ -65,7 +72,7 @@ h5, h6 {
   font-weight: normal;
 }
 
-p, li, ul, ol {
+p, li, ul, ol, legend {
   margin: 0;
   max-width: 80ch;
 }
@@ -171,6 +178,43 @@ td, th {
 #bbpress-forums .bbp-forum-info .bbp-forum-content,
 #bbpress-forums p.bbp-topic-meta {
   font-size: 16px;
+}
+
+.bbp-reply-permalink {
+  font-size: 10px;
+  line-height: 1.5em;
+  margin-top: 1.3em;
+}
+
+#bbpress-forums {
+  margin-bottom: 5rem;
+}
+#bbpress-forums ul.bbp-replies {
+  border: none;
+}
+#bbpress-forums div.bbp-reply-header {
+  background-color: #0061CD;
+  color: #f4f4f4;
+  padding-left: 25.5px;
+}
+#bbpress-forums div.type-topic, #bbpress-forums div.type-reply {
+  background-color: #e6e6e6;
+  margin-bottom: 3rem;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.32), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+#bbpress-forums blockquote {
+  background-color: #f4f4f4 !important;
+  border-color: #FFCE2F !important;
+}
+#bbpress-forums span.bbp-admin-links a, #bbpress-forums .bbp-reply-permalink {
+  color: #f4f4f4;
+}
+#bbpress-forums .bbp-reply-form {
+  background-color: #e6e6e6;
+  padding: 8px;
+}
+#bbpress-forums fieldset.bbp-form {
+  border-color: #f4f4f4;
 }
 
 /* Components */
