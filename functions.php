@@ -23,6 +23,113 @@ add_filter('get_the_archive_title', function($title) {
   return $title;
 });
 
+// Modified get_the_content to properly handle more blocks inside innerblocks
+// See: https://developer.wordpress.org/reference/functions/get_the_content/
+function ncs4_get_the_content( $more_link_text = null, $strip_teaser = false, $post = null ) {
+    global $page, $more, $preview, $pages, $multipage;
+
+    $_post = get_post( $post );
+
+    if ( ! ( $_post instanceof WP_Post ) ) {
+        return '';
+    }
+
+    // Use the globals if the $post parameter was not specified,
+    // but only after they have been set up in setup_postdata().
+    if ( null === $post && did_action( 'the_post' ) ) {
+        $elements = compact( 'page', 'more', 'preview', 'pages', 'multipage' );
+    } else {
+        $elements = generate_postdata( $_post );
+    }
+
+    if ( null === $more_link_text ) {
+        $more_link_text = sprintf(
+            '<span aria-label="%1$s">%2$s</span>',
+            sprintf(
+                /* translators: %s: Post title. */
+                __( 'Continue reading %s' ),
+                the_title_attribute(
+                    array(
+                        'echo' => false,
+                        'post' => $_post,
+                    )
+                )
+            ),
+            __( '(more&hellip;)' )
+        );
+    }
+
+    $output     = '';
+    $has_teaser = false;
+
+    // If post password required and it doesn't match the cookie.
+    if ( post_password_required( $_post ) ) {
+        return get_the_password_form( $_post );
+    }
+
+    // If the requested page doesn't exist.
+    if ( $elements['page'] > count( $elements['pages'] ) ) {
+        // Give them the highest numbered page that DOES exist.
+        $elements['page'] = count( $elements['pages'] );
+    }
+
+    $page_no = $elements['page'];
+    $content = $elements['pages'][ $page_no - 1 ];
+    if ( preg_match( '/<!--more(.*?)?-->/', $content, $matches ) ) {
+        if ( has_block( 'more', $content ) ) {
+            // Remove the core/more block delimiters. They will be left over after $content is split up.
+            $content = preg_replace( '/<!-- \/?wp:more(.*?) -->/', '', $content );
+        }
+
+        $content = explode( $matches[0], $content, 2 );
+
+        if ( ! empty( $matches[1] ) && ! empty( $more_link_text ) ) {
+            $more_link_text = strip_tags( wp_kses_no_null( trim( $matches[1] ) ) );
+        }
+
+        $has_teaser = true;
+    } else {
+        $content = array( $content );
+    }
+
+    if ( false !== strpos( $_post->post_content, '<!--noteaser-->' ) && ( ! $elements['multipage'] || 1 == $elements['page'] ) ) {
+        $strip_teaser = true;
+    }
+
+    $teaser = $content[0];
+
+    $more_link = '';
+    if ( count( $content ) > 1 ) {
+      if ( $elements['more'] ) {
+        $more_link.= '<span id="more-' . $_post->ID . '"></span>' . $content[1];
+      } else {
+        if ( ! empty( $more_link_text ) ) {
+
+          /**
+          * Filters the Read More link text.
+          *
+          * @since 2.8.0
+          *
+          * @param string $more_link_element Read More link element.
+          * @param string $more_link_text    Read More text.
+          */
+          $more_link .= apply_filters( 'the_content_more_link', ' <a href="' . get_permalink( $_post ) . "#more-{$_post->ID}\" class=\"more-link\">$more_link_text</a>", $more_link_text );
+        }
+        $more_link = force_balance_tags( $more_link );
+      }
+    }
+
+    if ( $elements['more'] && $strip_teaser && $has_teaser ) {
+      $teaser = '';
+    }
+
+    $teaser .= $more_link;
+    $teaser = force_balance_tags($teaser);
+    $output .= $teaser;
+
+    return $output;
+}
+
 // Add SVG support
 // Warning: SVG is an insecure image format and should only be accepted from trusted sources
 function cc_mime_types($mimes) {
@@ -404,10 +511,6 @@ endif;
 add_action( 'after_setup_theme', 'ncs4_pro_setup' );
 
 /* Custom search functions */
-
-function ncs4_excerpt() {
-
-}
 
 /* Original src: https://blog.project-insanity.org/2020/07/27/custom-excerpts-in-wordpress-search-highlighting-query-keywords/ */
 
