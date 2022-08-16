@@ -66,9 +66,10 @@
 		<div id="footer-widget-area">
 			<div id="footer-widget-area__inner" class="ncs4-site-margin no-padding">
 				<div class="widget-area widget-area__1">
-					<img src="<?php
-						echo get_template_directory_uri();
-					?>/img/footer.jpg">
+					<img
+            src="<?= get_template_directory_uri() . '/img/footer.jpg'?>"
+            <?= getimagesize(get_template_directory() . '/img/footer.jpg')[3] ?>
+          >
 					<section class="widget-text-area contact-info">
 						<h4>Mailing Address</h4>
 						<p>
