@@ -125,8 +125,8 @@
               <p class="links">
                 <a href="/about/">About NCS⁴</a><br>
                 <a href="/training/dhs-fema-courses">DHS/FEMA Training</a><br>
-                <a href="https://ncs4demo.usm.edu/redirect?url=https://ncs4.learnworlds.com/home">
-                  E-Learning</a><br>
+                <a href="/elearning">
+                  eLearning</a><br>
                 <a href="/training/cssp/">CSSP Certification</a><br>
                 <a href="/resources/best-practices/">
                   Best Practices</a><br>
