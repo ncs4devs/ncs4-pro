@@ -57,6 +57,7 @@
       $content = ncs4_get_the_content(
         __( 'Read more<span class="screen-reader-text"> "%s"</span>', 'ncs4-pro' )
       );
+      $content = apply_filters('the_content', $content);
       echo $content;
     endif;
 
