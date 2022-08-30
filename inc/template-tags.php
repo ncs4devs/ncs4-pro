@@ -120,8 +120,15 @@ if ( ! function_exists( 'ncs4_pro_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
+
+  // EDIT: Displays a default image for post archives
 	function ncs4_pro_post_thumbnail() {
-		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+    $default_thumbnail = "/img/post-thumbnail_lossy.jpg";
+
+		if (
+         post_password_required() || is_attachment()
+      || !( has_post_thumbnail() || is_archive() )
+    ) {
 			return;
 		}
 
@@ -136,17 +143,25 @@ if ( ! function_exists( 'ncs4_pro_post_thumbnail' ) ) :
 
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
-					the_post_thumbnail(
-						'post-thumbnail',
-						array(
-							'alt' => the_title_attribute(
-								array(
-									'echo' => false,
-								)
-							),
-						)
-					);
-				?>
+          if (has_post_thumbnail()) :
+            the_post_thumbnail(
+              'post-thumbnail',
+              array(
+                'alt' => the_title_attribute(
+                  array(
+                    'echo' => false,
+                  )
+                ),
+              )
+            );
+          else : ?>
+            <img
+              class="attachment-post-thumbnail size-post-thumbnail wp-post-image"
+              alt="<?php the_title_attribute(); ?>"
+              src="<?= get_template_directory_uri() . $default_thumbnail; ?>"
+              <?= getimagesize(get_template_directory() . $default_thumbnail)[3] ?>
+            >
+        <?php endif; // End has_post_thumbnail() ?>
 			</a>
 
 			<?php
