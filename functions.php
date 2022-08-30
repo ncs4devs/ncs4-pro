@@ -164,6 +164,7 @@ function ncs4_get_the_content( $more_link_text = null, $strip_teaser = false, $p
     return $output;
 }
 
+/*
 add_filter('the_post', function($post) {
   if (is_single($post)) {
     $post->post_name = (string) $post->ID;
@@ -202,6 +203,7 @@ function ncs4_event_start_meta_box($post) {
 function ncs4_event_end_meta_box($post) {
 
 }
+*/
 
 // Add SVG support
 // Warning: SVG is an insecure image format and should only be accepted from trusted sources
