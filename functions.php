@@ -7,6 +7,40 @@
  * @package NCS4_Pro
  */
 
+$ncs4_block_dependencies = array();
+
+/*
+
+ncs4_register_block_dependency(array(
+  'name'          =>  'award-card',
+  'editor-styles' =>  array(
+    'ncs4-custom-blocks_award-card-editor' => WP_PLUGIN_DIR
+  )
+));
+
+*/
+
+/*
+
+function ncs4_register_block_dependency($dependency) {
+  if (isset($ncs4_block_dependencies[ $dependency->name] )) {
+    return; // Dependency already exists
+  }
+
+  $ncs4_block_dependencies[$dependency->name] = $dependency;
+}
+
+function ncs4_enqueue_block_dependencies() {
+  foreach ($ncs4_block_dependencies as $dependency) {
+    foreach ($dependency->editor_style as $style) {
+      wp_enqueue_style()
+    }
+  }
+}
+add_action('init', 'ncs4_enqueue_block_dependencies');
+
+*/
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
@@ -130,6 +164,45 @@ function ncs4_get_the_content( $more_link_text = null, $strip_teaser = false, $p
     return $output;
 }
 
+add_filter('the_post', function($post) {
+  if (is_single($post)) {
+    $post->post_name = (string) $post->ID;
+  };
+  return $post;
+});
+
+// Add Event date meta boxes
+add_action( 'add_meta_boxes', function() {
+  $screens = [ 'post', 'wporg_cpt' ];
+  foreach ($screens as $screen) {
+    add_meta_box(
+      'ncs4_event-start',
+      'Event start date',
+      'ncs4_event_start_meta_box',
+      $screen,
+    );
+    add_meta_box(
+      'ncs4_event-end',
+      'Event end date',
+      'ncs4_event_end_meta_box',
+      $screen,
+    );
+  }
+});
+
+function ncs4_event_start_meta_box($post) {
+  ?>
+  <label for="event-start-field">Event start</label>
+  <select name="event-start-field" id="event-start-field" class="postbox">
+
+  <
+  <?php
+}
+
+function ncs4_event_end_meta_box($post) {
+
+}
+
 // Add SVG support
 // Warning: SVG is an insecure image format and should only be accepted from trusted sources
 function cc_mime_types($mimes) {
@@ -140,6 +213,9 @@ add_filter('mime_types', 'cc_mime_types');
 
 function remove_admin_bar_default_style() {
   remove_action('wp_head', '_admin_bar_bump_cb');
+  if (!current_user_can('edit_others_posts')) {
+    show_admin_bar(false);
+  }
 }
 add_action('admin_bar_init', 'remove_admin_bar_default_style');
 
