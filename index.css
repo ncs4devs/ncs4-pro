@@ -164,6 +164,29 @@ td, th {
   flex: 1 0 auto;
 }
 
+/* Memberpress */
+.mepr_username,
+.mepr_password .mp-form-label,
+.mepr_password .mp-hide-pw {
+  display: grid;
+  gap: 0.8em;
+}
+
+.mp-form-row.mepr_username {
+  grid-template-columns: 10ch 50ch;
+}
+
+.mp-form-row.mepr_password .mp-form-label {
+  grid-template-columns: 10ch 1fr;
+}
+.mp-form-row.mepr_password .mp-form-label div.mp-hide-pw {
+  grid-template-columns: 50ch 54px;
+}
+.mp-form-row.mepr_password .mp-form-label button.mp-hide-pw {
+  display: none;
+  /* Button is not working */
+}
+
 /* Connect */
 .ncs4-connect-banner {
   border: 6px none #E4B005;
