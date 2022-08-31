@@ -106,7 +106,7 @@
                   ?>
                   <div id="membership-login-links">
                     <a href="/join">Join</a>
-                    <a href="<?php echo wp_login_url($_SERVER['REQUEST_URI']);?>">Login</a>
+                    <a href="/login">Login</a>
                   </div>
                   <?php
                 }
