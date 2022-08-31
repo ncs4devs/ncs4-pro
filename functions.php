@@ -57,6 +57,12 @@ add_filter('get_the_archive_title', function($title) {
   return $title;
 });
 
+function console_log( $data ){
+  echo '<script>';
+  echo 'console.log('. json_encode( $data ) .')';
+  echo '</script>';
+}
+
 // Modified get_the_content to properly handle more blocks inside innerblocks
 // See: https://developer.wordpress.org/reference/functions/get_the_content/
 function ncs4_get_the_content( $more_link_text = null, $strip_teaser = false, $post = null ) {
@@ -158,8 +164,10 @@ function ncs4_get_the_content( $more_link_text = null, $strip_teaser = false, $p
     }
 
     $teaser .= $more_link;
-    $teaser = force_balance_tags($teaser);
     $output .= $teaser;
+
+    apply_filters('the_content', $output);
+    $output = force_balance_tags($output);
 
     return $output;
 }
