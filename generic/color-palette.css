@@ -350,6 +350,10 @@
   --palette-bg-color: #e6e6e6;
 }
 
+:root .has-white-color a, :root .has-white-color a:hover, :root .has-white-color a:focus-visible, :root .has-white-dark-color a, :root .has-white-dark-color a:hover, :root .has-white-dark-color a:focus-visible, :root .has-white-bright-color a, :root .has-white-bright-color a:hover, :root .has-white-bright-color a:focus-visible {
+  color: #FFCE2F;
+}
+
 :root .has-secondary-1_secondary-0_secondary-0c-gradient-background {
   background: linear-gradient(0deg, #003B7C 0%, #002C5D 22%, #040303 100%);
 }

@@ -63,4 +63,14 @@ $gradients: (
 @include colorProp("white", $color_white);
 @include colorProp("white-dark", $color_white-dark);
 
+:root {
+  .has-white, .has-white-dark, .has-white-bright {
+    &-color a {
+      &, &:hover, &:focus-visible {
+        color: $color_primary-2c;
+      }
+    }
+  }
+}
+
 @include makeGradients();
