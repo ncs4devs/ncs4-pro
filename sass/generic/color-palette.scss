@@ -69,6 +69,10 @@ $gradients: (
       &, &:hover, &:focus-visible, &:focus {
         color: $color_primary-2c;
       }
+
+      &:hover, &:focus-visible {
+        color: $color_primary-3c;
+      }
     }
   }
 }
