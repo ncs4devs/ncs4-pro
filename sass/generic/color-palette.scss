@@ -66,9 +66,26 @@ $gradients: (
 :root {
   .has-white, .has-white-dark, .has-white-bright {
     &-color a {
-      &, &:hover, &:focus-visible {
+      &, &:hover, &:focus-visible, &:focus {
         color: $color_primary-2c;
       }
+    }
+  }
+}
+
+:root .link-white, :root .link-navbar {
+  @at-root a#{&}, & a {
+    &, &:hover, &:focus-visible, &:focus {
+      color: $color_white-dark;
+    }
+  }
+}
+
+:root .link-navbar {
+  @at-root a#{&}, & a {
+    &:hover, &:focus-visible {
+      background-color: $color_secondary-2;
+      text-decoration: none;
     }
   }
 }

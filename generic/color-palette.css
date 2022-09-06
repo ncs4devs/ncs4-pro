@@ -350,8 +350,17 @@
   --palette-bg-color: #e6e6e6;
 }
 
-:root .has-white-color a, :root .has-white-color a:hover, :root .has-white-color a:focus-visible, :root .has-white-dark-color a, :root .has-white-dark-color a:hover, :root .has-white-dark-color a:focus-visible, :root .has-white-bright-color a, :root .has-white-bright-color a:hover, :root .has-white-bright-color a:focus-visible {
+:root .has-white-color a, :root .has-white-color a:hover, :root .has-white-color a:focus-visible, :root .has-white-color a:focus, :root .has-white-dark-color a, :root .has-white-dark-color a:hover, :root .has-white-dark-color a:focus-visible, :root .has-white-dark-color a:focus, :root .has-white-bright-color a, :root .has-white-bright-color a:hover, :root .has-white-bright-color a:focus-visible, :root .has-white-bright-color a:focus {
   color: #FFCE2F;
+}
+
+a:root .link-white, a:root .link-white:hover, a:root .link-white:focus-visible, a:root .link-white:focus, :root .link-navbar, :root .link-navbar:hover, :root .link-navbar:focus-visible, :root .link-navbar:focus, :root .link-white a, :root .link-white a:hover, :root .link-white a:focus-visible, :root .link-white a:focus, :root .link-navbar a, :root .link-navbar a:hover, :root .link-navbar a:focus-visible, :root .link-navbar a:focus {
+  color: #e6e6e6;
+}
+
+a:root .link-navbar:hover, a:root .link-navbar:focus-visible, :root .link-navbar a:hover, :root .link-navbar a:focus-visible {
+  background-color: #00499A;
+  text-decoration: none;
 }
 
 :root .has-secondary-1_secondary-0_secondary-0c-gradient-background {
