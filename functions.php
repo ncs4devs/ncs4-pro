@@ -166,7 +166,9 @@ function ncs4_get_the_content( $more_link_text = null, $strip_teaser = false, $p
     $teaser .= $more_link;
     $output .= $teaser;
 
-    apply_filters('the_content', $output);
+    if (!is_archive()) {
+      $output = apply_filters('the_content', $output);
+    }
     $output = force_balance_tags($output);
 
     return $output;

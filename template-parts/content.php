@@ -54,10 +54,9 @@
       </div><!-- .entry-excerpt -->
       <?php
     else:
-      $content = ncs4_get_the_content(
+      echo ncs4_get_the_content(
         __( 'Read more<span class="screen-reader-text"> "%s"</span>', 'ncs4-pro' )
       );
-      echo $content;
     endif;
 
 		wp_link_pages(
