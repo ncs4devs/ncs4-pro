@@ -7,6 +7,68 @@
 /* Yellow */
 /* Grey */
 /* Links */
+#buddypress div#item-header #cover-image-container #item-header-cover-image {
+  display: grid;
+  grid-template-columns: 20ch 1fr;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+#buddypress div#item-header #cover-image-container #item-header-cover-image #item-header-avatar {
+  margin-right: auto;
+  margin-left: auto;
+}
+#buddypress div#item-header #cover-image-container #item-header-cover-image #item-header-avatar img.avatar {
+  border-radius: 50%;
+  border-color: #555555;
+  margin: 0 auto;
+}
+#buddypress div#item-header #cover-image-container #item-header-cover-image #item-header-content {
+  margin: 178px 0 0 0;
+}
+
+.bp-wrap {
+  padding: 0 1em;
+  padding-left: calc(20ch + 2em);
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+#object-nav, #subnav {
+  border: solid 1px #555555;
+  height: auto;
+}
+#object-nav ul, #subnav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  max-width: 100%;
+}
+#object-nav li a, #subnav li a {
+  background-color: transparent;
+  height: 100%;
+}
+#object-nav li a:hover, #object-nav li a:focus-visible, #subnav li a:hover, #subnav li a:focus-visible {
+  background-color: #e6e6e6;
+}
+#object-nav li.current a, #object-nav li.current a:hover, #object-nav li.current a:focus-visible, #subnav li.current a, #subnav li.current a:hover, #subnav li.current a:focus-visible {
+  background-color: #95c5f6;
+}
+
+#item-body, #subnav {
+  margin-top: 0;
+}
+
+#subnav {
+  border: none;
+}
+#subnav li {
+  border-right: solid 1px #555555;
+  padding: 0 4px;
+}
+#subnav li:last-of-type {
+  border: none;
+}
+
 /*
   The second-most generic stylesheet (besides style.css, which isn't modified
   if it can be avoided)

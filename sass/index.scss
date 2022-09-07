@@ -2,6 +2,7 @@
 @use 'sass:math';
 @import 'abstracts/variables/colors';
 @import 'abstracts/mixins/mixins';
+@import 'profile';
 
 /*
   The second-most generic stylesheet (besides style.css, which isn't modified
