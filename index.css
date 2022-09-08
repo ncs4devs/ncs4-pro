@@ -69,6 +69,28 @@
   border: none;
 }
 
+.buddypress-wrap {
+  max-width: 1000px;
+  margin: 3rem auto 5rem auto;
+  padding: 0 3.2rem;
+}
+
+#buddypress #register-page #signup-form legend, #buddypress #register-page #signup-form label, #buddypress #register-page #signup-form input {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+#buddypress #register-page #signup-form input {
+  max-width: 40ch;
+}
+#buddypress #register-page #basic-details-section .bp-heading {
+  display: none;
+}
+#buddypress #register-page #profile-details-section {
+  padding: 0;
+}
+#buddypress #register-page #profile-details-section .bp-heading {
+  display: none;
+}
+
 /*
   The second-most generic stylesheet (besides style.css, which isn't modified
   if it can be avoided)

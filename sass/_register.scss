@@ -1,0 +1,39 @@
+.buddypress-wrap {
+  max-width: 1000px;
+  margin: 3rem auto 5rem auto;
+  padding: 0 3.2rem;
+}
+
+#buddypress #register-page {
+
+  #signup-form > .layout-wrap {
+    //flex-direction: column-reverse;
+
+  }
+
+  #signup-form {
+
+    legend, label, input {
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+    }
+
+    input {
+      max-width: 40ch;
+    }
+  }
+
+
+  #basic-details-section {
+    .bp-heading {
+      display: none;
+    }
+  }
+
+  #profile-details-section {
+    padding: 0;
+
+    .bp-heading {
+      display: none;
+    }
+  }
+}
