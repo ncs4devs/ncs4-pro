@@ -138,7 +138,9 @@
                 <a href="/about/contact-us/">Contact Us</a>
                 <br>
                 <br>
-                Privacy Policy (Coming soon!)
+                <a href="https://www.usm.edu/university/privacy.php" target="_blank" rel="noopener">
+                  Privacy and Legal
+                </a>
               </p><!-- .links -->
             </section><!-- .quick-links--directory -->
             <section class="quick-links--social-media">
