@@ -1,0 +1,51 @@
+#buddypress {
+
+  #dir-members-search-form {
+    border-color: $color_secondary-2c;
+  }
+
+  #members-dir-list {
+
+    #members-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+
+      &::before {
+        content: none;
+      }
+
+      .item-entry .list-wrap {
+        display: flex;
+        flex-direction: column;
+
+        .item {
+
+          .item-block,
+          .member-name,
+          .last-activity,
+          .friendship-button,
+          .members-meta
+          {
+            margin: 0 auto;
+            width: auto;
+          }
+
+          * {
+            text-align: center;
+            float: none;
+            max-width: max-content;
+          }
+        }
+      }
+
+      .item-avatar {
+        margin: 0;
+
+        .avatar {
+          border-radius: 50%;
+          border: solid 2px $color_secondary-2c;
+        }
+      }
+    }
+  }
+}
