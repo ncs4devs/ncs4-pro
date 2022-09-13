@@ -224,6 +224,11 @@ td, th {
   border-style: solid none;
 }
 
+.ncs4-connect-navbar {
+  border: none !important;
+  box-shadow: none !important;
+}
+
 .ncs4-connect-navbar ul.wp-block-navigation__container {
   column-gap: 1.6rem;
 }

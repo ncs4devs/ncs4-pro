@@ -7,6 +7,10 @@
 /* Yellow */
 /* Grey */
 /* Links */
+.bp-user #buddypress {
+  margin-top: 0;
+}
+
 #buddypress div#item-header #cover-image-container #item-header-cover-image {
   display: grid;
   grid-template-columns: 20ch 1fr;
@@ -27,7 +31,7 @@
 }
 
 .bp-wrap {
-  padding: 0 1em;
+  padding: 0;
   padding-left: calc(20ch + 2em);
   max-width: 80vw;
   margin: 0 auto;
@@ -69,7 +73,7 @@
   border: none;
 }
 
-.buddypress-wrap {
+#register-page .buddypress-wrap {
   max-width: 1000px;
   margin: 3rem auto 5rem auto;
   padding: 0 3.2rem;
@@ -310,6 +314,11 @@ td, th {
 .ncs4-connect-banner {
   border: 6px none #E4B005;
   border-style: solid none;
+}
+
+.ncs4-connect-navbar {
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .ncs4-connect-navbar ul.wp-block-navigation__container {
