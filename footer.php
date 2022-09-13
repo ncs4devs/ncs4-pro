@@ -130,7 +130,7 @@
                 <a href="/training/cssp/">CSSP Certification</a><br>
                 <a href="/resources/best-practices/">
                   Best Practices</a><br>
-                <a href="/membership/">Become a Member</a><br>
+                <a href="/join-ncs4-connect/">Become a Member</a><br>
                 <a href="https://ncs4.activehosted.com/f/1" target="_blank" rel="noopener">
                   Subscribe to Newsletter</a><br>
                 <a href="/industry-engagement/sponsorship-opportunities/">

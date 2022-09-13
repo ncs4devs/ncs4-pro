@@ -105,7 +105,7 @@
                 } else {
                   ?>
                   <div id="membership-login-links">
-                    <a href="/join">Join</a>
+                    <a href="/join-ncs4-connect">Join</a>
                     <a href="/login">Login</a>
                   </div>
                   <?php
