@@ -9,6 +9,7 @@
 ?>
 <?php reblex_display_block(5371); // Connect Header ?>
   <div class="ncs4-site-margin ncs4-site-margin__size-small">
+    <h1>Member Directory</h1>
     <p style="margin-bottom:1.5em"><em>This page is currently under construction and will be updated soon.</em></p>
     <?php bp_nouveau_before_members_directory_content(); ?>
 
