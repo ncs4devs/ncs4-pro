@@ -75,7 +75,7 @@
                     </button>
                     <ul id="membership-profile-dropdown" aria-hidden="true">
                       <li>
-                        <a href="/connect">Connect home</a>
+                        <a href="/connect">Connect Home</a>
                       </li>
                       <li>
                         <a href="/profile">Settings</a>
