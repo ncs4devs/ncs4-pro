@@ -63,6 +63,11 @@ function console_log( $data ){
   echo '</script>';
 }
 
+/*
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', function())
+*/
+
 // Modified get_the_content to properly handle more blocks inside innerblocks
 // See: https://developer.wordpress.org/reference/functions/get_the_content/
 function ncs4_get_the_content( $more_link_text = null, $strip_teaser = false, $post = null ) {
@@ -251,9 +256,18 @@ add_action('admin_bar_menu', 'ncs4_custom_admin_bar_items');
 // Forum settings
 function bbp_enable_tinymce( $args = array() ) {
   $args['tinymce'] = true;
+  $args['teeny'] = false;
   return $args;
 }
 add_filter( 'bbp_after_get_the_content_parse_args', 'bbp_enable_tinymce');
+add_filter('mce_buttons', function($buttons) {
+  $buttons[] = 'superscript';
+  $buttons[] = 'subscript';
+  $buttons[] = 'image';
+  $buttons[] = 'media';
+  return $buttons;
+});
+
 
 // Register styles
 function ncs4_enqueue_custom_styles() {
