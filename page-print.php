@@ -75,6 +75,9 @@ function filter_elements($elements, $industries) {
         break;
       }
     }
+    if (in_array("ncs4-best-practices-instructions", $classes)) {
+      $include = false;
+    }
     if (!$include) {
       remove_element($e);
     }
