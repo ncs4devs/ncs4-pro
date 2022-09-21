@@ -200,7 +200,7 @@ p, li, ul, ol, legend {
   max-width: 80ch;
 }
 
-.wp-block-file + p, .wp-block-file + a.more-link, p + p, p + a.more-link, span[id^=more-] + p, span[id^=more-] + a.more-link {
+.wp-block-file + p, .wp-block-file + a.more-link, .wp-block-file .wp-block-file, p + p, p + a.more-link, p .wp-block-file, span[id^=more-] + p, span[id^=more-] + a.more-link, span[id^=more-] .wp-block-file {
   margin-top: 2.4rem;
 }
 
@@ -387,7 +387,7 @@ td, th {
   background-color: var(--btn-secondary);
   color: var(--btn-primary);
   margin: 1em 0;
-  padding: 1em 1.5em;
+  padding: 0.5em 1em;
   font-weight: bold;
   border-radius: 5px;
   transition: transform 0.1s ease-in-out;

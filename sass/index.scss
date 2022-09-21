@@ -90,7 +90,7 @@ p, li, ul, ol, legend {
 }
 
 .wp-block-file, p, span[id^="more-"] {
-  + p, + a.more-link {
+  + p, + a.more-link, .wp-block-file {
     margin-top: 2.4rem;
   }
 }
