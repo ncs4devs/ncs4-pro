@@ -46,7 +46,7 @@
 			<?php endif; ?>
 
       <a href="/login">Log In</a>
-      
+
       <?php /*
 			<?php do_action( 'bp_after_activate_content' ); ?>
       */?>
