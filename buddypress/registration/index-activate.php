@@ -25,7 +25,7 @@
 				<?php if ( isset( $_GET['e'] ) ) : ?>
 					<p><?php _e( 'Your account was activated successfully! Your account details have been sent to you in a separate email.', 'buddypress' ); ?></p>
 				<?php else : ?>
-					<p><?php printf( __( 'Your account was activated successfully! You can now <a href="%s">log in</a> with the username and password you provided when you signed up.', 'buddypress' ), wp_login_url( bp_get_root_domain() ) ); ?></p>
+					<p><?php printf( __( 'Your account was activated successfully! You can now <a href="%s">log in</a> with the username and password you provided when you signed up.', 'buddypress' ), "/login" ); ?></p>
 				<?php endif; ?>
 
 			<?php else : ?>
@@ -45,21 +45,17 @@
 
 			<?php endif; ?>
 
-      <p><a href="/login">Log In</a></p>
-
-      <?php /*
 			<?php do_action( 'bp_after_activate_content' ); ?>
-      */?>
 
 		</div><!-- .page -->
 
-    <?php /*
 		<?php do_action( 'bp_after_activation_page' ); ?>
-    */?>
 
 		</div><!-- .padder -->
 	</div><!-- #content -->
 
+  <?php /*
 	<?php get_sidebar( 'buddypress' ); ?>
+  */?>
 
 <?php get_footer( 'buddypress' ); ?>
