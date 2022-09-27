@@ -256,7 +256,7 @@ add_action('admin_bar_menu', 'ncs4_custom_admin_bar_items');
 // BuddyPress
 add_filter('bp_after_activate_content', function() {
   if (bp_account_was_activated()) {
-    return '<a href="/login">Log In</a>';
+    return '<p><a href="/login">Log In</a></p>';
   }
   return "";
 });
