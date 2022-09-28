@@ -106,7 +106,7 @@
                   ?>
                   <div id="membership-login-links">
                     <a href="/join-ncs4-connect">Join</a>
-                    <a href="/login">Login</a>
+                    <a href="/login">Log in</a>
                   </div>
                   <?php
                 }
