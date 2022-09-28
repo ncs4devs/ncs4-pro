@@ -253,6 +253,14 @@ function ncs4_custom_admin_bar_items($admin_bar) {
 }
 add_action('admin_bar_menu', 'ncs4_custom_admin_bar_items');
 
+// BuddyPress
+add_filter('bp_after_activate_content', function() {
+  if (bp_account_was_activated()) {
+    return '<p><a href="/login">Log In</a></p>';
+  }
+  return "";
+});
+
 // Forum settings
 function bbp_enable_tinymce( $args = array() ) {
   $args['tinymce'] = true;
