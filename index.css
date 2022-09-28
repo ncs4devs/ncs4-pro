@@ -200,7 +200,7 @@ p, li, ul, ol, legend {
   max-width: 80ch;
 }
 
-.wp-block-file + p, .wp-block-file + a.more-link, p + p, p + a.more-link, span[id^=more-] + p, span[id^=more-] + a.more-link {
+.wp-block-file + p, .wp-block-file + a.more-link, .wp-block-file .wp-block-file, p + p, p + a.more-link, p .wp-block-file, span[id^=more-] + p, span[id^=more-] + a.more-link, span[id^=more-] .wp-block-file {
   margin-top: 2.4rem;
 }
 
@@ -379,7 +379,7 @@ td, th {
 }
 
 /* Components */
-.ncs4-button, .ncs4-button:visited {
+.ncs4-button.ncs4-button, .ncs4-button.ncs4-button:visited {
   --btn-primary: #f4f4f4;
   --btn-secondary: #0061CD;
   display: inline-block;
@@ -387,36 +387,36 @@ td, th {
   background-color: var(--btn-secondary);
   color: var(--btn-primary);
   margin: 1em 0;
-  padding: 1em 1.5em;
+  padding: 0.5em 1em;
   font-weight: bold;
   border-radius: 5px;
   transition: transform 0.1s ease-in-out;
   /* Button types */
 }
-.ncs4-button:hover, .ncs4-button:focus-visible, .ncs4-button:focus, .ncs4-button:visited:hover, .ncs4-button:visited:focus-visible, .ncs4-button:visited:focus {
+.ncs4-button.ncs4-button:hover, .ncs4-button.ncs4-button:focus-visible, .ncs4-button.ncs4-button:focus, .ncs4-button.ncs4-button:visited:hover, .ncs4-button.ncs4-button:visited:focus-visible, .ncs4-button.ncs4-button:visited:focus {
   text-decoration: none;
   outline-color: var(--btn-secondary);
   color: var(--btn-primary);
 }
 @media (prefers-reduced-motion: no-preference) {
-  .ncs4-button:hover, .ncs4-button:focus-visible, .ncs4-button:focus, .ncs4-button:visited:hover, .ncs4-button:visited:focus-visible, .ncs4-button:visited:focus {
+  .ncs4-button.ncs4-button:hover, .ncs4-button.ncs4-button:focus-visible, .ncs4-button.ncs4-button:focus, .ncs4-button.ncs4-button:visited:hover, .ncs4-button.ncs4-button:visited:focus-visible, .ncs4-button.ncs4-button:visited:focus {
     transform: scale(1.1);
   }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .ncs4-button:active, .ncs4-button:visited:active {
+  .ncs4-button.ncs4-button:active, .ncs4-button.ncs4-button:visited:active {
     transform: scale(0.9);
   }
 }
-.ncs4-button.ncs4-button__blue, .ncs4-button:visited.ncs4-button__blue {
+.ncs4-button.ncs4-button.ncs4-button__blue, .ncs4-button.ncs4-button:visited.ncs4-button__blue {
   --btn-primary: #f4f4f4;
   --btn-secondary: #0051a5;
 }
-.ncs4-button.ncs4-button__yellow, .ncs4-button:visited.ncs4-button__yellow {
+.ncs4-button.ncs4-button.ncs4-button__yellow, .ncs4-button.ncs4-button:visited.ncs4-button__yellow {
   --btn-primary: #040303;
   --btn-secondary: #FFCE2F;
 }
-.ncs4-button.ncs4-button__gold, .ncs4-button:visited.ncs4-button__gold {
+.ncs4-button.ncs4-button.ncs4-button__gold, .ncs4-button.ncs4-button:visited.ncs4-button__gold {
   --btn-primary: #040303;
   --btn-secondary: #E4B005;
 }
