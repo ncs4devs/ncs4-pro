@@ -25,7 +25,7 @@
 				<?php if ( isset( $_GET['e'] ) ) : ?>
 					<p><?php _e( 'Your account was activated successfully! Your account details have been sent to you in a separate email.', 'buddypress' ); ?></p>
 				<?php else : ?>
-					<p><?php printf( __( 'Your account was activated successfully! You can now <a href="%s">log in</a> with the username and password you provided when you signed up.', 'buddypress' ), "/login" ); ?></p>
+					<p><?php printf( __( 'Congratulations! Your account was activated successfully, and now you can register for NCS⁴ Connect membership. You should have received an email titled <strong>Success! NCS<sup>4</sup> Account Activated</strong>. Please follow the instructions on the email to register and pay for membership.</br><strong>Important: You will not have membership access to NCS<sup>4</sup> Connect until payment is received and registration is confirmed.</strong>', 'buddypress' ), "/login" ); ?></p>
 				<?php endif; ?>
 
 			<?php else : ?>
