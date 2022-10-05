@@ -276,6 +276,11 @@ add_filter('mce_buttons', function($buttons) {
   return $buttons;
 });
 
+add_filter( 'bbp_get_title_max_length', function($length) {
+  $length = 120;
+  return $length;
+});
+
 
 // Register styles
 function ncs4_enqueue_custom_styles() {
