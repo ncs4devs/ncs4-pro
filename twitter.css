@@ -1,0 +1,17 @@
+/* These colors are kept for compatibility reasons and should not be used */
+/* These colors may be used */
+/* Colors are swapped around to be in order from darkest to lightest */
+/* Navy */
+/* Dark Blue */
+/* Yellow */
+/* Grey */
+/* Links */
+.timeline-Header {
+  background-color: #18243E;
+  padding: 1em 2em;
+}
+.timeline-Header * {
+  color: #e6e6e6;
+}
+
+/*# sourceMappingURL=twitter.css.map */
