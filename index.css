@@ -95,41 +95,6 @@
   display: none;
 }
 
-#buddypress #dir-members-search-form {
-  border-color: #555555;
-}
-#buddypress #members-dir-list #members-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
-}
-#buddypress #members-dir-list #members-list::before {
-  content: none;
-}
-#buddypress #members-dir-list #members-list .item-entry .list-wrap {
-  display: flex;
-  flex-direction: column;
-}
-#buddypress #members-dir-list #members-list .item-entry .list-wrap .item .item-block,
-#buddypress #members-dir-list #members-list .item-entry .list-wrap .item .member-name,
-#buddypress #members-dir-list #members-list .item-entry .list-wrap .item .last-activity,
-#buddypress #members-dir-list #members-list .item-entry .list-wrap .item .friendship-button,
-#buddypress #members-dir-list #members-list .item-entry .list-wrap .item .members-meta {
-  margin: 0 auto;
-  width: auto;
-}
-#buddypress #members-dir-list #members-list .item-entry .list-wrap .item * {
-  text-align: center;
-  float: none;
-  max-width: max-content;
-}
-#buddypress #members-dir-list #members-list .item-avatar {
-  margin: 0;
-}
-#buddypress #members-dir-list #members-list .item-avatar .avatar {
-  border-radius: 50%;
-  border: solid 2px #555555;
-}
-
 /*
   The second-most generic stylesheet (besides style.css, which isn't modified
   if it can be avoided)

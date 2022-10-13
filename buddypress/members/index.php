@@ -7,6 +7,7 @@
  */
 
 ?>
+<link rel="stylesheet" href="<?= get_stylesheet_directory_uri() . '/buddypress/members/members.css'?>" type="text/css">
 <?php reblex_display_block(5371); // Connect Header ?>
   <div class="ncs4-site-margin ncs4-site-margin__size-small">
     <h1>Member Directory</h1>

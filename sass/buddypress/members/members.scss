@@ -1,4 +1,21 @@
+@import '../../abstracts/variables/colors';
+
 #buddypress {
+
+  nav.members-type-navs {
+    .selected a {
+      background-color: $color_primary-2;
+    }
+
+    li {
+      border: 1px solid $color_secondary-2c;
+    }
+
+    a:hover, a:focus-visible {
+      background-color: $color_secondary-2;
+      color: $color_white;
+    }
+  }
 
   #dir-members-search-form {
     border-color: $color_secondary-2c;
