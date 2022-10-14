@@ -57,12 +57,10 @@ body {
   html {
     border: none;
   }
-
   p, li, .ncs4-section {
     break-inside: avoid;
     page-break-inside: avoid;
   }
-
   ul, ol, div {
     display: block !important;
     overflow: visible;

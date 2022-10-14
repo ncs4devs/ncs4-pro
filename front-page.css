@@ -161,8 +161,7 @@ body {
   color: #f4f4f4;
 }
 .pillar figure {
-  display: flex;
-  /* Shrink image container to image */
+  display: flex; /* Shrink image container to image */
 }
 .pillar h3 {
   font-weight: normal;
@@ -190,8 +189,7 @@ body {
   font-size: 3.2rem;
   background-color: #f4f4f4;
 }
-.tiles__inner > div {
-  /* Inner container of group */
+.tiles__inner > div { /* Inner container of group */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

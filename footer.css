@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* These colors are kept for compatibility reasons and should not be used */
 /* These colors may be used */
 /* Colors are swapped around to be in order from darkest to lightest */
@@ -90,8 +89,7 @@
   padding: 0 0 0 0.8rem;
 }
 #colophon.site-footer .post-area ul li::marker {
-  content: "";
-  /* right arrow alt2 */
+  content: "\f345"; /* right arrow alt2 */
   font-family: dashicons;
   font-size: 1.6rem;
 }

@@ -22,33 +22,67 @@
 #buddypress #members-dir-list #members-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+  list-style-type: none;
 }
 #buddypress #members-dir-list #members-list::before {
   content: none;
 }
-#buddypress #members-dir-list #members-list .item-entry .list-wrap {
+#buddypress #members-dir-list #members-list .item-entry {
   display: flex;
   flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+  margin: 3rem;
 }
-#buddypress #members-dir-list #members-list .item-entry .list-wrap .item .item-block,
-#buddypress #members-dir-list #members-list .item-entry .list-wrap .item .member-name,
-#buddypress #members-dir-list #members-list .item-entry .list-wrap .item .last-activity,
-#buddypress #members-dir-list #members-list .item-entry .list-wrap .item .friendship-button,
-#buddypress #members-dir-list #members-list .item-entry .list-wrap .item .members-meta {
-  margin: 0 auto;
-  width: auto;
+#buddypress #members-dir-list #members-list .item-entry .item-avatar {
+  margin: auto;
+  align-items: center;
 }
-#buddypress #members-dir-list #members-list .item-entry .list-wrap .item * {
-  text-align: center;
-  float: none;
-  max-width: max-content;
-}
-#buddypress #members-dir-list #members-list .item-avatar {
-  margin: 0;
-}
-#buddypress #members-dir-list #members-list .item-avatar .avatar {
+#buddypress #members-dir-list #members-list .item-entry .item-avatar img.avatar {
   border-radius: 50%;
   border: solid 2px #555555;
+  height: 150px;
+  width: 150px;
+}
+#buddypress #members-dir-list #members-list .item-entry .item a.friendship-button {
+  background-color: grey;
+  color: white;
+  min-width: 8rem;
+  display: block;
+}
+#buddypress #members-dir-list #members-list .item-entry .item a.send-message {
+  background-color: grey;
+  min-width: 8rem;
+  color: white;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+#buddypress #members-dir-list #members-list .item-entry .item .last-activity {
+  font-size: 1.2rem;
+}
+#buddypress #members-dir-list #members-list .item-entry .item .item-block,
+#buddypress #members-dir-list #members-list .item-entry .item .member-name,
+#buddypress #members-dir-list #members-list .item-entry .item .last-activity,
+#buddypress #members-dir-list #members-list .item-entry .item .friendship-button,
+#buddypress #members-dir-list #members-list .item-entry .item .members-meta {
+  margin: auto;
+  width: auto;
+  align-self: center;
+}
+#buddypress #members-dir-list #members-list .item-entry .item * {
+  text-align: center;
+  font-size: small;
+  float: none;
+  max-width: max-content;
+  margin: auto;
+}
+#buddypress #members-dir-list #members-list .item-entry .item p.item-title {
+  font-size: large;
+  color: #0061CD;
+}
+#buddypress #members-dir-list #members-list .item-entry .item p.organization-name {
+  font-size: large;
 }
 
 /*# sourceMappingURL=members.css.map */

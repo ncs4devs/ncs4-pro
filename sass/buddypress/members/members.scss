@@ -26,16 +26,51 @@
     #members-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+      list-style-type: none;
 
       &::before {
         content: none;
       }
 
-      .item-entry .list-wrap {
+      .item-entry{
         display: flex;
         flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        margin: auto;
+        margin: 3rem;
+
+        .item-avatar {
+          margin: auto;
+          align-items: center;
+  
+          img.avatar {
+            border-radius: 50%;
+            border: solid 2px $color_secondary-2c;
+            height: 150px;
+            width: 150px;
+          }
+        }
 
         .item {
+
+          a.friendship-button{
+            background-color: grey;
+            color: white;
+            min-width: 8rem;
+            display: block;
+          }
+
+          a.send-message{
+            background-color: grey;
+            min-width: 8rem;
+            color: white;
+            display: block;
+            margin-bottom: 0.8rem;
+          }
+          .last-activity{
+            font-size: 1.2rem;
+          }
 
           .item-block,
           .member-name,
@@ -43,26 +78,31 @@
           .friendship-button,
           .members-meta
           {
-            margin: 0 auto;
+            margin: auto;
             width: auto;
+            align-self: center;
           }
 
           * {
             text-align: center;
+            font-size: small;
             float: none;
             max-width: max-content;
+            margin: auto;
+          }
+
+          p.item-title{
+            font-size: large;
+            color: $color_secondary-3;
+          }
+
+          p.organization-name {
+            font-size: large;
           }
         }
       }
 
-      .item-avatar {
-        margin: 0;
-
-        .avatar {
-          border-radius: 50%;
-          border: solid 2px $color_secondary-2c;
-        }
-      }
+      
     }
   }
 }

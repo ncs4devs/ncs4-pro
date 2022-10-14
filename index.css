@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* These colors are kept for compatibility reasons and should not be used */
 /* These colors may be used */
 /* Colors are swapped around to be in order from darkest to lightest */
@@ -115,7 +114,11 @@ body div {
 
 /*      Base Typography      */
 .caption, .tiny-text, .text-tiny {
-  font-size: clamp( 1rem, 2.2857142857vw, 1.6rem );
+  font-size: clamp(
+    1rem,
+    2.2857142857vw,
+    1.6rem
+  );
 }
 
 .site-main, .entry-content, .archive-content, p, li, ul, ol, h1, h2, h3, h4,
@@ -127,12 +130,20 @@ h5, h6, legend {
 .site-main, .site-main .archive-content div, .entry-content, .entry-content .archive-content div, .archive-content, .archive-content .archive-content div, p, p .archive-content div, li, li .archive-content div, ul, ul .archive-content div, ol, ol .archive-content div, h1, h1 .archive-content div, h2, h2 .archive-content div, h3, h3 .archive-content div, h4, h4 .archive-content div,
 h5,
 h5 .archive-content div, h6, h6 .archive-content div, legend, legend .archive-content div {
-  font-size: clamp( 1.6rem, 3vw, 2.1rem );
+  font-size: clamp(
+    1.6rem,
+    3vw,
+    2.1rem
+  );
 }
 
 /* Headings */
 h1, h2 {
-  font-size: clamp( 2.1rem, 5.7142857143vw, 4rem );
+  font-size: clamp(
+    2.1rem,
+    5.7142857143vw,
+    4rem
+  );
   line-height: 1.2em;
   text-transform: uppercase;
   margin: 1em 0 0.5em 0;
@@ -146,7 +157,11 @@ h1 + h3, h1 + h4, h1 + h5, h1 + h6, h2 + h3, h2 + h4, h2 + h5, h2 + h6 {
 
 /* Subheadings */
 h3, h4, h5, h6 {
-  font-size: clamp( 1.6rem, 3.5714285714vw, 2.5rem );
+  font-size: clamp(
+    1.6rem,
+    3.5714285714vw,
+    2.5rem
+  );
   line-height: 1.4em;
   margin: 1em 0 0.5em 0;
 }
@@ -271,8 +286,7 @@ td, th {
   grid-template-columns: 50ch 54px;
 }
 .mp-form-row.mepr_password .mp-form-label button.mp-hide-pw {
-  display: none;
-  /* Button is not working */
+  display: none; /* Button is not working */
 }
 
 /* Connect */
@@ -392,22 +406,18 @@ figure > a {
 }
 
 .wp-block-embed.is-type-video {
-  margin: 1.6rem 0 !important;
-  /* WP uses margin: auto !important */
+  margin: 1.6rem 0 !important; /* WP uses margin: auto !important */
 }
 .wp-block-embed.is-type-video .wp-block-embed__wrapper {
   display: flex;
   justify-content: center;
 }
 
-.wp-block-embed.wp-embed-aspect-16-9 .wp-block-embed__wrapper {
-  /* Youtube videos, mostly */
+.wp-block-embed.wp-embed-aspect-16-9 .wp-block-embed__wrapper { /* Youtube videos, mostly */
   position: relative;
-  padding-top: 56.25%;
-  /* 9/16 */
+  padding-top: 56.25%; /* 9/16 */
 }
-.wp-block-embed.wp-embed-aspect-16-9 .wp-block-embed__wrapper > span {
-  /* Later WP versions add a span between the block and the iframe */
+.wp-block-embed.wp-embed-aspect-16-9 .wp-block-embed__wrapper > span { /* Later WP versions add a span between the block and the iframe */
   display: flex;
   position: absolute;
   top: 0;
@@ -424,11 +434,11 @@ figure > a {
 .wp-block-embed-issuu {
   --height: 90vh;
   width: 100%;
-  max-width: calc($aspect-ratio * var(--height));
+  max-width: calc(1.5454545455 * var(--height));
 }
 .wp-block-embed-issuu .issuuembed {
   position: relative;
-  max-width: calc($aspect-ratio * var(--height));
+  max-width: calc(1.5454545455 * var(--height));
   max-height: var(--height);
   /* Inline style overrides */
   width: auto !important;
@@ -457,7 +467,7 @@ figure > a {
   margin: 0;
 }
 .wp-block-file a::before {
-  content: "";
+  content: "\f316";
   font-family: "dashicons";
   font-size: 0.9em;
   position: relative;
