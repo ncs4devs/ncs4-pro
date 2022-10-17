@@ -10,11 +10,12 @@
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
 
-@mixin component-buttons() {
+@mixin component-buttons($primary-color: $color_white, $secondary-color: $color_secondary-3) {
 
-  .ncs4-button.ncs4-button, .ncs4-button.ncs4-button:visited {
-    --btn-primary: #{$color_white};
-    --btn-secondary: #{$color_secondary-3};
+  &, &:visited {
+    --btn-primary: #{$primary-color};
+    --btn-secondary: #{$secondary-color};
+
 
     display: inline-block;
     height: fit-content;
@@ -42,22 +43,6 @@
       }
     }
 
-    /* Button types */
-    &.ncs4-button {
-      &__blue {
-        --btn-primary: #{$color_white};
-        --btn-secondary: #{$color_link-0};
-      }
-
-      &__yellow {
-        --btn-primary: #{$color_secondary-0c};
-        --btn-secondary: #{$color_primary-2c};
-      }
-
-      &__gold {
-        --btn-primary: #{$color_secondary-0c};
-        --btn-secondary: #{$color_primary-1c};
-      }
-    }
+    
   }
 }

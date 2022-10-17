@@ -46,17 +46,68 @@
   width: 150px;
 }
 #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button {
-  background-color: grey;
-  color: white;
-  min-width: 8rem;
+  min-width: 12rem;
   display: block;
 }
+#buddypress #members-dir-list #members-list .item-entry .item a.friendship-button, #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:visited {
+  --btn-primary: #f4f4f4;
+  --btn-secondary: #0051a5;
+  display: inline-block;
+  height: fit-content;
+  background-color: var(--btn-secondary);
+  color: var(--btn-primary);
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: transform 0.1s ease-in-out;
+}
+#buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:hover, #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:focus-visible, #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:focus, #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:visited:hover, #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:visited:focus-visible, #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:visited:focus {
+  text-decoration: none;
+  outline-color: var(--btn-secondary);
+  color: var(--btn-primary);
+}
+@media (prefers-reduced-motion: no-preference) {
+  #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:hover, #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:focus-visible, #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:focus, #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:visited:hover, #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:visited:focus-visible, #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:visited:focus {
+    transform: scale(1.1);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:active, #buddypress #members-dir-list #members-list .item-entry .item a.friendship-button:visited:active {
+    transform: scale(0.9);
+  }
+}
 #buddypress #members-dir-list #members-list .item-entry .item a.send-message {
-  background-color: grey;
-  min-width: 8rem;
-  color: white;
+  min-width: 12rem;
   display: block;
-  margin-bottom: 0.8rem;
+}
+#buddypress #members-dir-list #members-list .item-entry .item a.send-message, #buddypress #members-dir-list #members-list .item-entry .item a.send-message:visited {
+  --btn-primary: #f4f4f4;
+  --btn-secondary: #0051a5;
+  display: inline-block;
+  height: fit-content;
+  background-color: var(--btn-secondary);
+  color: var(--btn-primary);
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: transform 0.1s ease-in-out;
+}
+#buddypress #members-dir-list #members-list .item-entry .item a.send-message:hover, #buddypress #members-dir-list #members-list .item-entry .item a.send-message:focus-visible, #buddypress #members-dir-list #members-list .item-entry .item a.send-message:focus, #buddypress #members-dir-list #members-list .item-entry .item a.send-message:visited:hover, #buddypress #members-dir-list #members-list .item-entry .item a.send-message:visited:focus-visible, #buddypress #members-dir-list #members-list .item-entry .item a.send-message:visited:focus {
+  text-decoration: none;
+  outline-color: var(--btn-secondary);
+  color: var(--btn-primary);
+}
+@media (prefers-reduced-motion: no-preference) {
+  #buddypress #members-dir-list #members-list .item-entry .item a.send-message:hover, #buddypress #members-dir-list #members-list .item-entry .item a.send-message:focus-visible, #buddypress #members-dir-list #members-list .item-entry .item a.send-message:focus, #buddypress #members-dir-list #members-list .item-entry .item a.send-message:visited:hover, #buddypress #members-dir-list #members-list .item-entry .item a.send-message:visited:focus-visible, #buddypress #members-dir-list #members-list .item-entry .item a.send-message:visited:focus {
+    transform: scale(1.1);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  #buddypress #members-dir-list #members-list .item-entry .item a.send-message:active, #buddypress #members-dir-list #members-list .item-entry .item a.send-message:visited:active {
+    transform: scale(0.9);
+  }
 }
 #buddypress #members-dir-list #members-list .item-entry .item .last-activity {
   font-size: 1.2rem;

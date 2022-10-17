@@ -48,8 +48,8 @@ bp_nouveau_before_loop(); ?>
                 
                 <div><p class="organization-name"><?= bp_profile_field_data(array('field' => 2, 'user_id'=>bp_get_member_user_id())); ?></p></div>
                 <div class="item-meta last-activity"><?php bp_member_last_active(); ?></div>
-                <div class="item-meta friendship-button"><?php hibuddy_send_private_message_button(); ?></div>
-                <div class="item-meta friendship-button"><span class="activity"><?php bp_add_friend_button()?></span></div>
+                <div class="item-meta"><?php hibuddy_send_private_message_button(); ?></div>
+                <div class="item-meta"><?php bp_add_friend_button(array( 'button_attr' => array( 'class' => 'ncs4-button ncs4-button__blue')))?></div>
                 <div class="action"><?php do_action( 'bp_directory_members_actions' ); ?></div>
 
               </div> <!---items--->

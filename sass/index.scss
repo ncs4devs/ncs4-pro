@@ -302,8 +302,27 @@ td, th {
 
 /* Components */
 
-@include component-buttons();
 
+.ncs4-button.ncs4-button {
+/* Button types */
+@include component-buttons();
+&.ncs4-button {
+  &__blue {
+    --btn-primary: #{$color_white};
+    --btn-secondary: #{$color_link-0};
+  }
+
+  &__yellow {
+    --btn-primary: #{$color_secondary-0c};
+    --btn-secondary: #{$color_primary-2c};
+  }
+
+  &__gold {
+    --btn-primary: #{$color_secondary-0c};
+    --btn-secondary: #{$color_primary-1c};
+  }
+}
+}
 /* Wordpress Block Stylings */
 
 figure > a {

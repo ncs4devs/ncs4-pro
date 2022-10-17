@@ -1,4 +1,5 @@
 @import '../../abstracts/variables/colors';
+@import '../../abstracts/mixins/_mixins.scss';
 
 #buddypress {
 
@@ -55,18 +56,15 @@
         .item {
 
           a.friendship-button{
-            background-color: grey;
-            color: white;
-            min-width: 8rem;
+            @include component-buttons($color_white, $color_link-0);
+            min-width: 12rem;
             display: block;
           }
 
           a.send-message{
-            background-color: grey;
-            min-width: 8rem;
-            color: white;
+            @include component-buttons($color_white, $color_link-0);
+            min-width: 12rem;
             display: block;
-            margin-bottom: 0.8rem;
           }
           .last-activity{
             font-size: 1.2rem;

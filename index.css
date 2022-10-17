@@ -358,6 +358,9 @@ td, th {
 }
 
 /* Components */
+.ncs4-button.ncs4-button {
+  /* Button types */
+}
 .ncs4-button.ncs4-button, .ncs4-button.ncs4-button:visited {
   --btn-primary: #f4f4f4;
   --btn-secondary: #0061CD;
@@ -370,7 +373,6 @@ td, th {
   font-weight: bold;
   border-radius: 5px;
   transition: transform 0.1s ease-in-out;
-  /* Button types */
 }
 .ncs4-button.ncs4-button:hover, .ncs4-button.ncs4-button:focus-visible, .ncs4-button.ncs4-button:focus, .ncs4-button.ncs4-button:visited:hover, .ncs4-button.ncs4-button:visited:focus-visible, .ncs4-button.ncs4-button:visited:focus {
   text-decoration: none;
@@ -387,15 +389,15 @@ td, th {
     transform: scale(0.9);
   }
 }
-.ncs4-button.ncs4-button.ncs4-button__blue, .ncs4-button.ncs4-button:visited.ncs4-button__blue {
+.ncs4-button.ncs4-button.ncs4-button__blue {
   --btn-primary: #f4f4f4;
   --btn-secondary: #0051a5;
 }
-.ncs4-button.ncs4-button.ncs4-button__yellow, .ncs4-button.ncs4-button:visited.ncs4-button__yellow {
+.ncs4-button.ncs4-button.ncs4-button__yellow {
   --btn-primary: #040303;
   --btn-secondary: #FFCE2F;
 }
-.ncs4-button.ncs4-button.ncs4-button__gold, .ncs4-button.ncs4-button:visited.ncs4-button__gold {
+.ncs4-button.ncs4-button.ncs4-button__gold {
   --btn-primary: #040303;
   --btn-secondary: #E4B005;
 }
