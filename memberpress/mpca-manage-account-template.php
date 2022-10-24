@@ -49,37 +49,6 @@
       <?php else: ?>
         <input value="" type="text" name="userdata[existing_login]" />
       <?php endif ?>
-      <label>
-        <span><?php echo '- '; _e('OR', 'memberpress-corporate'); echo ' -'; ?></span>
-      </label>
-    <?php if(!$mepr_options->username_is_email): ?>
-      <label>
-        <span><?php _e('Username', 'memberpress-corporate'); ?> </span>
-        <input id="" type="text" name="userdata[user_login]" value="<?php echo esc_attr($form_data['user_login']); ?>" />
-      </label>
-      <?php endif ?>
-
-      <label>
-        <span><?php _e('Email', 'memberpress-corporate'); ?> </span>
-        <input id="" type="text" name="userdata[user_email]" value="<?php echo esc_attr($form_data['user_email']); ?>" />
-      </label>
-
-      <?php if($mepr_options->show_fname_lname): ?>
-        <label>
-          <span><?php _e('First Name', 'memberpress-corporate'); ?></span>
-          <input id="" type="text" name="userdata[first_name]" value="<?php echo esc_attr($form_data['first_name']); ?>" />
-        </label>
-        <label>
-          <span><?php _e('Last Name', 'memberpress-corporate'); ?></span>
-          <input id="" type="text" name="userdata[last_name]" value="<?php echo esc_attr($form_data['last_name']); ?>"  />
-        </label>
-      <?php endif ?>
-
-      <label>
-        <input type="checkbox" name="userdata[welcome]" <?php checked($sub_welcome_checked); ?> />
-        <span><?php _e('Send NEW members the welcome email', 'memberpress-corporate'); ?></span>
-      </label>
-
       <?php MeprHooks::do_action('mepr-user-signup-fields'); ?>
 
       <input class="mpca-fat-top" type="submit" value="<?php _e('Submit', 'memberpress-corporate') ?>" />
@@ -154,46 +123,10 @@
     <a href="<?php echo $ca->export_url(); ?>"><?php _e('Export Sub Accounts', 'memberpress-corporate');?></a>
   </div>
 
-  <div id="mpca_signup_url" class="mpca-fat-bottom">
-    <h4><?php _e('Signup URL', 'memberpress-corporate'); ?></h4>
-    <p><?php _e('People signing up with this link will be automatically added to your account', 'memberpress-corporate'); ?></p>
 
-    <?php $app_helper->clipboard_input($_SERVER['SERVER_NAME'].$ca->signup_url(), '', 'mpca-20'); ?>
-  </div>
 
   <?php if($ca->num_sub_accounts > $ca->num_sub_accounts_used() && defined('MPCA_IMPORTERS_PATH') === true): ?>
-  <div id="mpca_import_sub_accounts">
-    <h4><?php _e('Import Sub Accounts via CSV', 'memberpress-corporate'); ?></h4>
-    <div><small><em><?php _e('(Maximum 200 Sub Accounts per CSV file)', 'memberpress-corporate'); ?></em></small></div>
-
-    <?php
-      $csv_notice_checked = isset($_POST['action']) ? isset($_POST['notice']) : true;
-      $csv_welcome_checked = isset($_POST['action']) ? isset($_POST['welcome']) : false;
-    ?>
-
-    <form action="" method="post" enctype="multipart/form-data">
-      <input type="hidden" name="action" value="manage_sub_accounts" />
-      <input type="hidden" name="manage_sub_accounts_form" value="import" />
-      <input type="hidden" name="ca" value="<?php echo $ca->uuid; ?>" />
-      <input type="hidden" name="mepr_product_id" value="<?php echo esc_attr($product_id); ?>" />
-
-      <br/>
-      <input type="checkbox" name="notice" <?php checked($csv_notice_checked); ?> />
-      <?php _e('Send NEW members a password reset link (does not email existing members)', 'memberpress-corporate'); ?>
-      <br/>
-      <input type="checkbox" name="welcome" <?php checked($csv_welcome_checked); ?> />
-      <?php _e('Send NEW members the welcome email if they haven\'t received it already for the membership.', 'memberpress-corporate'); ?>
-      <br/>
-      <?php MeprHooks::do_action('mepr-user-signup-fields'); ?>
-      <br/><br/>
-      <input type="file" name="mpca_sub_accounts_csv" id="mpca_sub_accounts_csv">
-      <input type="submit" value="<?php _e('Upload CSV', 'memberpress-corporate'); ?>" name="submit">
-      <span class="mpca-loading-gif" style="display: none;">
-        <img src="<?php echo admin_url('images/loading.gif'); ?>" />
-        <em><?php _e('Importing sub accounts...', 'memberpress-corporate'); ?></em>
-      </span>
-    </form>
-  </div>
+  
   <?php endif ?>
   <?php do_action('mpca-restrictions'); ?>
 </div>
