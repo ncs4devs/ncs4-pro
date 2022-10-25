@@ -12,7 +12,7 @@ bp_nouveau_before_loop(); ?>
 	<p class="current-member-type"><?php bp_current_member_type_message(); ?></p>
 <?php endif; ?>
 
-<?php require __DIR__ . "/bpFunctions.php";?>
+
 
 <?php if ( bp_has_members( bp_ajax_querystring( 'members' ) ) ) : ?>
 

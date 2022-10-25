@@ -78,7 +78,35 @@ function hibuddy_send_private_message_button() {
 	echo hibuddy_get_send_private_message_button();
 }
 
-// if ( bp_is_active( 'messages' ) ) {
-// 	// experiment with the last value to change position.
-// 	add_action( 'bp_directory_members_actions', 'hibuddy_send_private_message_button', 30 );
-// }
+/**
+ * Use the appropriate Member header and enjoy a template hierarchy
+ *
+ * @since 3.0.0
+ *
+ * @return string HTML Output
+ */
+function ncs4_pro_member_header_template_part() {
+	$template = 'member-header';
+
+	if ( bp_displayed_user_use_cover_image_header() ) {
+		$template = 'cover-image-header';
+	}
+
+	/**
+	 * Fires before the display of a member's header.
+	 *
+	 * @since 1.2.0
+	 */
+	do_action( 'bp_before_member_header' );
+
+	// Get the template part for the header
+	bp_nouveau_member_get_template_part( $template );
+
+	/**
+	 * Fires after the display of a member's header.
+	 *
+	 * @since 1.2.0
+	 */
+	do_action( 'bp_after_member_header' );
+
+}

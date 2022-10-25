@@ -767,6 +767,8 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+require __DIR__ . "/buddypress/members/bpFunctions.php";
+
 /**
  * Load Jetpack compatibility file.
  */
