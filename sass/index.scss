@@ -467,3 +467,12 @@ ul {
     }
   }
 }
+
+//changing locked forumpost colors to blue from the deafault grey
+#bbpress-forums ul.status-closed a {
+  color: $color_secondary-2;
+}
+
+#bbpress-forums ul.status-closed {
+  color: black;
+}

@@ -528,4 +528,12 @@ ul ul ul ul {
   list-style-type: disc;
 }
 
+#bbpress-forums ul.status-closed a {
+  color: #00499A;
+}
+
+#bbpress-forums ul.status-closed {
+  color: black;
+}
+
 /*# sourceMappingURL=index.css.map */
