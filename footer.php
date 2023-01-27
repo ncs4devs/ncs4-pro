@@ -124,6 +124,7 @@
               <h4>Quick Links</h4>
               <p class="links">
                 <a href="/about/">About NCS⁴</a><br>
+                <a href="/wp-content/uploads/2022/09/NCS4-eBrochure-lo.pdf">NCS⁴ eBrochure</a><br>
                 <a href="/training/dhs-fema-courses">DHS/FEMA Training</a><br>
                 <a href="/elearning">
                   eLearning</a><br>
