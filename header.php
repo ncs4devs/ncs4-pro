@@ -87,6 +87,9 @@
                         <a href="/connect">Connect Home</a>
                       </li>
                       <li>
+                        <a href="/connect/members/<?php echo wp_get_current_user()->user_nicename; ?>/profile">My Profile</a>
+                      </li>
+                      <li>
                         <a href="/profile">Settings</a>
                       </li>
                       <li>
