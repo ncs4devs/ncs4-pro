@@ -137,7 +137,7 @@ function create_header() {
   echo '
   <div class="print-page-header">
     ' . file_get_contents(get_stylesheet_directory() . "/img/logo-dark.svg") . '
-    <img src="' . get_stylesheet_directory_uri() . '/img/landmark-logo-small.png" style="margin-left: 40px; width: 100px; height: 100px;">
+    <img src="' . get_stylesheet_directory_uri() . '/img/landmark-logo-small.png" style="margin-left: 40px; width: 100px; height: 80px;">
     <p>Best Practices</p>
     <hr>
   </div>';
