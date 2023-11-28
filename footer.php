@@ -80,7 +80,7 @@
 						<h4>Physical Address</h4>
 						<p>6197 Highway 49 | Hattiesburg, MS 39401</p>
 						<h4 class="no-caps">Phone: <a href="tel:6012666183">601-266-6183</a></h4>
-						<h4 class="no-caps">Email: <a href="mailto:ncs4@usm.edu">ncs4@usm.edu</a></h4>
+						<h4 class="no-caps"><a href="/about/contact-us/">Contact Us</a></h4>
 					</section><!-- .widget-text-area.contact-info -->
 				</div><!-- .widget-area__1 -->
 				<div class="widget-area widget-area__2">
@@ -124,7 +124,7 @@
               <h4>Quick Links</h4>
               <p class="links">
                 <a href="/about/">About NCS⁴</a><br>
-                <a href="/wp-content/uploads/2022/09/NCS4-eBrochure-lo.pdf">NCS⁴ eBrochure</a><br>
+                <a href="/wp-content/uploads/2022/09/ncs4-e-brochure-lo-101923.pdf">NCS⁴ eBrochure</a><br>
                 <a href="/training/dhs-fema-courses">DHS/FEMA Training</a><br>
                 <a href="/elearning">
                   eLearning</a><br>
