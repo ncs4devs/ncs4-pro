@@ -65,6 +65,7 @@
 }
 #footer-widget-area__inner .widget-area {
   color: inherit;
+  min-width: 20rem;
   flex: 1 0 0;
 }
 
